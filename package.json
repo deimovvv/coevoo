@@ -1,0 +1,35 @@
+{
+  "name": "coevo-site",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@react-email/link": "0.0.4",
+    "@react-three/drei": "^9.57.2",
+    "@react-three/fiber": "^8.12.0",
+    "@react-three/postprocessing": "2.6",
+    "@types/three": "^0.149.0",
+    "animate.css": "^4.1.1",
+    "boxicons": "^2.1.4",
+    "gsap": "^3.11.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-player": "^2.12.0",
+    "react-router-dom": "^6.9.0",
+    "react-spinners": "^0.13.8",
+    "styled-components": "^5.3.8",
+    "three": "^0.150.1",
+    "vite-plugin-glsl": "^1.1.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^3.1.0",
+    "vite": "^4.1.0"
+  }
+}

@@ -1,0 +1,134 @@
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+} 
+
+body{
+    background-color: #e4e4e4;
+     /* overflow-x: hidden; */
+   /*  height: 100%; */
+}
+
+
+.wrapper{
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0;
+}
+
+h1{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+
+}
+
+
+
+h2{
+    color: black;
+    font-weight: bold;
+    font-size: 1.4rem;
+
+}
+
+h3{
+
+    font-weight: 200;
+    font-size: 1rem;
+    color: black;
+
+}
+
+/* links */
+h5{
+
+font-size: medium;
+}
+
+.loader{
+    background-color: rebeccapurple;
+    z-index: 1000;
+}
+
+
+.video{
+  margin-top: 100px;
+  position: relative;
+}
+
+.iconContainer{
+    padding: 0 7px;
+
+}
+
+
+.emailLink{
+ color: rgb(102, 102, 102);
+ text-decoration: underline;
+
+}
+.closeIcon{
+    position:absolute;
+    top: 26px;
+    right: 22px;
+   
+}
+
+.arrow{
+    position: absolute;
+    top: 60px;
+    left: 55px;
+}
+
+/* .dropdown-menu .fadeIn{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.dropdown{
+    opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+
+} */
+
+
+@media screen and (max-width: 40em) {
+    
+    .video{
+        margin-top: 50px;
+      }
+
+      .emailLink{
+       font-size: small;
+       
+       }
+
+       .arrow{
+        top: 30px;
+        left: 25px;
+    }
+
+    .gallery{
+        font-size: 1rem;
+    }
+
+    }
