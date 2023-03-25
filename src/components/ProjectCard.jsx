@@ -63,7 +63,7 @@ font-weight: 200;
 
 const ProjectCard = ({ id, title, publisher, date, description}) => {
   
-  const projectURL = `/assets/${id}.jpg`;
+  const projectURL = `src/assets/${id}.jpg`;
 
 
 
