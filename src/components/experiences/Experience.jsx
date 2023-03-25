@@ -43,7 +43,7 @@ const Experience = () => {
           <DepthOfField
             focusDistance={0.25}
             focalLength={0.75}
-            bokehScale={2.2}
+            bokehScale={2.3}
           />
         </EffectComposer>
  
