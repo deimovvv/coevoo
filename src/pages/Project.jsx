@@ -4,6 +4,8 @@ import styled from "styled-components"
 import LogoNegro from '../components/LogoNegro'
 import ReactPlayer from "react-player"
 import '../css/style.css'
+import Loader from "../components/Loader"
+import { useEffect, useState } from "react"
 
 const Section = styled.div`
 margin: 150px 10px;
@@ -105,16 +107,29 @@ const Project = () => {
     const project  = getProjectByid(id)
 
     const projectURL = `/assets/${project.id}.jpg`
+
     
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+      setTimeout(() => setIsLoading(false), 1000); // Simula el tiempo de carga de la página
+    });
+  
     
 
 
   return (
-    <Section  id="project-section"> 
+    
+    <>
+    { isLoading  ? <Loader/> :   
+     <Section  id="project-section"> 
+
+      
      <Link className="arrow" to="/collaborations"> <box-icon name='arrow-back' color='#000000' ></box-icon> 
      </Link>
+     
        <LogoNegro/>
-      <CardProject> 
+         <CardProject> 
       <h2> {project.title}  </h2> 
       <h3> {project.description}  </h3> 
 
@@ -137,8 +152,13 @@ const Project = () => {
       
    
      </CardProject>
-      
+    
+    
     </Section>
+   }
+    </>
+   
+    
   )
 }
 
