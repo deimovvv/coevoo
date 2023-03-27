@@ -71,14 +71,14 @@ const ProjectCard = ({ id, title, publisher, date, description}) => {
     <Project  className="animate__animated animate__fadeIn" >
 
       <ImageContainer>
+
         <Link 
           onClick={() => handleClick("project-section")}
         to={`/project/${id}`}>
           <IMG 
             src={projectURL}
              />
-       
-
+  
         <TitleContainer>
         {<H3> {description} </H3>}
         </TitleContainer>
