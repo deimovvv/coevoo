@@ -9,6 +9,8 @@ import styled from "styled-components";
 import '../../css/style.css'
 import { Suspense } from "react";
 import Model from "./Model";
+import Bicho9 from "./Model";
+
 
 
 const Container = styled.div`
@@ -54,7 +56,8 @@ const Experience = () => {
 
        <Suspense fallback={null}>
     
-       <Model/>
+       {/* <Model/> */}
+       <Bicho9/>
         </Suspense>
       
 
