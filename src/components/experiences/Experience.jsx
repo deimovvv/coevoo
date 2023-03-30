@@ -20,7 +20,7 @@ const Container = styled.div`
   z-index: 1;
   margin: 0;
   padding: 0;
-  background-color: #171717;
+  background-color: #050505;
  
 
 `;
