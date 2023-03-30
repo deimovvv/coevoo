@@ -20,7 +20,7 @@ const Container = styled.div`
   z-index: 1;
   margin: 0;
   padding: 0;
-  background-color: #050505;
+  background-color: #010101;
  
 
 `;
@@ -43,9 +43,9 @@ const Experience = () => {
        <EffectComposer>
           <Bloom mipmapBlur intensity={5.1} luminanceThreshold={0} />
           <DepthOfField
-            focusDistance={0.25}
-            focalLength={0.75}
-            bokehScale={2.3}
+            focusDistance={0.1}
+            focalLength={0.14}
+            bokehScale={5.8}
           />
         </EffectComposer>
  
