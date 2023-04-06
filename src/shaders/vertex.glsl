@@ -12,6 +12,8 @@ void main() {
     vPosition = position;
 
     vec3 hola = vPosition * 1.0;
+
+    
    
     gl_Position = projectionMatrix * modelViewMatrix * vec4(hola , 1.0 );
 }

@@ -77,6 +77,7 @@ const ProjectCard = ({ id, title, publisher, date, description}) => {
         to={`/project/${id}`}>
           <IMG 
             src={projectURL}
+
              />
   
         <TitleContainer>

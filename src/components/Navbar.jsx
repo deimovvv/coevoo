@@ -65,7 +65,7 @@ z-index: 100000;
 
 
 
-const Navbar = () => {
+const Navbar = ({color}) => {
 
   
 
@@ -90,13 +90,18 @@ const ham = useRef()
   return (
     <>
     
-    <NavBar    ref={nav} > 
+    <NavBar   className="animate__animated animate__fadeIn"  ref={nav} > 
 
       {/* Overlay close button */}
         
-        <Link className="closeIcon" onClick={closeNav}  >
+        {  color ? <Link className="closeIcon" onClick={closeNav}  >
+          <box-icon ref={cruz} name='x' color='#ffffff' size=' 37px' ></box-icon>
+       </Link> : <Link className="closeIcon" onClick={closeNav}  >
           <box-icon ref={cruz} name='x' color='#ffffff' size=' 37px' ></box-icon>
        </Link>
+          
+       }
+        
       {/* dropDow menu */}
       <Overlay>
 
@@ -109,10 +114,13 @@ const ham = useRef()
        
     </NavBar>
     
-    
-      <NavMenu onClick={openNav}  >
+       
+       { color ?  <NavMenu onClick={openNav}  >
+    <box-icon ref={ham} name='menu-alt-right' color='#222222' size='32px'></box-icon>
+    </NavMenu> :  <NavMenu onClick={openNav}  >
     <box-icon ref={ham} name='menu-alt-right' color='#ffffff' size='32px'></box-icon>
-    </NavMenu>
+    </NavMenu> }
+     
 
       
     

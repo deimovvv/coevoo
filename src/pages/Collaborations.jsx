@@ -4,6 +4,7 @@ import ProjectList from "../components/ProjectList";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Loader from "../components/Loader";
+import Navbar from "../components/Navbar";
 
 /* import '../css/style.css' */
 
@@ -45,10 +46,12 @@ const Collaborations = () => {
     <>
       { isLoading ?  <Loader/>  : 
         <Container>
-          <Link
+          {/* <Link
            className="arrow" to="/">
             <box-icon name="arrow-back" color="#000000"></box-icon>
-          </Link>
+          </Link> */}
+
+           <Navbar  color={true} />
           <Section>
             <LogoNegro />
 

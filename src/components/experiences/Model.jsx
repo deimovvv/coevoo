@@ -27,7 +27,7 @@ extend({ BackgroundMaterial })
 
 
 function Model(props) {
-  const { nodes, materials } = useGLTF('/bicho9.glb')
+  const { nodes, materials } = useGLTF('/bicho10.glb')
 
   const mat = useRef();
 
@@ -35,6 +35,8 @@ function Model(props) {
 
   useFrame((state, delta) => {
     mat.current.time += delta;
+
+    
 
     
     
@@ -52,7 +54,7 @@ function Model(props) {
   )
 }
 
-useGLTF.preload('/bicho9.glb')
+useGLTF.preload('/bicho10.glb')
 
 
 export default Model

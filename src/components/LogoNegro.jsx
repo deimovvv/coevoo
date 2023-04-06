@@ -7,7 +7,7 @@ z-index: 10;
 margin: 0;
 padding: 0;
 top: 40px;
-right: 40px;
+left: 40px;
 
 
 @media screen and (max-width: 40em) {

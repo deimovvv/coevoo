@@ -6,6 +6,7 @@ import ReactPlayer from "react-player"
 import '../css/style.css'
 import Loader from "../components/Loader"
 import { useEffect, useState } from "react"
+import Navbar from "../components/Navbar"
 
 const Section = styled.div`
 margin: 150px 10px;
@@ -123,10 +124,10 @@ const Project = () => {
     <>
     { isLoading  ? <Loader/> :   
      <Section  id="project-section"> 
-
+       <Navbar color={true} />
       
-     <Link className="arrow" to="/collaborations"> <box-icon name='arrow-back' color='#000000' ></box-icon> 
-     </Link>
+    {/*  <Link className="arrow" to="/collaborations"> <box-icon name='arrow-back' color='#000000' ></box-icon> 
+     </Link> */}
      
        <LogoNegro/>
          <CardProject> 
