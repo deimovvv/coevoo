@@ -1,10 +1,12 @@
-import LogoNegro from "../components/LogoNegro";
+import LogoNegro from "../components/Logo";
 import styled from "styled-components";
 import ProjectList from "../components/ProjectList";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Loader from "../components/Loader";
 import Navbar from "../components/Navbar";
+import Logo from "../components/Logo";
+
 
 /* import '../css/style.css' */
 
@@ -51,9 +53,9 @@ const Collaborations = () => {
             <box-icon name="arrow-back" color="#000000"></box-icon>
           </Link> */}
 
-           <Navbar  color={true} />
+           <Navbar  />
           <Section>
-            <LogoNegro />
+            <Logo/>
 
             <ProjectList publisher="collaborations" />
           </Section>
@@ -64,4 +66,11 @@ const Collaborations = () => {
 };
 
 export default Collaborations;
+
+
+
+
+
+
+
 

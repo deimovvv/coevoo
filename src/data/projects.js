@@ -1,10 +1,25 @@
 const projects = [
 
     {
+        'id': 'Rechii',
+        'publisher': 'collaborations',
+        'date': '3/05',
+        'title': 'Rechi',
+        'image': '/public/images/Rechi2.jpg',
+        'image2': '/public/images/Rechi3.jpg',
+       'video': 'https://www.youtube.com/watch?v=j77M3NmnCrA',
+        'description': 'Video for Rechi',
+        'client': 'Rechi',
+        'technologies': 'Unreal Engine, Marvelous Designer, Substance Painter, Adobe Premier',
+        
+    },
+
+    {
           'id': 'Dease',
           'publisher': 'collaborations',
           'date': '03/23',
           'title': 'Dease',
+          'image': '/public/assets/Dease.jpg',
           'description': 'Visual Art for album cover',
           'client': 'Dease',
           'technologies': 'Unreal Engine, Blender & Photoshop'
@@ -74,7 +89,10 @@ const projects = [
   
   
   },
+
+ 
   
+
   
   
   

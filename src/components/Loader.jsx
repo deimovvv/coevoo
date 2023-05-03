@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/style.css';
+/* import '../css/style.css'; */
 import styled from "styled-components"
 import PuffLoader from "react-spinners/ClipLoader";
 
@@ -10,7 +10,9 @@ justify-content: center;
 align-items: center;
 width: 100%;
 height: 100vh;
-background-color: black;
+/* background-color: black; */
+background-color: rgba(0.0, 0.0, 0.0, 0.9);
+
 
 
 `

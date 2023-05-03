@@ -1,7 +1,6 @@
 import Experience from "./experiences/Experience";
 import Navbar from "./Navbar";
 import Logo from "./Logo";
-import LogoNegro from "./LogoNegro";
 import styled from "styled-components";
 import '../css/style.css';
 import { useEffect, useState } from "react";
@@ -46,9 +45,11 @@ const Home = () => {
 
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 1000); // Simula el tiempo de carga de la página
-    
-
+  
   }, []);
+
+
+ 
 
 
   return (
@@ -59,14 +60,14 @@ const Home = () => {
        <div  className="animate__animated animate__fadeIn">
       
       <Logo />
-      <Navbar />
+      <Navbar  />
      
 
        <Copirigth>
          <h5> ©2023 Coevo Studio</h5>
         </Copirigth>
 
-        <Experience />
+        <Experience/>
       
     </div>
      
@@ -80,4 +81,9 @@ const Home = () => {
 };
 
 export default Home;
+
+
+
+
+
 

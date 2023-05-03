@@ -11,8 +11,9 @@ function App() {
     <>
      
 
-      {/* RUTAS */}
+      {/* Rutas */}
       <AppRouter/>
+      
 
     </>
   )

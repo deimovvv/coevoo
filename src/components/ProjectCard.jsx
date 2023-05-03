@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useState  } from "react";
+import { useEffect } from "react";
+import { motion } from "framer-motion";
 
 const Project = styled.div`
 margin: 0%;
@@ -13,8 +15,6 @@ const IMG = styled.img`
   width: 440px;
   height: 440px;
   margin-top: 0%;
-
-
 
 
 `;
@@ -63,23 +63,30 @@ font-weight: 200;
 
 const ProjectCard = ({ id, title, publisher, date, description}) => {
   
+
   const projectURL = `/assets/${id}.jpg`;
 
 
 
   return (
+    <motion.div 
+    initial={{ y: 200, opacity:0.9}}
+    animate={{ y: 0, opacity:1}}
+    transition={{ delay: 0 , ease: "circOut",
+    duration: 3} 
+ }
+  >
+   
     <Project  className="animate__animated animate__fadeIn" >
 
-      <ImageContainer>
+      <ImageContainer >
 
         <Link 
           onClick={() => handleClick("project-section")}
         to={`/project/${id}`}>
           <IMG 
             src={projectURL}
-
-             />
-  
+           />
         <TitleContainer>
         {<H3> {description} </H3>}
         </TitleContainer>
@@ -89,6 +96,7 @@ const ProjectCard = ({ id, title, publisher, date, description}) => {
       
 
     </Project>
+    </motion.div>
 
   );
 };

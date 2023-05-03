@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import React from 'react'
 import styled from "styled-components"
 import '../css/style.css'
@@ -72,7 +73,15 @@ font-size: 10px;
 const Team = () => {
   return (
    <>
+   <motion.div 
+    initial={{ y: 200, opacity:0}}
+    animate={{ y: 0, opacity:1}}
+    transition={{ delay: 0.1 , ease: "circOut",
+    duration: 1} 
+ }
+  >
     <Title><h3>Team</h3></Title>
+    
     <TeamDiv>
   
           <div className="team-photo" > 
@@ -91,6 +100,7 @@ const Team = () => {
               <h3  className="team-name" >  <a className='a' href="https://www.instagram.com/keyla___000/"  target="_blank">  Keyla </a>  </h3>
           </div>
         </TeamDiv>
+        </motion.div>
    </>
   )
 }
