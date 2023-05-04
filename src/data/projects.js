@@ -1,12 +1,12 @@
 const projects = [
 
     {
-        'id': 'Rechii',
+        'id': 'Rechi',
         'publisher': 'collaborations',
         'date': '3/05',
         'title': 'Rechi',
-        'image': '/public/images/Rechi2.jpg',
-        'image2': '/public/images/Rechi3.jpg',
+        'image': '/assets/Rechi2.jpg',
+        'image2': '/assets/Rechi3.jpg',
        'video': 'https://www.youtube.com/watch?v=j77M3NmnCrA',
         'description': 'Video for Rechi',
         'client': 'Rechi',
