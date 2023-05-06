@@ -17,6 +17,12 @@ const NavBar = styled.div`
   overflow-y: hidden;
   transform: 0.5s;
 
+  @media screen and (max-width: 30em) {
+   h5{
+    font-size: 12px;
+   }
+}
+
   @media screen and (max-width: 40em) {
   }
 `;

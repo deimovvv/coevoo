@@ -32,8 +32,9 @@ const projects = [
       'date': '03/23',
       'title': 'Rave Party',
       'description': 'Visual Art for 1322',
-      'client': '1322',
-      'technologies': 'Unreal Engine & Blender'
+      'client': 'Rave 1312',
+      'technologies': 'Unreal Engine & Blender',
+      'video': 'youtube.com/shorts/zqDZuFh7wYw'
   
   },
   
