@@ -8,7 +8,7 @@ const projects = [
         'image': '/assets/Rechi2.jpg',
         'image2': '/assets/Rechi3.jpg',
        'video': 'https://www.youtube.com/watch?v=j77M3NmnCrA',
-        'description': 'Video for Rechi',
+        'description': 'Videoclip for Rechi',
         'client': 'Rechi',
         'technologies': 'Unreal Engine, Marvelous Designer, Substance Painter, Adobe Premier',
         
@@ -25,6 +25,20 @@ const projects = [
           'technologies': 'Unreal Engine, Blender & Photoshop'
       
       },
+      {
+        'id': 'partyplane',
+        'publisher': 'collaborations',
+        'date': '12/22',
+        'title': 'Divina Glitch',
+        'description': 'Videoclip for Divina Glitch',
+        'client': 'Divina Glitch',
+        'technologies': 'Unreal Engine, Blender, Adobe Premier',
+        'video': 'https://www.youtube.com/watch?v=K-GqiwfEEA8'
+        
+    
+    
+    },
+    
   
   {
       'id': 'rave',
@@ -64,20 +78,7 @@ const projects = [
   
   },
   
-  /* {
-      'id': 'partyplane',
-      'publisher': 'collaborations',
-      'date': '12/22',
-      'title': 'Divina Glitch',
-      'description': 'Videoclip for Divina Glitch',
-      'client': 'Divina Glitch',
-      'technologies': 'Unreal Engine, Blender, Adobe Premier',
-      'video': 'https://www.youtube.com/watch?v=K-GqiwfEEA8'
-      
-  
-  
-  }, */
-  
+
   {
       'id': 'deimovAI',
       'publisher': 'collaborations',

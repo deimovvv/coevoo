@@ -17,7 +17,7 @@ width: 70%;
 
  .team-name{
   padding-top: 15px;
-  margin-bottom: 20px;
+  color: white;
  }
 
  .team-description{
@@ -25,7 +25,7 @@ width: 70%;
  }
 
  .a{
-    color: black !important;
+    color:white;
     
  }
 
@@ -86,18 +86,33 @@ const Team = () => {
   
           <div className="team-photo" > 
           <IMG src="/assets/deimovAI.jpg" alt="" />
+          <a  className='a' href="https://www.instagram.com/deimovvv/" target="_blank">
+          <h3  className="team-name" >Deimov</h3>
+              </a> 
               <p  className="team-description"  >  Co-founder / Creative Director / Creative Coding / Sound Design / VFX  </p>
-              <h3  className="team-name" > <a  className='a' href="https://www.instagram.com/deimovvv/" target="_blank"> Deimov </a> </h3>
+            
           </div>
           <div className="team-photo">
           <IMG src="/team/divinaglitch.jpg" alt="" />
-          <p  className="team-description"  >  Co-founder / Creative Director / Cinematic / CGI  </p>
-              <h3  className="team-name" >  <a  className='a' href="https://www.instagram.com/divina.glitch/"  target="_blank">  Divina glitch  </a></h3>
+           <a  className='a' href="https://www.instagram.com/divina.glitch/"  target="_blank">
+            <h3  className="team-name" >Divina glitch</h3>
+           </a>
+          <p  className="team-description"  >  Co-founder | Creative Director | Cinematic  | CGI</p>
+             
           </div>
           <div className="team-photo">
           <IMG src="/team/keyla.jpg" alt="" />
-          <p  className="team-description"  >  Digital Fashion / Art Director / Creative Coding  </p>
-              <h3  className="team-name" >  <a className='a' href="https://www.instagram.com/keyla___000/"  target="_blank">  Keyla </a>  </h3>
+          <a className='a' href="https://www.instagram.com/keyla___000/"  target="_blank"> <h3  className="team-name" >Keyla</h3>
+          </a>
+          <p  className="team-description"  >  Digital Fashion |  Art Director | Creative Coding  </p>
+             
+          </div>
+          <div className="team-photo">
+          <IMG src="/team/juno.png" alt="" />
+          <a className='a' href="https://www.linkedin.com/in/juno-nedic-3022031b8/"  target="_blank"> <h3  className="team-name" >Juno </h3>
+          </a> 
+          <p  className="team-description"  >  Sound Desing | Inmersive Audio | Creative Coding | Generative AI | Media Artist </p>
+              
           </div>
         </TeamDiv>
         </motion.div>
