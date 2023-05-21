@@ -1,6 +1,21 @@
 const projects = [
 
     {
+        'id': 'Roterton',
+        'publisher': 'collaborations',
+        'date': '16/05',
+        'title': 'Roterton',
+        'image': '/assets/Roterton1.jpg',
+        'image2': '/assets/Roterton2.jpg',
+       'video': 'https://www.youtube.com/watch?v=pUe8FA5ncso',
+        'description': 'Virtual Reality experience for Party',
+        'client': 'Roterton',
+        'technologies': 'Unreal Engine, Blender, ChatGPT'
+        
+    },
+
+
+    {
         'id': 'Rechi',
         'publisher': 'collaborations',
         'date': '3/05',
