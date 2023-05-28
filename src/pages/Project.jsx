@@ -142,7 +142,7 @@ justify-content: space-between;
 
 const Project = () => {
 
-    const {id, image} = useParams()
+    const {id} = useParams()
    
 
     const project  = getProjectByid(id)
@@ -173,10 +173,10 @@ const Project = () => {
      
        <Logo/>
        <motion.div 
-    initial={{ y: 200, opacity:0.8}}
+    initial={{ y: 200, opacity:0}}
     animate={{ y: 0, opacity:1}}
     transition={{ delay: 0 , ease: "circOut",
-    duration: 2} 
+    duration: 1} 
  }
   >
          <CardProject> 

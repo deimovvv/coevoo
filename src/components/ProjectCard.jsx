@@ -70,10 +70,10 @@ const ProjectCard = ({ id, title, publisher, date, description}) => {
 
   return (
     <motion.div 
-    initial={{ y: 200, opacity:0.9}}
+    initial={{ y: 200, opacity:0}}
     animate={{ y: 0, opacity:1}}
     transition={{ delay: 0 , ease: "circOut",
-    duration: 3} 
+    duration: 1} 
  }
   >
    

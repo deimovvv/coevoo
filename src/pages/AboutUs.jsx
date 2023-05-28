@@ -90,9 +90,10 @@ const Manifiesto = () => {
       <h3> Coevo is an interdiciplinary studio based in Argentina... </h3>{" "}
       <br />
       <p>
-        We create experiencies that cover 3D art, music, virtual worlds, art
+        We create experiencies that cover 3D art, 
+         immersive installations, virtual reality, sound / inmersive Design, virtual worlds, art
         direction and visual effects. <br />
-        We use techniques like modeling, animation, sculping and rendering.
+       
       </p>
       <br />
       <p>
@@ -138,7 +139,7 @@ const Manifiesto = () => {
 
         <Link
           className="iconContainer"
-          to={"https://www.youtube.com/channel/UCgWTsMXba0Nm6Do0NFJ77uA"}
+          to={"https://www.youtube.com/@coevostudio/videos"}
           target="_blank"
         >
           <box-icon type="logo" name="youtube" color="grey"></box-icon>

@@ -30,7 +30,7 @@ const Experience = () => {
     <Container>
       <Canvas   camera={{position:[0,0,-4]}} >
 
-       <OrbitControls updateDefaultCamera ={true}  /* enableZoom={false} */  />
+       <OrbitControls updateDefaultCamera ={true}   enableZoom={false}   />
 
         <directionalLight position={[0, 5, 3]} intensity={0.3} />
      

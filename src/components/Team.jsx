@@ -26,6 +26,7 @@ width: 70%;
 
  .a{
     color:white;
+    cursor: pointer;
     
  }
 
@@ -69,6 +70,14 @@ font-size: 10px;
 }
 `
 
+const Button = styled.button`
+color: whitesmoke;
+margin-top: 15px;
+padding: 5px 20px 5px 20px;
+background-color: #1e9c52;
+border: none;
+`
+
 
 const Team = () => {
   return (
@@ -89,7 +98,8 @@ const Team = () => {
           <a  className='a' href="https://www.instagram.com/deimovvv/" target="_blank">
           <h3  className="team-name" >Deimov</h3>
               </a> 
-              <p  className="team-description"  >  Co-founder / Creative Director / Creative Coding / Sound Design / VFX  </p>
+              <p  className="team-description"  >  Co-founder / Creative Director / Creative Coding / Sound Design / VFX / Media Artist  </p>
+              <a className='a' href="https://www.instagram.com/deimovvv/" target="_blank">  <Button>  - </Button> </a>
             
           </div>
           <div className="team-photo">
@@ -105,6 +115,7 @@ const Team = () => {
           <a className='a' href="https://www.instagram.com/keyla___000/"  target="_blank"> <h3  className="team-name" >Keyla</h3>
           </a>
           <p  className="team-description"  >  Digital Fashion |  Art Director | Creative Coding  </p>
+        
              
           </div>
           <div className="team-photo">
