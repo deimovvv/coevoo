@@ -36,9 +36,10 @@ const Collaborations = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setIsLoading(false), 1000); // Simula el tiempo de carga de la página
-  });
+    setTimeout(() => setIsLoading(false), 2000); // Simula el tiempo de carga de la página
+  }); // o usar uselayouteffect
 
+  
   const handleClick = (id) => {
     const element = document.getElementById(id);
     element.scrollIntoView({ behavior: "smooth" });
@@ -46,7 +47,7 @@ const Collaborations = () => {
 
   return (
     <>
-      { isLoading ?  <Loader/>  : 
+      { isLoading ?   <Loader/>    : 
         <Container>
           {/* <Link
            className="arrow" to="/">
