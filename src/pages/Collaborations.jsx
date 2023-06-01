@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import Loader from "../components/Loader";
 import Navbar from "../components/Navbar";
 import Logo from "../components/Logo";
+import { useLayoutEffect } from "react";
 
 
 /* import '../css/style.css' */
@@ -35,9 +36,13 @@ const Section = styled.div`
 const Collaborations = () => {
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
+  /* useEffect(() => {
     setTimeout(() => setIsLoading(false), 2000); // Simula el tiempo de carga de la página
-  }); // o usar uselayouteffect
+  }); // o usar uselayouteffect */
+
+  useLayoutEffect(() => {
+    setTimeout(() => setIsLoading(false), 1000);
+  })
 
   
   const handleClick = (id) => {
