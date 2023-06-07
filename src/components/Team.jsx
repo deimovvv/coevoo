@@ -78,6 +78,11 @@ background-color: #1e9c52;
 border: none;
 `
 
+const Flecha = styled.div`
+margin-top: 10px;
+
+`
+
 
 const Team = () => {
   return (
@@ -99,30 +104,39 @@ const Team = () => {
           <h3  className="team-name" >Deimov</h3>
               </a> 
               <p  className="team-description"  >  Co-founder / Creative Director / Creative Coding / Sound Design / VFX / Media Artist  </p>
-              <a className='a' href="https://www.instagram.com/deimovvv/" target="_blank">  <Button>  - </Button> </a>
+              <a className='a' href="https://www.instagram.com/deimovvv/" target="_blank">  <Flecha><box-icon  className="flecha" animation='flashing' name='right-arrow-alt' flip='vertical' color='#ffffff' ></box-icon></Flecha>
+              </a>
             
           </div>
           <div className="team-photo">
           <IMG src="/team/divinaglitch.jpg" alt="" />
-           <a  className='a' href="https://www.instagram.com/divina.glitch/"  target="_blank">
-            <h3  className="team-name" >Divina glitch</h3>
-           </a>
+          <h3  className="team-name" >Divina glitch</h3>
+          
           <p  className="team-description"  >  Co-founder | Creative Director | Cinematic  | CGI</p>
+          <a  className='a' href="https://www.instagram.com/divina.glitch/"  target="_blank">
+          <Flecha><box-icon  className="flecha" animation='flashing' name='right-arrow-alt' flip='vertical' color='#ffffff' ></box-icon></Flecha>
+           </a>
              
           </div>
           <div className="team-photo">
           <IMG src="/team/keyla.jpg" alt="" />
-          <a className='a' href="https://www.instagram.com/keyla___000/"  target="_blank"> <h3  className="team-name" >Keyla</h3>
-          </a>
+          <h3  className="team-name" >Keyla</h3>
+          
           <p  className="team-description"  >  Digital Fashion |  Art Director | Creative Coding  </p>
+          <a className='a' href="https://www.instagram.com/keyla___000/"  target="_blank"> 
+          <Flecha><box-icon  className="flecha" animation='flashing' name='right-arrow-alt' flip='vertical' color='#ffffff' ></box-icon></Flecha>
+          </a>
         
              
           </div>
           <div className="team-photo">
           <IMG src="/team/juno.png" alt="" />
-          <a className='a' href="https://www.linkedin.com/in/juno-nedic-3022031b8/"  target="_blank"> <h3  className="team-name" >Juno </h3>
-          </a> 
+          <h3  className="team-name" >Juno </h3>
           <p  className="team-description"  >  Sound Desing | Inmersive Audio | Creative Coding | Generative AI | Media Artist </p>
+          <a className='a' href="https://www.linkedin.com/in/juno-nedic-3022031b8/"  target="_blank"> 
+          <Flecha><box-icon  className="flecha" animation='flashing' name='right-arrow-alt' flip='vertical' color='#ffffff' ></box-icon></Flecha>
+          </a> 
+         i
               
           </div>
         </TeamDiv>

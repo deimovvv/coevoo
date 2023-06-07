@@ -2,8 +2,6 @@ import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import "../css/style.css";
-import { motion } from "framer-motion";
-import gsap from "gsap";
 
 const NavBar = styled.div`
   height: 0%;
@@ -18,10 +16,10 @@ const NavBar = styled.div`
   transform: 0.5s;
 
   @media screen and (max-width: 30em) {
-   h5{
-    font-size: 12px;
-   }
-}
+    h5 {
+      font-size: 12px;
+    }
+  }
 
   @media screen and (max-width: 40em) {
   }
@@ -53,19 +51,16 @@ const NavMenu = styled.div`
   z-index: 100000;
 `;
 
-const Navbar = ({ color}) => {
+const Navbar = ({ color }) => {
   const nav = useRef();
   /*   console.log(nav.current,'da'); */
 
   const cruz = useRef();
   const ham = useRef();
 
-
-
-
   function openNav() {
     nav.current.style.height = `100%`;
-   
+
     cruz.current ? (ham.current.style.display = `none`) : "null";
   }
 
@@ -73,12 +68,9 @@ const Navbar = ({ color}) => {
     nav.current.style.height = `0%`;
     cruz.current ? (ham.current.style.display = `block`) : "null";
   }
- 
- 
 
   return (
     <>
-     
       <NavBar ref={nav}>
         {/* Overlay close button */}
 
@@ -104,8 +96,8 @@ const Navbar = ({ color}) => {
 
         {/* dropDow menu */}
 
-             <Overlay>
-            <Ul>
+        <Overlay>
+          <Ul>
             <Li>
               {" "}
               <Link to="/collaborations">
@@ -114,53 +106,44 @@ const Navbar = ({ color}) => {
               </Link>{" "}
             </Li>
 
-            <Li >
+            <Li>
               {" "}
               <Link to="/aboutus">
                 {" "}
                 <h5>ABOUT US</h5>{" "}
               </Link>{" "}
             </Li>
-            </Ul> 
-          </Overlay>
-       
-     
-      {color ? (
-        <NavMenu onClick={openNav}>
-          <box-icon
-            ref={ham}
-            name="menu-alt-right"
-            color="#222222"
-            size="32px"
-          ></box-icon>
-        </NavMenu>
-      ) : (
-        <NavMenu onClick={openNav}>
-          <box-icon
-            ref={ham}
-            name="menu-alt-right"
-            color="#ffffff"
-            size="32px"
-          ></box-icon>
-        </NavMenu>
-      )}
+          </Ul>
+        </Overlay>
 
-      {/*  <NavMenu onClick={openNav}  >
+        {color ? (
+          <NavMenu onClick={openNav}>
+            <box-icon
+              ref={ham}
+              name="menu-alt-right"
+              color="#222222"
+              size="32px"
+            ></box-icon>
+          </NavMenu>
+        ) : (
+          <NavMenu onClick={openNav}>
+            <box-icon
+              ref={ham}
+              name="menu-alt-right"
+              color="#ffffff"
+              size="32px"
+            ></box-icon>
+          </NavMenu>
+        )}
+
+        {/*  <NavMenu onClick={openNav}  >
     <box-icon ref={ham} name='menu-alt-right' color='#ffffff' size='32px'></box-icon>
     </NavMenu>
  */}
-    </NavBar>
-
+      </NavBar>
     </>
   );
 };
 
 export default Navbar;
 
-if (true) {
-  // ejecuta
-} else {
-  // esto
-}
-
-true ? "esto" : "esto otro";
