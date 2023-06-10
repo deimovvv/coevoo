@@ -18,7 +18,25 @@ const Section = styled.div`
 
   @media screen and (max-width: 40em) {
     margin: 120px 10px;
+
   }
+
+  .title{
+
+@media screen and (max-width: 30em) {
+display: grid;
+padding-left: 17px;
+}
+
+}
+
+.description{
+@media screen and (max-width: 30em) {
+display: grid;
+padding-left: 17px;
+}
+
+}
 `;
 
 const CardProject = styled.div`
@@ -51,6 +69,13 @@ const DivImagenes = styled.div`
   justify-content: center;
   width: 200px;
   margin: auto;
+
+  @media screen and (max-width: 30em) {
+    margin: auto;
+
+
+  }
+
 `;
 const Img2 = styled.img`
   width: 500px;
@@ -73,8 +98,8 @@ const Img2 = styled.img`
     height: 400px;
   }
   @media screen and (max-width: 30em) {
-    width: 160px;
-    height: 160px;
+    width: 190px;
+    height: 190px;
   }
 `;
 
@@ -117,7 +142,9 @@ const TextContainer = styled.div`
 
   @media screen and (max-width: 30em) {
     display: grid;
+    padding-left: 17px;
   }
+
 `;
 
 const Project = () => {
@@ -140,18 +167,21 @@ const Project = () => {
       ) : (
         <Section id="project-section">
           <Navbar />
-
           <Logo />
+
           <motion.div
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0, ease: "circOut", duration: 1 }}
           >
-            <CardProject>
-              <h2> {project.title} </h2>
-              <h3> {project.description} </h3>
 
+            <CardProject>
+              
+            <h2 className="title"> {project.title} </h2>
+              <h3 className="description">  {project.description} </h3>
+              
               <TextContainer>
+              
                 <h3>
                   {" "}
                   <b> Technologies </b> - {project.technologies}{" "}

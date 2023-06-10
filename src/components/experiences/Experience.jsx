@@ -36,7 +36,7 @@ const Experience = () => {
 
         {/* PostProcess */}
         <EffectComposer>
-          {/* <Bloom mipmapBlur intensity={1.1} luminanceThreshold={0} /> */}
+          <Bloom mipmapBlur intensity={2.1} luminanceThreshold={0} />
           {/* <DepthOfField
             focusDistance={0.1}
             focalLength={0.14}
