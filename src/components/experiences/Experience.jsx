@@ -6,12 +6,11 @@ import {
   EffectComposer,
 } from "@react-three/postprocessing";
 import styled from "styled-components";
-import '../../css/style.css'
+import "../../css/style.css";
 import { Suspense } from "react";
 import Model from "./Model";
 import Bicho9 from "./Model";
-
-
+import { FBOParticles } from './FBOParticles'
 
 const Container = styled.div`
   position: fixed !important;
@@ -21,46 +20,35 @@ const Container = styled.div`
   margin: 0;
   padding: 0;
   background-color: #010101;
- 
-
 `;
 
 const Experience = () => {
   return (
     <Container>
-      <Canvas   camera={{position:[0,0,-4]}} >
+      <Canvas camera={{ position: [0, 0, 0] }}> {/* -4 */}
+        <OrbitControls updateDefaultCamera={true} enableZoom={true} />
 
-       <OrbitControls updateDefaultCamera ={true}   enableZoom={false}   />
-
+        {/* Lighting */}
         <directionalLight position={[0, 5, 3]} intensity={0.3} />
-     
         <pointLight color={"purple"} intensity={0.5}></pointLight>
-        <pointLight color={"green"} intensity={1.2}></pointLight> 
+        <pointLight color={"green"} intensity={1.2}></pointLight>
+        <Environment preset="warehouse" blur={0} />
 
-      <Environment preset="warehouse" blur={0} />
-
-
-       <EffectComposer>
-          <Bloom mipmapBlur intensity={5.1} luminanceThreshold={0} />
-          <DepthOfField
+        {/* PostProcess */}
+        <EffectComposer>
+          {/* <Bloom mipmapBlur intensity={1.1} luminanceThreshold={0} /> */}
+          {/* <DepthOfField
             focusDistance={0.1}
             focalLength={0.14}
             bokehScale={5.8}
-          />
+          /> */}
         </EffectComposer>
- 
-        
 
         {/* 3D MODEL */}
-       {/*  <Model /> */}
-
-       <Suspense fallback={null}>
-    
-       {/* <Model/> */}
-       <Bicho9/>
+        <Suspense fallback={null}>
+          {/* <Bicho9 /> */}
+          < FBOParticles/>
         </Suspense>
-      
-
       </Canvas>
     </Container>
   );

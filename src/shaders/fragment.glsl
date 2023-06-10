@@ -63,18 +63,20 @@ void main() {
         vUv + 0.01*sin(vUv*20. + time) 
     ); */
 
+
     vec3 color1 = vec3(.3,0.3,0.3);
     vec3 color2 = vec3(0.4,0.4,0.4);
     vec3 color3 = vec3(1.1);
+ 
 
-      /* vec3 color1 = vec3(.4,.3,0.14);
+ /*      vec3 color1 = vec3(.4,.3,0.14);
     vec3 color2 = vec3(.01, 0.1, 0.1);
     vec3 color3 = vec3(0.244,0.3,0.5); */
- /* 
-    vec3 color1 = vec3(0.5,0.4,0.54);
+ 
+     /* vec3 color1 = vec3(0.25,0.4,0.54);
     vec3 color2 = vec3(0.11,0.2,0.21);
-    vec3 color3 = vec3(0.244,0.5,0.49); */
-
+    vec3 color3 = vec3(0.044,0.15,0.19); 
+ */
     
 
     float n = noise(vPosition + time*0.05);

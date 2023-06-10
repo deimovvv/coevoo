@@ -1,25 +1,16 @@
-
 import ProjectCard from "./ProjectCard";
-import { getData } from "../helpers/getData"
+import { getData } from "../helpers/getData";
 
-const ProjectList = ({ publisher}) => {
+const ProjectList = ({ publisher }) => {
+  const projects = getData(publisher);
 
-    const projects = getData(  publisher );
-
-    
   return (
     <>
-        {
-            projects.map(project => (
-                <ProjectCard 
-                key={project.id}
-                {...project}
-                 />
-            ))
-        }
-
+      {projects.map((project) => (
+        <ProjectCard key={project.id} {...project} />
+      ))}
     </>
-  )
-}
+  );
+};
 
-export default ProjectList
+export default ProjectList;

@@ -1,15 +1,10 @@
-import LogoNegro from "../components/Logo";
 import styled from "styled-components";
 import ProjectList from "../components/ProjectList";
-import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Loader from "../components/Loader";
 import Navbar from "../components/Navbar";
 import Logo from "../components/Logo";
 import { useLayoutEffect } from "react";
-
-
-/* import '../css/style.css' */
 
 const Container = styled.div`
   display: flex;
@@ -36,47 +31,26 @@ const Section = styled.div`
 const Collaborations = () => {
   const [isLoading, setIsLoading] = useState(true);
 
-  /* useEffect(() => {
-    setTimeout(() => setIsLoading(false), 2000); // Simula el tiempo de carga de la página
-  }); // o usar uselayouteffect */
-
   useLayoutEffect(() => {
     setTimeout(() => setIsLoading(false), 1000);
-  })
-
-  
-  const handleClick = (id) => {
-    const element = document.getElementById(id);
-    element.scrollIntoView({ behavior: "smooth" });
-  };
+  });
 
   return (
     <>
-      { isLoading ?   <Loader/>    : 
+      {isLoading ? (
+        <Loader />
+      ) : (
         <Container>
-          {/* <Link
-           className="arrow" to="/">
-            <box-icon name="arrow-back" color="#000000"></box-icon>
-          </Link> */}
-
-           <Navbar  />
+          <Navbar />
           <Section>
-            <Logo/>
+            <Logo />
 
             <ProjectList publisher="collaborations" />
           </Section>
         </Container>
-      }
+      )}
     </>
   );
 };
 
 export default Collaborations;
-
-
-
-
-
-
-
-

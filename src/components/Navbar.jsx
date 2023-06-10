@@ -136,14 +136,9 @@ const Navbar = ({ color }) => {
           </NavMenu>
         )}
 
-        {/*  <NavMenu onClick={openNav}  >
-    <box-icon ref={ham} name='menu-alt-right' color='#ffffff' size='32px'></box-icon>
-    </NavMenu>
- */}
       </NavBar>
     </>
   );
 };
 
 export default Navbar;
-
