@@ -67,11 +67,11 @@ const DivImage = styled.div`
 const DivImagenes = styled.div`
   display: flex;
   justify-content: center;
-  width: 200px;
+ /*  width: 200px; */
   margin: auto;
 
   @media screen and (max-width: 30em) {
-    margin: auto;
+   /*  margin: auto; */
 
 
   }
@@ -80,6 +80,8 @@ const DivImagenes = styled.div`
 const Img2 = styled.img`
   width: 500px;
   height: 500px;
+  object-fit: cover;
+  object-position: 70%;
 
   @media screen and (max-width: 70em) {
     width: 740px;
@@ -98,8 +100,9 @@ const Img2 = styled.img`
     height: 400px;
   }
   @media screen and (max-width: 30em) {
-    width: 190px;
-    height: 190px;
+    width: 200px;
+    height: 200px;
+    padding-left: 5px;
   }
 `;
 
@@ -196,7 +199,7 @@ const Project = () => {
                 <Img src={projectURL} alt="" />
                 {project.image && project.image2 ? (
                   <DivImagenes>
-                    {" "}
+                  
                     <Img2 src={project.image} alt="" />{" "}
                     <Img2 src={project.image2} alt="" />{" "}
                   </DivImagenes>

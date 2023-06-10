@@ -7,11 +7,11 @@ const Container = styled.div`
   margin: 0;
   padding: 0;
   top: 32px;
-  left: 40px;
+  left: 38px;
 
-  @media screen and (max-width: 40em) {
+  @media screen and (max-width: 30em) {
     top: 32px;
-    right: 22px;
+    left: 14px;
   }
 `;
 const IMG = styled.img`

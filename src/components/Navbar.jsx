@@ -45,10 +45,15 @@ const Li = styled.li`
 const NavMenu = styled.div`
   position: fixed;
   top: 30px;
-  right: 30px;
+  right: 25px;
   cursor: pointer;
   height: 1000px;
   z-index: 100000;
+
+  @media screen and (max-width: 30em) {
+    top: 32px;
+    right: 14px;
+  }
 `;
 
 const Navbar = ({ color }) => {
