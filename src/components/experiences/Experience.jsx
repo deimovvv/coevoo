@@ -25,8 +25,8 @@ const Container = styled.div`
 const Experience = () => {
   return (
     <Container>
-      <Canvas camera={{ position: [0, 0, 0] }}> {/* -4 */}
-        <OrbitControls updateDefaultCamera={true} enableZoom={true} />
+      <Canvas camera={{ position: [-0.7, 0, -1] }}> {/* -4 */}
+        <OrbitControls updateDefaultCamera={true} enableZoom={false} />
 
         {/* Lighting */}
         <directionalLight position={[0, 5, 3]} intensity={0.3} />
