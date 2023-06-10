@@ -56,7 +56,7 @@ export const FBOParticles = () => {
 
     points.current.material.uniforms.uPositions.value = renderTarget.texture;
 
-    simulationMaterialRef.current.uniforms.uTime.value = clock.elapsedTime;
+    simulationMaterialRef.current.uniforms.uTime.value = clock.elapsedTime *0.2;
   });
 
   return (
