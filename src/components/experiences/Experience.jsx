@@ -36,7 +36,7 @@ const Experience = () => {
 
         {/* PostProcess */}
         <EffectComposer>
-          <Bloom mipmapBlur intensity={2.1} luminanceThreshold={0} />
+          <Bloom mipmapBlur intensity={1.8} luminanceThreshold={0} />
           {/* <DepthOfField
             focusDistance={0.1}
             focalLength={0.14}
@@ -46,7 +46,7 @@ const Experience = () => {
 
         {/* 3D MODEL */}
         <Suspense fallback={null}>
-          {/* <Bicho9 /> */}
+          {/* <Bicho9 />  */}
           < FBOParticles/>
         </Suspense>
       </Canvas>

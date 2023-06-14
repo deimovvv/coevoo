@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import "../css/style.css";
+import { AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 const NavBar = styled.div`
   height: 0%;
@@ -58,19 +60,28 @@ const NavMenu = styled.div`
 
 const Navbar = ({ color }) => {
   const nav = useRef();
-  /*   console.log(nav.current,'da'); */
 
   const cruz = useRef();
   const ham = useRef();
+  const ul = useRef()
+
+  const [open, setOpen] = useState(false)
 
   function openNav() {
+    setOpen(true)
+
     nav.current.style.height = `100%`;
+    ul.current.style.animationDelay  = 2
+    ul.current.style.opacity = "1"
 
     cruz.current ? (ham.current.style.display = `none`) : "null";
   }
 
   function closeNav() {
+    setOpen(false)
+    
     nav.current.style.height = `0%`;
+    
     cruz.current ? (ham.current.style.display = `block`) : "null";
   }
 
@@ -79,67 +90,49 @@ const Navbar = ({ color }) => {
       <NavBar ref={nav}>
         {/* Overlay close button */}
 
-        {color ? (
-          <Link className="closeIcon" onClick={closeNav}>
-            <box-icon
-              ref={cruz}
-              name="x"
-              color="#ffffff"
-              size=" 37px"
-            ></box-icon>
-          </Link>
-        ) : (
-          <Link className="closeIcon" onClick={closeNav}>
-            <box-icon
-              ref={cruz}
-              name="x"
-              color="#ffffff"
-              size=" 37px"
-            ></box-icon>
-          </Link>
-        )}
 
+      
+        <NavMenu onClick={openNav}>
+            <box-icon
+              ref={ham}
+              name="menu-alt-right"
+              color="#ffffff"
+              size="32px"
+            ></box-icon>
+          </NavMenu>
+       
+
+       
+          <Link className="closeIcon" onClick={closeNav}>
+            <box-icon
+              ref={cruz}
+              name="x"
+              color="#ffffff"
+              size=" 37px"
+            ></box-icon>
+          </Link>
+       
+        
         {/* dropDow menu */}
-
+        
         <Overlay>
-          <Ul>
+          <Ul ref={ul}>
             <Li>
-              {" "}
               <Link to="/collaborations">
-                {" "}
-                <h5>COLLABORATIONS</h5>{" "}
-              </Link>{" "}
+                <h5>COLLABORATIONS</h5>
+              </Link>
             </Li>
 
             <Li>
-              {" "}
               <Link to="/aboutus">
-                {" "}
-                <h5>ABOUT US</h5>{" "}
-              </Link>{" "}
+                <h5>ABOUT US</h5>
+              </Link>
             </Li>
           </Ul>
-        </Overlay>
+        </Overlay> 
 
-        {color ? (
-          <NavMenu onClick={openNav}>
-            <box-icon
-              ref={ham}
-              name="menu-alt-right"
-              color="#222222"
-              size="32px"
-            ></box-icon>
-          </NavMenu>
-        ) : (
-          <NavMenu onClick={openNav}>
-            <box-icon
-              ref={ham}
-              name="menu-alt-right"
-              color="#ffffff"
-              size="32px"
-            ></box-icon>
-          </NavMenu>
-        )}
+       
+       
 
       </NavBar>
     </>

@@ -111,7 +111,13 @@ font-size: medium;
     left: 55px;
 }
 
-
+.overlayMenu{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 40%;
+}
 
 
 

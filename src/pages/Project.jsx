@@ -155,6 +155,7 @@ const Project = () => {
 
   const project = getProjectByid(id);
 
+
   const projectURL = `/assets/${project.id}.jpg`;
 
   const [isLoading, setIsLoading] = useState(true);

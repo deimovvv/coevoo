@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import ProjectList from "../components/ProjectList";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Loader from "../components/Loader";
 import Navbar from "../components/Navbar";
 import Logo from "../components/Logo";
 import { useLayoutEffect } from "react";
+import { lazy } from "react";
+const collaborations = lazy(() => {})
 
 const Container = styled.div`
   display: flex;
@@ -32,7 +34,7 @@ const Collaborations = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useLayoutEffect(() => {
-    setTimeout(() => setIsLoading(false), 1000);
+    setTimeout(() => setIsLoading(false), 1500);
   });
 
   return (
@@ -40,7 +42,8 @@ const Collaborations = () => {
       {isLoading ? (
         <Loader />
       ) : (
-        <Container>
+        <Suspense  fallback="null">
+          <Container>
           <Navbar />
           <Section>
             <Logo />
@@ -48,6 +51,8 @@ const Collaborations = () => {
             <ProjectList publisher="collaborations" />
           </Section>
         </Container>
+        </Suspense>
+        
       )}
     </>
   );

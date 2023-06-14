@@ -40,7 +40,8 @@ const Home = () => {
         ) : (
           <div className="animate__animated animate__fadeIn">
             <Logo />
-            <Navbar />
+            <Navbar /> 
+           
 
             <Copirigth>
               <h5> ©2023 Coevo Studio</h5>
