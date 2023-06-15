@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import "../css/style.css";
-import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const NavBar = styled.div`
   height: 0%;
@@ -44,6 +44,16 @@ const Li = styled.li`
   list-style-type: none;
 `;
 
+const Menu = styled.h4`
+font-family: "Syncopate", sans-serif;
+font-size: 15px;
+ color: white;
+font-weight: 1000;
+margin: 10px;
+
+
+`
+
 const NavMenu = styled.div`
   position: fixed;
   top: 30px;
@@ -51,6 +61,9 @@ const NavMenu = styled.div`
   cursor: pointer;
   height: 1000px;
   z-index: 100000;
+  display: flex;
+
+
 
   @media screen and (max-width: 30em) {
     top: 32px;
@@ -63,6 +76,7 @@ const Navbar = ({ color }) => {
 
   const cruz = useRef();
   const ham = useRef();
+  const menu = useRef()
   const ul = useRef()
 
   const [open, setOpen] = useState(false)
@@ -75,6 +89,8 @@ const Navbar = ({ color }) => {
     ul.current.style.opacity = "1"
 
     cruz.current ? (ham.current.style.display = `none`) : "null";
+    cruz.current ? (menu.current.style.display = `none`) : "null";
+
   }
 
   function closeNav() {
@@ -83,6 +99,9 @@ const Navbar = ({ color }) => {
     nav.current.style.height = `0%`;
     
     cruz.current ? (ham.current.style.display = `block`) : "null";
+    cruz.current ? (menu.current.style.display = `block`) : "null";
+
+
   }
 
   return (
@@ -91,8 +110,9 @@ const Navbar = ({ color }) => {
         {/* Overlay close button */}
 
 
-      
         <NavMenu onClick={openNav}>
+          <Menu 
+          ref={menu} >Menu</Menu>
             <box-icon
               ref={ham}
               name="menu-alt-right"
@@ -116,7 +136,9 @@ const Navbar = ({ color }) => {
         {/* dropDow menu */}
         
         <Overlay>
-          <Ul ref={ul}>
+          <Ul 
+          
+          ref={ul}>
             <Li>
               <Link to="/collaborations">
                 <h5>COLLABORATIONS</h5>

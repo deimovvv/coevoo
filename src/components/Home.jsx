@@ -5,6 +5,7 @@ import styled from "styled-components";
 import "../css/style.css";
 import { useEffect, useState } from "react";
 import Loader from "./Loader";
+import { Link } from "react-router-dom";
 
 const Copirigth = styled.div`
   z-index: 99;
@@ -12,17 +13,17 @@ const Copirigth = styled.div`
   top: 90%;
   left: 51%;
   transform: translateX(-51%);
+  cursor: pointer;
 
-  /* top: 720px;
-left: 620px; */
 
   & > h5 {
     font-family: "Syncopate", sans-serif;
     font-size: 9px;
     color: white;
-    /* color: black; */
     font-weight: 1000;
   }
+
+ 
 `;
 
 const Home = () => {
@@ -44,7 +45,7 @@ const Home = () => {
            
 
             <Copirigth>
-              <h5> ©2023 Coevo Studio</h5>
+            <h5 onClick={() => {}}>  ©2023 Coevo Studio  </h5>
             </Copirigth>
 
             <Experience />
