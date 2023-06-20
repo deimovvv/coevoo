@@ -5,7 +5,7 @@ const projects = [
         'publisher': 'collaborations',
         'date': '20/06',
         'title': 'Fiah',
-       'video': 'https://www.youtube.com/watch?v=NsWotkWNN6g&ab_channel=DivinaGlitch',
+       'video': 'https://www.youtube.com/watch?v=cDmQvqzYUBk&ab_channel=DivinaGlitch',
         'description': 'Video Clip for Artist',
         'client': 'Fiah',
         'technologies': 'Unreal Engine, Blender, Adobe Premier'
