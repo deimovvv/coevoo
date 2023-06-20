@@ -9,7 +9,7 @@ export const getData = ( publisher ) => {
         throw new Error(`${ publisher } is not valid publiser`)
     }
 
-    return projects.filter( project => project.publisher )
+    return projects.filter(project => project.publisher)
 
 }
 

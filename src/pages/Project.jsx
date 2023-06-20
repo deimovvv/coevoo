@@ -151,9 +151,12 @@ const TextContainer = styled.div`
 `;
 
 const Project = () => {
+
   const { id } = useParams();
 
   const project = getProjectByid(id);
+    
+
 
 
   const projectURL = `/assets/${project.id}.jpg`;

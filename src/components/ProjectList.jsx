@@ -1,8 +1,10 @@
 import ProjectCard from "./ProjectCard";
 import { getData } from "../helpers/getData";
+import { useMemo } from "react";
 
 const ProjectList = ({ publisher }) => {
-  const projects = getData(publisher);
+
+  const projects = useMemo( () => getData(publisher), [publisher]);
 
   return (
     <>

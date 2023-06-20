@@ -1,7 +1,5 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import { useEffect } from "react";
 import { motion } from "framer-motion";
 
 const Project = styled.div`
@@ -56,6 +54,7 @@ const H3 = styled.h3`
 `;
 
 const ProjectCard = ({ id, title, publisher, date, description }) => {
+
   const projectURL = `/assets/${id}.jpg`;
 
   return (

@@ -97,6 +97,7 @@ const Navbar = ({ color }) => {
     setOpen(false)
     
     nav.current.style.height = `0%`;
+         
     
     cruz.current ? (ham.current.style.display = `block`) : "null";
     cruz.current ? (menu.current.style.display = `block`) : "null";
@@ -135,9 +136,8 @@ const Navbar = ({ color }) => {
         
         {/* dropDow menu */}
         
-        <Overlay>
+        <Overlay >
           <Ul 
-          
           ref={ul}>
             <Li>
               <Link to="/collaborations">

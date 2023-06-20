@@ -8,8 +8,7 @@ import {
 import styled from "styled-components";
 import "../../css/style.css";
 import { Suspense } from "react";
-import Model from "./Model";
-import Bicho9 from "./Model";
+
 import { FBOParticles } from './FBOParticles'
 
 const Container = styled.div`
@@ -32,7 +31,7 @@ const Experience = () => {
         <directionalLight position={[0, 5, 3]} intensity={0.3} />
         <pointLight color={"purple"} intensity={0.5}></pointLight>
         <pointLight color={"green"} intensity={1.2}></pointLight>
-        <Environment preset="warehouse" blur={0} />
+        
 
         {/* PostProcess */}
         <EffectComposer>

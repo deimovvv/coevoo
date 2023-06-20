@@ -29,6 +29,7 @@ const Section = styled.div`
 `;
 
 const Collaborations = () => {
+  
   const [isLoading, setIsLoading] = useState(true);
 
   useLayoutEffect(() => {
@@ -47,6 +48,7 @@ const Collaborations = () => {
             <Logo />
 
             <ProjectList publisher="collaborations" />
+
           </Section>
         </Container>
         </Suspense>
