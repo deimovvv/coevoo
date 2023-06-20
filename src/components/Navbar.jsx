@@ -59,7 +59,7 @@ const NavMenu = styled.div`
   top: 30px;
   right: 25px;
   cursor: pointer;
-  height: 1000px;
+  height: 50px;
   z-index: 100000;
   display: flex;
 

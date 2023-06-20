@@ -4,7 +4,7 @@ import { Suspense,  useState } from "react";
 import Loader from "../components/Loader";
 import Navbar from "../components/Navbar";
 import Logo from "../components/Logo";
-import { useLayoutEffect } from "react";
+import { useEffect } from "react";
 
 const Container = styled.div`
   display: flex;
@@ -32,26 +32,36 @@ const Collaborations = () => {
   
   const [isLoading, setIsLoading] = useState(true);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     setTimeout(() => setIsLoading(false), 2000);
   });
+
+   // Función para manejar el evento onLoad de las imágenes
+   const handleImageLoad = () => {
+    // Comprueba si todas las imágenes están cargadas
+    // Puedes agregar una lógica adicional aquí si es necesario
+    setIsLoading(false);
+  };
 
   return (
     <>
       {isLoading ? (
+          // Renderiza el Loader mientras isLoading sea true
         <Loader />
       ) : (
-        <Suspense  fallback="null">
+       
           <Container>
           <Navbar />
           <Section>
             <Logo />
-
-            <ProjectList publisher="collaborations" />
+          
+         
+          <ProjectList publisher="collaborations"   onLoad={handleImageLoad} />
+         
 
           </Section>
         </Container>
-        </Suspense>
+      
         
       )}
     </>
