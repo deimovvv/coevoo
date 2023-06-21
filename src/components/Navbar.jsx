@@ -46,7 +46,7 @@ const Li = styled.li`
 
 const Menu = styled.h4`
 font-family: "Syncopate", sans-serif;
-font-size: 15px;
+font-size: 14px;
  color: white;
 font-weight: 1000;
 margin: 10px;

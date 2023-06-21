@@ -6,7 +6,7 @@ const projects = [
         'date': '20/06',
         'title': 'Fiah',
        'video': 'https://www.youtube.com/watch?v=cDmQvqzYUBk&ab_channel=DivinaGlitch',
-        'description': 'Video Clip for Artist',
+        'description': 'Videoclip for Fiah',
         'client': 'Fiah',
         'technologies': 'Unreal Engine, Blender, Adobe Premier'
         
