@@ -10,6 +10,7 @@ import "../../css/style.css";
 import { Suspense } from "react";
 
 import { FBOParticles } from './FBOParticles'
+import Model from "./Model";
 
 const Container = styled.div`
   position: fixed !important;
@@ -45,7 +46,7 @@ const Experience = () => {
 
         {/* 3D MODEL */}
         <Suspense fallback={null}>
-          {/* <Bicho9 />  */}
+          {/* <Model/> */}
           < FBOParticles/>
         </Suspense>
       </Canvas>

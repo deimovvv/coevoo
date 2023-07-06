@@ -47,6 +47,6 @@ function Model(props) {
   );
 }
 
-useGLTF.preload("/bicho10.glb");
+useGLTF.preload("/logomj.glb");
 
 export default Model;
