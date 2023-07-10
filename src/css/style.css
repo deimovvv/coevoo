@@ -162,6 +162,20 @@ font-size: medium;
     text-align: center;
 }
 
+.link{
+    font-family: "Syncopate", sans-serif;
+    font-size: 10px;
+    color: white;
+    font-weight: 1000;
+    z-index: 1000;
+  position: fixed;
+  top: 90%;
+  left: 51%;
+  transform: translateX(-51%);
+
+  }
+
+
 
 @media screen and (max-width: 40em) {
     

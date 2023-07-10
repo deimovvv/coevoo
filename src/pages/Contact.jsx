@@ -112,12 +112,7 @@ const Contact = () => {
         </Iconcontainer>
       </Contactos>
 
-      <Copirigth>
-        <Link to="/copyright">
-          {" "}
-          <Copy> ©2023 Coevo Studio </Copy>{" "}
-        </Link>
-      </Copirigth>
+     
     </Container>
   );
 };

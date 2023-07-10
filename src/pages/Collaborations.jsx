@@ -84,10 +84,10 @@ const Collaborations = () => {
                 
         </Container>
       )}
-      <Copirigth>
-      <Link to="/copyright"
-            > <Copy>  ©2023 Coevo Studio </Copy>  </Link>
-      </Copirigth> 
+
+      {/* <Link className="link" to="/copyright">  ©2023 Coevo Studio   </Link> */}
+           
+
 
     </>
 
