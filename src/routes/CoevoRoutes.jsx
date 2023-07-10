@@ -9,7 +9,7 @@ import Loader from '../components/Loader';
 import { motion } from 'framer-motion';
 import Installations from '../pages/Installations';
 import Contact from '../pages/Contact';
-import CopyRight from '../components/CopyRight';
+import CopyRight from '../pages/Copyright';
 
 
 const CollabRoutes = () => {

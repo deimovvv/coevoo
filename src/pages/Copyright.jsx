@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import Experience from "./experiences/Experience";
-import Logo from "./Logo";
-import Navbar from "./Navbar";
+import Experience from "../components/experiences/Experience";
+import Logo from "../components/Logo";
+import Navbar from "../components/Navbar";
 
 const Div = styled.div`
  height: 100vh;
