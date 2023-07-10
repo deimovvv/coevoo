@@ -150,6 +150,12 @@ const Navbar = ({ color }) => {
                 <h5>ABOUT US</h5>
               </Link>
             </Li>
+
+            <Li>
+              <Link to="/contact">
+                <h5>CONTACT</h5>
+              </Link>
+            </Li>
           </Ul>
         </Overlay> 
 

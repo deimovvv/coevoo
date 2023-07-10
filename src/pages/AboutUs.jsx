@@ -14,7 +14,6 @@ import "../css/style.css";
 const Container = styled.div`
   display: flex;
   justify-content: center;
-
   margin-top: 150px;
 `;
 
@@ -38,21 +37,20 @@ const Section = styled.div`
   }
 `;
 
-const Iconcontainer = styled.div`
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 50px;
-`;
-
-const Emailcontainer = styled.div`
-  text-align: center;
-  margin-top: 50px;
-`;
 
 const Gallery = styled.p`
+
   .gallery {
-    color: whitesmoke;
+    color: #1cb385;
+    text-decoration: underline;
+    
   }
+
+  .gallery:hover{
+    color: whitesmoke;
+
+  }
+
 `;
 
 const Manifiesto = () => {
@@ -103,54 +101,11 @@ const Manifiesto = () => {
                   target="_blank"
                 >
                   {" "}
-                  Here{" "}
+                  here{" "}
                 </Link>
               </Gallery>
-              <Emailcontainer>
-                <Link
-                  className="emailLink"
-                  to={"https://coevo.agency@gmail.com"}
-                  target="_blank"
-                >
-                  {" "}
-                  coevo.agency@gmail.com{" "}
-                </Link>
-              </Emailcontainer>
-              <Iconcontainer>
-                <Link
-                  className="iconContainer"
-                  to={"https://www.linkedin.com/in/coevo-studio-38b3a5265/"}
-                  target="_blank"
-                >
-                  <box-icon
-                    type="logo"
-                    name="linkedin-square"
-                    color="grey"
-                  ></box-icon>
-                </Link>
-
-                <Link
-                  className="iconContainer"
-                  to={"https://www.youtube.com/@coevostudio/videos"}
-                  target="_blank"
-                >
-                  <box-icon type="logo" name="youtube" color="grey"></box-icon>
-                </Link>
-
-                <Link
-                  className="iconContainer"
-                  to={"https://www.instagram.com/_coevo_/"}
-                  target="_blank"
-                >
-                  <box-icon
-                    type="logo"
-                    name="instagram-alt"
-                    color="grey"
-                  ></box-icon>
-                </Link>
-
-              </Iconcontainer>
-
+              
+            
               {/* Team Section */}
               <Team />
             </Section>

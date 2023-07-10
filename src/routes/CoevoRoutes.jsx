@@ -8,6 +8,8 @@ import Project from '../pages/Project';
 import Loader from '../components/Loader';
 import { motion } from 'framer-motion';
 import Installations from '../pages/Installations';
+import CopyModal from '../components/CopyModal';
+import Contact from '../pages/Contact';
 
 
 const CollabRoutes = () => {
@@ -34,6 +36,11 @@ const CollabRoutes = () => {
         <Route path="/aboutus" element={<AboutUs/>} />
         <Route path="/project/:id" element={<Project />} />
         <Route path="/installations" element={<Installations />} />
+        <Route path="/copyright" element={<CopyModal />} />
+        <Route path="/contact" element={<Contact />} />
+
+
+
 
 
 

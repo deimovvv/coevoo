@@ -1,16 +1,17 @@
 import styled from "styled-components";
 import ProjectList from "../components/ProjectList";
-import { Suspense,  useState } from "react";
+import { Suspense, useState } from "react";
 import Loader from "../components/Loader";
 import Navbar from "../components/Navbar";
 import Logo from "../components/Logo";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 150px;
-  margin-bottom: 150px !important;
+  margin-bottom: 100px !important;
 `;
 
 const Section = styled.div`
@@ -28,16 +29,39 @@ const Section = styled.div`
   }
 `;
 
-const Collaborations = () => {
+const Copirigth = styled.div`
+ 
   
+  /* transform: translateX(-51%);  */
+  cursor: pointer;
+  z-index: 99;
+  position:relative;
+  left: 45%;
+  margin-bottom: 5%;
+  
+
+  & > h5 {
+    font-family: "Syncopate", sans-serif;
+    font-size: 10px;
+    color: white;
+    font-weight: 1000;
+  }
+`;
+
+const Copy = styled.h5`
+font-size: 10px;
+  font-family: "Syncopate", sans-serif;
+`;
+
+const Collaborations = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 2000);
   });
 
-   // Función para manejar el evento onLoad de las imágenes
-   const handleImageLoad = () => {
+  // Función para manejar el evento onLoad de las imágenes
+  const handleImageLoad = () => {
     // Comprueba si todas las imágenes están cargadas
     // Puedes agregar una lógica adicional aquí si es necesario
     setIsLoading(false);
@@ -46,25 +70,27 @@ const Collaborations = () => {
   return (
     <>
       {isLoading ? (
-          // Renderiza el Loader mientras isLoading sea true
+        // Renderiza el Loader mientras isLoading sea true
         <Loader />
       ) : (
-       
-          <Container>
+        <Container>
           <Navbar />
           <Section>
             <Logo />
-          
-         
-          <ProjectList publisher="collaborations"   onLoad={handleImageLoad} />
-         
 
+            <ProjectList publisher="collaborations" onLoad={handleImageLoad} />
           </Section>
+
+                
         </Container>
-      
-        
       )}
+      <Copirigth>
+      <Link to="/copyright"
+            > <Copy>  ©2023 Coevo Studio </Copy>  </Link>
+      </Copirigth> 
+
     </>
+
   );
 };
 

@@ -6,6 +6,7 @@ import "../css/style.css";
 import { useEffect, useState } from "react";
 import Loader from "./Loader";
 import { Link } from "react-router-dom";
+import CopyModal from "./CopyModal";
 
 const Copirigth = styled.div`
   z-index: 99;
@@ -16,22 +17,35 @@ const Copirigth = styled.div`
   cursor: pointer;
 
 
-  & > h5 {
+  
+ 
+`;
+
+const Copy = styled.h5`
+font-size: 10px;
+font-family: "Syncopate", sans-serif;
+
+& > h5 {
     font-family: "Syncopate", sans-serif;
     font-size: 9px;
     color: white;
     font-weight: 1000;
   }
 
- 
-`;
+
+`
 
 const Home = () => {
+
   const [isLoading, setIsLoading] = useState(true);
+  const [isOpen, setIsOpen] = useState(false)
+
 
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 1000); // Simula el tiempo de carga de la página
   }, []);
+
+
 
   return (
     <>
@@ -45,8 +59,11 @@ const Home = () => {
            
 
             <Copirigth>
-            <h5 onClick={() => {}}>  ©2023 Coevo Studio  </h5>
+            <Link to="/copyright"> <Copy>  ©2023 Coevo Studio </Copy>  </Link>
             </Copirigth>
+            
+            
+           
 
             <Experience />
           </div>
