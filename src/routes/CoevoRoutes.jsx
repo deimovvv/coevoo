@@ -38,13 +38,8 @@ const CollabRoutes = () => {
         <Route path="/installations" element={<Installations />} />
         <Route path="/copyright" element={<CopyRight />} />
         <Route path="/contact" element={<Contact />} />
-
-
-
-
-
-
       </Routes>
+
       </motion.div>
       
     </>

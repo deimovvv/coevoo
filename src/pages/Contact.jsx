@@ -7,6 +7,7 @@ import Navbar from "../components/Navbar";
 const Container = styled.div`
   height: 100vh;
   background-color: rgba(0.8, 0.8, 0.8, 0.7);
+  z-index: 100000;
 
 `;
 
@@ -111,6 +112,8 @@ const Contact = () => {
           </Link>
         </Iconcontainer>
       </Contactos>
+
+      <Link className="link" to="/copyright">  ©2023 Coevo Studio   </Link>
 
      
     </Container>

@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
 import Logo from "../components/Logo";
+import Experience from "../components/experiences/Experience";
 
 const Section = styled.div`
   margin: 150px 10px;
@@ -221,6 +222,7 @@ const Project = () => {
               </DivImage>
             </CardProject>
           </motion.div>
+       
         </Section>
       )}
     </>

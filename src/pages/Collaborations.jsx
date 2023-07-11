@@ -74,6 +74,7 @@ const Collaborations = () => {
         <Loader />
       ) : (
         <Container>
+          
           <Navbar />
           <Section>
             <Logo />
@@ -81,12 +82,13 @@ const Collaborations = () => {
             <ProjectList publisher="collaborations" onLoad={handleImageLoad} />
           </Section>
 
-                
+          
         </Container>
       )}
 
       {/* <Link className="link" to="/copyright">  ©2023 Coevo Studio   </Link> */}
            
+    
 
 
     </>

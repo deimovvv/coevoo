@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Experience from "../components/experiences/Experience";
 import Logo from "../components/Logo";
@@ -5,14 +6,26 @@ import Navbar from "../components/Navbar";
 
 const Div = styled.div`
  height: 100vh;
-  background-color: rgba(0.8, 0.8, 0.8, 0.7);
+ background-color: rgba(0.8, 0.8, 0.8, 0.7);
+  
   width: 100%;
+  overflow: hidden;
 
   .info{
   
       width: 50%;
-      position: absolute;
-  z-index: 1000;
+      /* position: absolute; */
+  z-index: 10000;
+  height: 100%;
+   display: flex;
+   margin: auto;
+   justify-content: center;
+   align-items: center;
+  text-align: center;
+  right: 350px;
+
+ 
+
 
   }
 
@@ -20,6 +33,11 @@ const Div = styled.div`
 
 const Data = styled.h3`
 color: white;
+
+@media screen and (max-width: 64em) {
+    font-size: 14px;
+   
+  }
 
 `
 
@@ -29,6 +47,7 @@ const CopyRight = () => {
     <Div >
         <Logo/>
         <Navbar/>
+        <Experience/>
 
         <div className="info" >
         <Data  className="animate__animated animate__fadeIn" >
@@ -38,7 +57,11 @@ const CopyRight = () => {
       </Data>
       </div>
 
-      <Experience/>
+    
+
+      <Link className="link" to="/copyright">  ©2023 Coevo Studio   </Link>
+
+           
        
 
     </Div>
