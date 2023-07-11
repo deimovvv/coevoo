@@ -7,6 +7,7 @@ import Navbar from "../components/Navbar";
 const Div = styled.div`
  height: 100vh;
  background-color: rgba(0.8, 0.8, 0.8, 0.7);
+
   
   width: 100%;
   overflow: hidden;
@@ -15,7 +16,7 @@ const Div = styled.div`
   
       width: 50%;
       /* position: absolute; */
-  z-index: 10000;
+      z-index: 10000;
   height: 100%;
    display: flex;
    margin: auto;
@@ -33,6 +34,7 @@ const Div = styled.div`
 
 const Data = styled.h3`
 color: white;
+z-index: 100;
 
 @media screen and (max-width: 64em) {
     font-size: 14px;
