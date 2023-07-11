@@ -7,7 +7,7 @@ import Navbar from "../components/Navbar";
 const Container = styled.div`
   height: 100vh;
   background-color: rgba(0.8, 0.8, 0.8, 0.7);
-  z-index: 100000;
+ 
 
 `;
 
@@ -20,6 +20,8 @@ const Iconcontainer = styled.div`
 const Contactos = styled.div`
     position: relative;
     top: 40%;
+  z-index: 100000;
+
 
 
 `
