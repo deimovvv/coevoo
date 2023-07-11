@@ -7,6 +7,7 @@ import Navbar from "../components/Navbar";
 const Div = styled.div`
  height: 100vh;
  background-color: rgba(0.8, 0.8, 0.8, 0.7);
+ z-index: 10 !important;
 
   
   width: 100%;
@@ -15,8 +16,6 @@ const Div = styled.div`
   .info{
   
       width: 50%;
-      /* position: absolute; */
-      z-index: 10000;
   height: 100%;
    display: flex;
    margin: auto;
