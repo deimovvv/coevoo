@@ -78,12 +78,11 @@ const Navbar = ({ color }) => {
   const ham = useRef();
   const menu = useRef()
   const ul = useRef()
-  const cruzLink = useRef()
 
   const [open, setOpen] = useState(false)
 
   function openNav() {
-    setOpen(true)
+    setOpen(!open)
 
     nav.current.style.height = `100%`;
     ul.current.style.animationDelay  = 2
@@ -96,7 +95,7 @@ const Navbar = ({ color }) => {
   }
 
   function closeNav() {
-    setOpen(false)
+    setOpen(open)
     
     nav.current.style.height = `0%`;
          
@@ -123,10 +122,7 @@ const Navbar = ({ color }) => {
               color="#ffffff"
               size="32px"
             ></box-icon>
-          </NavMenu>
-       
-
-       
+          </NavMenu>       
           <a onClick={closeNav} className="closeIcon">
             <box-icon
               ref={cruz}
@@ -138,7 +134,6 @@ const Navbar = ({ color }) => {
        
         
         {/* dropDow menu */}
-        
         <Overlay >
           <Ul 
           ref={ul}>
