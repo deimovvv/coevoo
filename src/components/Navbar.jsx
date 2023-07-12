@@ -103,8 +103,6 @@ const Navbar = ({ color }) => {
     cruz.current ? (menu.current.style.display = `block`) : "null";
 
 
-
-
   }
 
   return (
@@ -122,13 +120,14 @@ const Navbar = ({ color }) => {
               color="#ffffff"
               size="32px"
             ></box-icon>
-          </NavMenu>       
+          </NavMenu>     
+
           <a onClick={closeNav} className="closeIcon">
             <box-icon
               ref={cruz}
               name="x"
               color="#ffffff"
-              size="38px"
+              size="45px"
             ></box-icon>
           </a>
        
