@@ -5,9 +5,12 @@ import Logo from "../components/Logo";
 import Navbar from "../components/Navbar";
 
 const Container = styled.div`
-  height: 100vh;
-  background-color: rgba(0.8, 0.8, 0.8, 0.7);
-  
+  width: 100%;
+  position: fixed;
+  z-index: 9999999;
+  height: 762px;
+  background-color: rgba(2, 2, 2, 0.7);
+  overflow-y: hidden;
 `;
 
 const Iconcontainer = styled.div`
@@ -17,59 +20,33 @@ const Iconcontainer = styled.div`
 `;
 
 const Contactos = styled.div`
-    position: relative;
-    top: 40%;
+  position: relative;
+  top: 40%;
   z-index: 100000;
-`
+`;
 
 const Emailcontainer = styled.div`
   text-align: center;
 
-  .work-us{
-  font-family: "Syncopate", sans-serif;
-  padding-bottom: 40px;
-  font-size: 16px;
-  
-
-  }
- 
-`;
-
-const Copirigth = styled.div`
-  /* transform: translateX(-51%);  */
-  cursor: pointer;
-  position: relative;
-  top: 68.5%;
-  left: 46%;
-
-  & > h5 {
+  .work-us {
     font-family: "Syncopate", sans-serif;
-    font-size: 10px;
-    color: white;
-    font-weight: 1000;
+    padding-bottom: 40px;
+    font-size: 16px;
   }
 `;
 
-const Copy = styled.h5`
-  font-size: 10px;
-  font-family: "Syncopate", sans-serif;
-`;
 
 const Contact = () => {
-
-
   return (
     <Container>
-        
       <Logo />
       <Experience />
       <Navbar />
-      
-      <Contactos  className="animate__animated animate__fadeIn">
-          
+
+      <Contactos className="animate__animated animate__fadeIn">
         <Emailcontainer>
-        <h2 className="work-us" >Work with us</h2>
-        
+          <h2 className="work-us">Work with us</h2>
+
           <Link
             className="emailLink"
             to={"https://coevo.agency@gmail.com"}
@@ -88,7 +65,7 @@ const Contact = () => {
             <box-icon
               type="logo"
               name="linkedin-square"
-              color="grey"
+              color="#bfbfbf"
             ></box-icon>
           </Link>
 
@@ -97,7 +74,7 @@ const Contact = () => {
             to={"https://www.youtube.com/@coevostudio/videos"}
             target="_blank"
           >
-            <box-icon type="logo" name="youtube" color="grey"></box-icon>
+            <box-icon type="logo" name="youtube" color="#bfbfbf"></box-icon>
           </Link>
 
           <Link
@@ -105,14 +82,15 @@ const Contact = () => {
             to={"https://www.instagram.com/_coevo_/"}
             target="_blank"
           >
-            <box-icon type="logo" name="instagram-alt" color="grey"></box-icon>
+            <box-icon type="logo" name="instagram-alt" color="#bfbfbf"></box-icon>
           </Link>
         </Iconcontainer>
       </Contactos>
 
-      <Link className="link" to="/copyright">  ©2023 Coevo Studio   </Link>
-
-     
+      <Link className="link" to="/copyright">
+        {" "}
+        ©2023 Coevo Studio{" "}
+      </Link>
     </Container>
   );
 };

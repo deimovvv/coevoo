@@ -7,19 +7,15 @@ import { useEffect, useState } from "react";
 import Loader from "./Loader";
 import { Link } from "react-router-dom";
 
- 
+
 
 const Home = () => {
-
   const [isLoading, setIsLoading] = useState(true);
-  const [isOpen, setIsOpen] = useState(false)
-
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 1000); // Simula el tiempo de carga de la página
   }, []);
-
-
 
   return (
     <>
@@ -29,18 +25,11 @@ const Home = () => {
         ) : (
           <div className="animate__animated animate__fadeIn">
             <Logo />
-            <Navbar /> 
-           
- 
-           
-            <Link className="link" to="/copyright">  ©2023 Coevo Studio   </Link>
-           
+            <Navbar />
 
-     
-
-         
-            
-           
+            <Link className="link" to="/copyright">
+              ©2023 Coevo Studio
+            </Link>
 
             <Experience />
           </div>

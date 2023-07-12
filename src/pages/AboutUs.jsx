@@ -10,7 +10,6 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import "../css/style.css";
 
-
 const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -37,20 +36,15 @@ const Section = styled.div`
   }
 `;
 
-
 const Gallery = styled.p`
-
   .gallery {
     color: #1cb385;
     text-decoration: underline;
-    
   }
 
-  .gallery:hover{
+  .gallery:hover {
     color: whitesmoke;
-
   }
-
 `;
 
 const Manifiesto = () => {
@@ -104,8 +98,6 @@ const Manifiesto = () => {
                   here{" "}
                 </Link>
               </Gallery>
-              
-            
               {/* Team Section */}
               <Team />
             </Section>

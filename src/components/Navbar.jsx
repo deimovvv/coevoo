@@ -12,7 +12,6 @@ const NavBar = styled.div`
   z-index: 9999999;
   left: 0%;
   top: 0%;
-  /* background-color: #bfbdbdb8; */
   background-color: rgba(0.8, 0.8, 0.8, 0.7);
   overflow-y: hidden;
   transform: 0.5s;
