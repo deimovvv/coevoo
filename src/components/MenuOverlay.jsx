@@ -61,7 +61,7 @@ const MenuOverlay = () => {
     <>
       <header className="header">
         <div onClick={isOpen} className="menu">
-        <Menu ref={menu} >Menu</Menu>
+        <Menu ref={menu} >menu</Menu>
           <box-icon
             name="menu-alt-right"
             color="#ffffff"
