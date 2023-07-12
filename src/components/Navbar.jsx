@@ -31,6 +31,8 @@ const Overlay = styled.div`
   flex-direction: column;
   position: relative;
   top: 40%;
+
+
 `;
 
 const Ul = styled.ul``;
@@ -76,6 +78,7 @@ const Navbar = ({ color }) => {
   const ham = useRef();
   const menu = useRef()
   const ul = useRef()
+  const cruzLink = useRef()
 
   const [open, setOpen] = useState(false)
 
@@ -85,6 +88,7 @@ const Navbar = ({ color }) => {
     nav.current.style.height = `100%`;
     ul.current.style.animationDelay  = 2
     ul.current.style.opacity = "1"
+    
 
     cruz.current ? (ham.current.style.display = `none`) : "null";
     cruz.current ? (menu.current.style.display = `none`) : "null";
@@ -99,6 +103,8 @@ const Navbar = ({ color }) => {
     
     cruz.current ? (ham.current.style.display = `block`) : "null";
     cruz.current ? (menu.current.style.display = `block`) : "null";
+
+
 
 
   }
@@ -122,12 +128,13 @@ const Navbar = ({ color }) => {
        
 
        
-          <Link className="closeIcon" onClick={closeNav}>
+          <Link  className="closeIcon">
             <box-icon
               ref={cruz}
+              onClick={closeNav}
               name="x"
               color="#ffffff"
-              size=" 37px"
+              size="38px"
             ></box-icon>
           </Link>
        
