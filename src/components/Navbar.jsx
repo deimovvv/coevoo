@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import "../css/style.css";
 import { useState } from "react";
-import { motion } from "framer-motion";
 
 const NavBar = styled.div`
   height: 0%;
@@ -12,7 +11,7 @@ const NavBar = styled.div`
   z-index: 9999999;
   left: 0%;
   top: 0%;
-  background-color: rgba(0.8, 0.8, 0.8, 0.7);
+  background-color: rgba(0.2, 0.2, 0.2, 0.8);
   overflow-y: hidden;
   transform: 0.5s;
 

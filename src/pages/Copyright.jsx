@@ -46,8 +46,8 @@ const Data = styled.h3`
 const CopyRight = () => {
   return (
     <Div>
-      <Logo />
-      <Navbar />
+      <Logo /> 
+       <Navbar /> 
       <Experience />
 
       <DataContainer className="info">
