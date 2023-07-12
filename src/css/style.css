@@ -28,6 +28,7 @@ body {
   width: 100%;
   height: 100vh;
   flex-direction: column;
+  
 }
 
 .header{
@@ -50,18 +51,20 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  margin-right: 30px;
 }
 
 .menu_container{
   position: absolute;
   width: 100%;
-  height: 100%;
+  max-height: 100% !important;
   background-color: rgba(0.2, 0.2, 0.2, 0.8);
   z-index: 9999999;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  top: 0;
 }
 
 .link_menu{
@@ -82,8 +85,8 @@ font-family: "Syncopate", sans-serif;
   width: 58%;
   height: 58px;
   position: absolute;
-  top: 5px;
-  right: 2px;
+  top: 10px;
+  right: 4px;
   cursor: pointer;
   padding: 0 20px;
 
@@ -239,4 +242,12 @@ h5 {
   .gallery {
     font-size: 1rem;
   }
+}
+
+.menu{
+  right: 5px;
+}
+
+.link_menu{
+  font-size: 12px;
 }

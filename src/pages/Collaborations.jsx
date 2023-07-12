@@ -6,12 +6,14 @@ import Navbar from "../components/Navbar";
 import Logo from "../components/Logo";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import MenuOverlay from "../components/MenuOverlay";
 
 const Container = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 150px;
   margin-bottom: 100px !important;
+  z-index: -1;
 `;
 
 const Section = styled.div`
@@ -73,9 +75,13 @@ const Collaborations = () => {
         // Renderiza el Loader mientras isLoading sea true
         <Loader />
       ) : (
+        
         <Container>
           
-          <Navbar />
+        
+          <MenuOverlay/>
+         
+
           <Section>
             <Logo />
 

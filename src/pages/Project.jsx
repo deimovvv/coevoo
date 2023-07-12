@@ -11,6 +11,7 @@ import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
 import Logo from "../components/Logo";
 import Experience from "../components/experiences/Experience";
+import MenuOverlay from "../components/MenuOverlay";
 
 const Section = styled.div`
   margin: 150px 10px;
@@ -174,7 +175,7 @@ const Project = () => {
         <Loader />
       ) : (
         <Section id="project-section">
-          <Navbar />
+          <MenuOverlay/>
           <Logo />
 
           <motion.div

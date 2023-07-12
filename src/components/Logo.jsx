@@ -3,11 +3,12 @@ import styled from "styled-components";
 
 const Container = styled.div`
   position: fixed;
-  z-index: 1000;
+  z-index: 999999;
   margin: 0;
   padding: 0;
   top: 32px;
   left: 38px;
+  display: block;
 
   @media screen and (max-width: 30em) {
     top: 32px;

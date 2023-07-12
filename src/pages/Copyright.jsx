@@ -2,13 +2,14 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Experience from "../components/experiences/Experience";
 import Logo from "../components/Logo";
+import MenuOverlay from "../components/MenuOverlay";
 import Navbar from "../components/Navbar";
 
 const Div = styled.div`
  width: 100%;
   position: fixed;
   z-index: 9999999;
-  height: 762px;
+  height: 100vh;
   background-color: rgba(2, 2, 2, 0.7);
   overflow-y: hidden;
 
@@ -47,7 +48,8 @@ const CopyRight = () => {
   return (
     <Div>
       <Logo /> 
-       <Navbar /> 
+      <MenuOverlay/>
+
       <Experience />
 
       <DataContainer className="info">

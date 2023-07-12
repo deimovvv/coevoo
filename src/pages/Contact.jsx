@@ -2,13 +2,14 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Experience from "../components/experiences/Experience";
 import Logo from "../components/Logo";
+import MenuOverlay from "../components/MenuOverlay";
 import Navbar from "../components/Navbar";
 
 const Container = styled.div`
   width: 100%;
   position: fixed;
   z-index: 9999999;
-  height: 762px;
+  height: 100vh;
   background-color: rgba(2, 2, 2, 0.7);
   overflow-y: hidden;
   @media screen and (max-width: 64em) {
@@ -26,7 +27,7 @@ const Iconcontainer = styled.div`
 const Contactos = styled.div`
   position: relative;
   top: 40%;
-  z-index: 100000;
+  z-index: 0;
 
    @media screen and (max-width: 64em) {
     font-size: 14px;
@@ -50,7 +51,8 @@ const Contact = () => {
     <Container>
       <Logo />
       <Experience />
-      <Navbar />
+     
+      <MenuOverlay/>
 
       <Contactos className="animate__animated animate__fadeIn">
         <Emailcontainer>

@@ -16,7 +16,7 @@ const Container = styled.div`
   position: fixed !important;
   width: 100%;
   height: 100vh;
-  z-index: 1;
+  z-index: -1;
   margin: 0;
   padding: 0;
   background-color: rgba(2, 2, 2, 0.7);

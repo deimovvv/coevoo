@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import "../css/style.css";
+import MenuOverlay from "../components/MenuOverlay";
 
 const Container = styled.div`
   display: flex;
@@ -60,7 +61,8 @@ const Manifiesto = () => {
         <Loader />
       ) : (
         <Container className="animate__animated animate__fadeIn">
-          <Navbar />
+         {/*  <Navbar /> */}
+          <MenuOverlay/>
           <LogoNegro color="white" />
           <motion.div
             initial={{ y: 200, opacity: 0.9 }}
