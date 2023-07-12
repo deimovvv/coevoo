@@ -79,7 +79,8 @@ h5 {
   position: absolute;
   top: 26px;
   right: 22px;
-  padding: 5px;
+  cursor: pointer;
+
 }
 
 .arrow {

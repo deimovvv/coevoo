@@ -100,7 +100,6 @@ const Navbar = ({ color }) => {
     
     nav.current.style.height = `0%`;
          
-    
     cruz.current ? (ham.current.style.display = `block`) : "null";
     cruz.current ? (menu.current.style.display = `block`) : "null";
 
@@ -128,15 +127,14 @@ const Navbar = ({ color }) => {
        
 
        
-          <Link  className="closeIcon">
+          <a onClick={closeNav} className="closeIcon">
             <box-icon
               ref={cruz}
-              onClick={closeNav}
               name="x"
               color="#ffffff"
               size="38px"
             ></box-icon>
-          </Link>
+          </a>
        
         
         {/* dropDow menu */}
