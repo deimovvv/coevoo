@@ -1,6 +1,8 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Experience from "../components/experiences/Experience";
+import Loader from "../components/Loader";
 import Logo from "../components/Logo";
 import MenuOverlay from "../components/MenuOverlay";
 import Navbar from "../components/Navbar";
@@ -45,8 +47,17 @@ const Data = styled.h3`
 `;
 
 const CopyRight = () => {
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => setIsLoading(false), 500);
+  });
+
+
   return (
-    <Div>
+    <>
+    {isLoading ? <Loader/> :   <Div>
       <Logo /> 
       <MenuOverlay/>
 
@@ -66,7 +77,9 @@ const CopyRight = () => {
         {" "}
         ©2023 Coevo Studio{" "}
       </Link>
-    </Div>
+    </Div> }
+  
+    </>
   );
 };
 

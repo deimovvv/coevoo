@@ -1,6 +1,8 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Experience from "../components/experiences/Experience";
+import Loader from "../components/Loader";
 import Logo from "../components/Logo";
 import MenuOverlay from "../components/MenuOverlay";
 import Navbar from "../components/Navbar";
@@ -47,8 +49,19 @@ const Emailcontainer = styled.div`
 
 
 const Contact = () => {
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => setIsLoading(false), 500);
+  });
+
+
   return (
+    <>
+    { isLoading ? <Loader/> : 
     <Container>
+      
       <Logo />
       <Experience />
      
@@ -103,6 +116,8 @@ const Contact = () => {
         ©2023 Coevo Studio{" "}
       </Link>
     </Container>
+  }
+  </>
   );
 };
 
