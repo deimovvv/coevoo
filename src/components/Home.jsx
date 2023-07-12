@@ -6,6 +6,7 @@ import "../css/style.css";
 import { useEffect, useState } from "react";
 import Loader from "./Loader";
 import { Link } from "react-router-dom";
+import MenuOverlay from "./MenuOverlay";
 
 
 
@@ -25,7 +26,8 @@ const Home = () => {
         ) : (
           <div className="animate__animated animate__fadeIn">
             <Logo />
-            <Navbar />
+           {/*  <Navbar /> */}
+            <MenuOverlay/>
 
             <Link className="link" to="/copyright">
               ©2023 Coevo Studio

@@ -15,10 +15,81 @@ body {
   /*  height: 100%; */
 }
 
+.dflex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .wrapper {
   position: relative;
   overflow: hidden;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
 }
+
+.header{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 58px;
+  padding: 0 20px;
+  position: absolute;
+  z-index: 9999;
+  top: 10px;
+  
+}
+
+.menu{
+  width: 58px;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.menu_container{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0.2, 0.2, 0.2, 0.8);
+  z-index: 9999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.link_menu{
+  display: inline-flex;
+  height: 50px;
+  overflow: hidden;
+  text-transform: uppercase;
+font-family: "Syncopate", sans-serif;
+
+
+
+}
+
+.btn_close{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 58%;
+  height: 58px;
+  position: absolute;
+  top: 5px;
+  right: 2px;
+  cursor: pointer;
+  padding: 0 20px;
+
+}
+
+
 
 a {
   text-decoration: none;
