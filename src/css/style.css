@@ -66,6 +66,7 @@ body {
   align-items: center;
   flex-direction: column;
   top: 0;
+  position: fixed;
 }
 
 .link_menu{
@@ -251,4 +252,13 @@ h5 {
 
 .link_menu{
   font-size: 12px;
+}
+
+@media screen and (max-width: 64em) {
+
+
+h5{
+  font-size: 12px;
+}
+
 }
