@@ -11,6 +11,10 @@ const Container = styled.div`
   height: 762px;
   background-color: rgba(2, 2, 2, 0.7);
   overflow-y: hidden;
+  @media screen and (max-width: 64em) {
+    padding-bottom: 100px;
+   
+  }
 `;
 
 const Iconcontainer = styled.div`
@@ -23,6 +27,11 @@ const Contactos = styled.div`
   position: relative;
   top: 40%;
   z-index: 100000;
+
+   @media screen and (max-width: 64em) {
+    font-size: 14px;
+   
+  }
 `;
 
 const Emailcontainer = styled.div`

@@ -28,6 +28,7 @@ const DataContainer = styled.section`
     .developers{
       color: #1cb385;
     text-decoration: underline;
+    font-size: 14px;
     }
 
 `
