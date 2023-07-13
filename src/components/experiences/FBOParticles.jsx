@@ -11,7 +11,7 @@ import fragmentShader from './fragmentShader';
 extend({ SimulationMaterial: SimulationMaterial });
 
 export const FBOParticles = () => {
-  const size = 222;
+  const size = 111;
 
   const points = useRef();
   const simulationMaterialRef = useRef();

@@ -68,7 +68,7 @@ body {
   flex-direction: column;
   top: 0;
   position: fixed;
- 
+   
 }
 
 .link_menu{
@@ -135,6 +135,7 @@ h3 {
 /* links */
 h5 {
   font-size: medium;
+
 }
 
 .loader {
@@ -260,9 +261,13 @@ h5 {
 
 @media screen and (max-width: 64em) {
 
+  
 
+ 
 h5{
-  font-size: 12px;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
 }
 
 }

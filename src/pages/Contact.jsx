@@ -12,8 +12,9 @@ const Container = styled.div`
   position: fixed;
   z-index: 9999999;
   height: 100vh;
-  background-color: rgba(2, 2, 2, 0.7);
   overflow-y: hidden;
+  background-color: rgba(0.2, 0.2, 0.2, 0.6);
+
   @media screen and (max-width: 64em) {
     padding-bottom: 100px;
    

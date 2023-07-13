@@ -65,7 +65,7 @@ const CopyRight = () => {
 
       <DataContainer className="info">
         <Data className="animate__animated animate__fadeIn">
-          All the content in this website is the copyrighted of Coevo Studio and
+          The content of this website is the copyrighted of Coevo Studio and
           their clients. Its prohibited distribute or publish any content
           without the prior written consent of the Studio. The design and
           develop of this website was created by <a className="developers" href="https://www.instagram.com/deimovvv"target="_blank"> Deimov </a>and <a className="developers" href="https://www.instagram.com/keyla___000/" target="_blank">Keyla</a> , for web

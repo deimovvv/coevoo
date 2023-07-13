@@ -14,10 +14,10 @@ const projects = [
     {
         'id': 'Artic',
         'publisher': 'collaborations',
-        'date': '13/0y',
+        'date': '13/07',
         'title': 'Realistic Landscape',
        'video': 'https://www.youtube.com/watch?v=iHV8JBfzrTg',
-        'description': 'We create this landscape',
+        'description': 'Practice Realistic Landscape',
         'client': 'Coevo-studio',
         'technologies': 'Unreal Engine 5.1'
         
