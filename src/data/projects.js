@@ -11,6 +11,17 @@ const projects = [
         'technologies': 'Unreal Engine, Blender, Adobe Premier'
         
     },
+    {
+        'id': 'Artic',
+        'publisher': 'collaborations',
+        'date': '13/0y',
+        'title': 'Realistic Landscape',
+       'video': 'https://www.youtube.com/watch?v=iHV8JBfzrTg',
+        'description': 'We create this landscape',
+        'client': 'Coevo-studio',
+        'technologies': 'Unreal Engine 5.1'
+        
+    },
 
     {
         'id': 'Roterton',
