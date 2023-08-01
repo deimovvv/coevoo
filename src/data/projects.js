@@ -17,9 +17,20 @@ const projects = [
         'date': '13/07',
         'title': 'Realistic Landscape',
        'video': 'https://www.youtube.com/watch?v=iHV8JBfzrTg',
-        'description': 'Practice Realistic Landscape',
+        'description': 'Environment Design',
         'client': 'Coevo-studio',
         'technologies': 'Unreal Engine 5.1'
+        
+    },
+    {
+        'id': 'Audi',
+        'publisher': 'collaborations',
+        'date': '02/07',
+        'title': 'Fiah',
+       'video': 'https://www.youtube.com/watch?v=UGQMYhJdl_8',
+        'description': 'Product Visualization',
+        'client': 'Coevo',
+        'technologies': 'Unreal Engine, Blender, Adobe Premier'
         
     },
 

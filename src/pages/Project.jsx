@@ -204,11 +204,12 @@ const Project = () => {
               <DivImage className="animate__animated animate__fadeIn">
                 <Img src={projectURL} alt="" />
                 {project.image && project.image2 ? (
+
                   <DivImagenes>
-                  
                     <Img2 src={project.image} alt="" />{" "}
                     <Img2 src={project.image2} alt="" />{" "}
                   </DivImagenes>
+                  
                 ) : null}
                 {project.video ? (
                   <ReactPlayer
