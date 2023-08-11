@@ -29,6 +29,8 @@ const Home = () => {
            {/*  <Navbar /> */}
             <MenuOverlay/>
 
+           
+
             <Link className="link" to="/copyright">
               ©2023 Coevo Studio
             </Link>

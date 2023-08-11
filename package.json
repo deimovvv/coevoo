@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@cloudinary/react": "^1.11.2",
+    "@cloudinary/url-gen": "^1.11.1",
     "@react-email/link": "0.0.4",
     "@react-three/drei": "^9.57.2",
     "@react-three/fiber": "^8.12.0",

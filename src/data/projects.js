@@ -5,12 +5,49 @@ const projects = [
         'publisher': 'collaborations',
         'date': '20/06',
         'title': 'Fiah',
-       'video': 'https://www.youtube.com/watch?v=cDmQvqzYUBk&ab_channel=DivinaGlitch',
+       'video': 'https://www.youtube.com/watch?v=UR_d1DSDtvc',
         'description': 'Videoclip for Fiah',
         'client': 'Fiah',
-        'technologies': 'Unreal Engine, Blender, Adobe Premier'
+        'technologies': 'Unreal Engine, Blender, Adobe Premier',
+        'type': 'image'
         
     },
+    {
+        'id': 'Remix-Facu',
+        'publisher': 'collaborations',
+        'date': '20/06',
+        'title': 'Divina',
+       'video': 'https://www.youtube.com/watch?v=4xNtGSmIy9U',
+        'description': 'Visualizer for Divina Glitch',
+        'client': 'Divina',
+        'technologies': 'Unreal Engine, Blender, Adobe Premier',
+        'type': 'image'
+        
+    },
+    {
+        'id': 'KMILA',
+        'publisher': 'collaborations',
+        'date': '11/06',
+        'title': 'Fiah',
+       'video': 'https://www.youtube.com/watch?v=g18jd8X-JpQ&t=1s',
+        'description': 'Virtual Production for KMILA - Erotica in Motion',
+        'client': 'Fiah',
+        'technologies': 'Unreal Engine, Adobe Premier',
+        'type': 'image'
+        
+    },
+    /* {
+        'id': 'PCG',
+        'publisher': 'collaborations',
+        'date': '04/08',
+        'title': 'PCG Content',
+       'video': 'https://www.youtube.com/watch?v=mSKksYOPXCc',
+        'description': 'Environment with Unreal Engine',
+        'client': 'Coevo',
+        'technologies': 'Unreal Engine 5.2',
+        'type': 'image'
+        
+    }, */
     {
         'id': 'Artic',
         'publisher': 'collaborations',
@@ -19,7 +56,8 @@ const projects = [
        'video': 'https://www.youtube.com/watch?v=iHV8JBfzrTg',
         'description': 'Environment Design',
         'client': 'Coevo-studio',
-        'technologies': 'Unreal Engine 5.1'
+        'technologies': 'Unreal Engine 5.1',
+        'type': 'image'
         
     },
     {
@@ -27,10 +65,11 @@ const projects = [
         'publisher': 'collaborations',
         'date': '02/07',
         'title': 'Fiah',
-       'video': 'https://www.youtube.com/watch?v=UGQMYhJdl_8',
+        'video': 'https://www.youtube.com/watch?v=UGQMYhJdl_8',
         'description': 'Product Visualization',
         'client': 'Coevo',
-        'technologies': 'Unreal Engine, Blender, Adobe Premier'
+        'technologies': 'Unreal Engine, Blender, Adobe Premier',
+        'type': 'image'
         
     },
 
@@ -44,11 +83,54 @@ const projects = [
        'video': 'https://www.youtube.com/watch?v=pUe8FA5ncso',
         'description': 'Virtual Reality experience for Party',
         'client': 'Roterton',
-        'technologies': 'Unreal Engine, Blender, ChatGPT'
+        'technologies': 'Unreal Engine, Blender, ChatGPT',
+        'type': 'image'
         
+        
+    },
+    {
+        'id': 'delight',
+        'publisher': 'collaborations',
+        'date': '02/23',
+        'title': 'Delight',
+        'description': 'Audiovisual Art for Cloth Brand',
+        'client': 'Delight',
+        'technologies': 'Unreal Engine, Marvelous Designer & After Effects',
+         'video': 'https://youtu.be/hjbuKv4GKuc',
+         'type': 'image'
+    
     },
 
 
+    
+
+    {
+          'id': 'Dease',
+          'publisher': 'collaborations',
+          'date': '03/23',
+          'title': 'Dease',
+          'image': '/public/assets/Dease.jpg',
+          'description': 'Visual Art for album cover',
+          'client': 'Dease',
+          'technologies': 'Unreal Engine, Blender & Photoshop',
+          'type': 'image'
+      
+      },
+      {
+        'id': 'partyplane',
+        'publisher': 'collaborations',
+        'date': '12/22',
+        'title': 'Divina Glitch',
+        'description': 'Videoclip for Divina Glitch',
+        'client': 'Divina Glitch',
+        'technologies': 'Unreal Engine, Blender, Adobe Premier',
+        'video': 'https://www.youtube.com/watch?v=K-GqiwfEEA8',
+        'type': 'image'
+        
+    
+    
+    },
+    
     {
         'id': 'Rechi',
         'publisher': 'collaborations',
@@ -60,59 +142,11 @@ const projects = [
         'description': 'Videoclip for Rechi',
         'client': 'Rechi',
         'technologies': 'Unreal Engine, Marvelous Designer, Substance Painter, Adobe Premier',
+        'type': 'image'
         
     },
-
-    {
-          'id': 'Dease',
-          'publisher': 'collaborations',
-          'date': '03/23',
-          'title': 'Dease',
-          'image': '/public/assets/Dease.jpg',
-          'description': 'Visual Art for album cover',
-          'client': 'Dease',
-          'technologies': 'Unreal Engine, Blender & Photoshop'
-      
-      },
-      {
-        'id': 'partyplane',
-        'publisher': 'collaborations',
-        'date': '12/22',
-        'title': 'Divina Glitch',
-        'description': 'Videoclip for Divina Glitch',
-        'client': 'Divina Glitch',
-        'technologies': 'Unreal Engine, Blender, Adobe Premier',
-        'video': 'https://www.youtube.com/watch?v=K-GqiwfEEA8'
-        
-    
-    
-    },
-    
-  
-  {
-      'id': 'rave',
-      'publisher': 'collaborations',
-      'date': '03/23',
-      'title': 'Rave Party',
-      'description': 'Visual Art for 1322',
-      'client': 'Rave 1312',
-      'technologies': 'Unreal Engine & Blender',
-      'video': 'youtube.com/shorts/zqDZuFh7wYw'
-  
-  },
   
   
-  {
-      'id': 'delight',
-      'publisher': 'collaborations',
-      'date': '02/23',
-      'title': 'Delight',
-      'description': 'Audiovisual Art for Cloth Brand',
-      'client': 'Delight',
-      'technologies': 'Unreal Engine, Marvelous Designer & After Effects',
-       'video': 'https://youtu.be/hjbuKv4GKuc'
-  
-  },
   {
       'id': 'racodeloix1',
       'publisher': 'collaborations',
@@ -121,7 +155,8 @@ const projects = [
       'description': 'Audiovisual Art for Cloth Brand',
       'client': 'Raco de Loix',
       'technologies': 'Unreal Engine, Marvelous Designer & After Effects',
-      'video': 'https://youtu.be/Mw39CJpcKbE'
+      'video': 'https://youtu.be/Mw39CJpcKbE',
+      'type': 'image'
       
   
   
@@ -136,6 +171,7 @@ const projects = [
       'description': 'Visual Art for Deimov',
       'client': 'Deimov',
       'technologies': 'Stable Diffusion, Photoshop',
+      'type': 'image'
       
   
   

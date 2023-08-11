@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Cloudinary } from "@cloudinary/url-gen";
 
 const Project = styled.div`
   margin: 0%;
@@ -53,9 +54,27 @@ const H3 = styled.h3`
   bottom: 25px;
 `;
 
-const ProjectCard = ({ id, title, publisher, date, description }) => {
+const Video = styled.video`
+width: 440px;
+  height: 440px;
+  margin-top: 0%;
+`
+const cld = new Cloudinary({
+  cloud: {
+    cloudName: 'dgina7ff6'
+  }
+});
+
+
+
+
+const ProjectCard = ({ id, title, publisher, date, description, type }) => {
 
   const projectURL = `/assets/${id}.jpg`;
+  const projectVideo = `/assets/videos/${id}.mp4`;
+
+  
+
 
   return (
     <motion.div
@@ -68,8 +87,22 @@ const ProjectCard = ({ id, title, publisher, date, description }) => {
           <Link
             onClick={() => handleClick("project-section")}
             to={`/project/${id}`}
-          >
-            <IMG src={projectURL} />
+          > 
+          { type === 'image' && (
+             <IMG src={projectURL} />
+          )}
+           { type === 'video' && (
+
+              <Video 
+              controls  
+              src={cld.video(`/assets/videos/${id}.mp4`).toURL}
+             />
+ 
+          )} 
+ 
+              {/*  <IMG src={projectURL} />  */}
+          
+             
             <TitleContainer>{<H3> {description} </H3>}</TitleContainer>
           </Link>
         </ImageContainer>
@@ -79,3 +112,10 @@ const ProjectCard = ({ id, title, publisher, date, description }) => {
 };
 
 export default ProjectCard;
+
+
+ {/* <Video src={cld.video(projectVideo).toURL}>
+              
+              Tu navegador no soporta el elemento de video.
+            </Video> */}
+          

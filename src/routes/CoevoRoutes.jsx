@@ -4,7 +4,7 @@ import Home from '../components/Home';
 import Navbar from '../components/Navbar';
 import Collaborations from '../pages/Collaborations';
 import AboutUs from '../pages/AboutUs';
-import Project from '../pages/Project';
+import ProjectDetail from '../pages/ProjectDetail';
 import Loader from '../components/Loader';
 import { motion } from 'framer-motion';
 import Installations from '../pages/Installations';
@@ -34,7 +34,7 @@ const CollabRoutes = () => {
         <Route exact path="/" element={<Home/>} />
         <Route path="/collaborations" element={<Collaborations/>} />
         <Route path="/aboutus" element={<AboutUs/>} />
-        <Route path="/project/:id" element={<Project />} />
+        <Route path="/project/:id" element={<ProjectDetail />} />
         <Route path="/installations" element={<Installations />} />
         <Route path="/copyright" element={<CopyRight />} />
         <Route path="/contact" element={<Contact />} />
