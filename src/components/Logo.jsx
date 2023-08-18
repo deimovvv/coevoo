@@ -6,8 +6,10 @@ const Container = styled.div`
   z-index: 999999;
   margin: 0;
   padding: 0;
-  top: 32px;
-  left: 38px;
+  /* top: 32px;
+  left: 38px; */
+  top: 25px;
+  left: 35px;
 
   display: block;
 
@@ -17,12 +19,19 @@ const Container = styled.div`
   }
 `;
 const IMG = styled.img`
-  width: 45px;
-  height: 36px;
+  /* width: 45px;
+  height: 36px; */
+  width: 62px;
+    height: 62px;
 
   @media screen and (max-width: 40em) {
-    width: 35px;
-    height: 25px;
+   /*  width: 35px;
+    height: 25px; */
+    width: 40px;
+    height: 40px;
+    top: 15px;
+    
+
   }
 `;
 
@@ -31,7 +40,7 @@ const logo = () => {
     <Container>
       <Link to="/">
         {" "}
-        <IMG src="/assets/logoPequeño.png" />{" "}
+        <IMG src="/assets/Logo33.png" />{" "}
       </Link>
     </Container>
   );

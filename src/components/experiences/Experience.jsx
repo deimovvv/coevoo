@@ -19,7 +19,9 @@ const Container = styled.div`
   z-index: -1;
   margin: 0;
   padding: 0;
+  /* background-color: rgba(2, 2, 2, 0.7); */
   background-color: rgba(2, 2, 2, 0.7);
+
 
 `;
 
