@@ -58,17 +58,21 @@ const Video = styled.video`
 width: 440px;
   height: 440px;
   margin-top: 0%;
+  
 `
+
+
+
 const cld = new Cloudinary({
   cloud: {
-    cloudName: 'dgina7ff6'
+    cloudName: 'djkkxjn4u'
   }
 });
 
 
 
 
-const ProjectCard = ({ id, title, publisher, date, description, type }) => {
+const ProjectCard = ({ id, title, category, date, description, type }) => {
 
   const projectURL = `/assets/${id}.jpg`;
   const projectVideo = `/assets/videos/${id}.mp4`;
@@ -97,6 +101,12 @@ const ProjectCard = ({ id, title, publisher, date, description, type }) => {
               controls  
               src={cld.video(`/assets/videos/${id}.mp4`).toURL}
              />
+
+            /*  <Video
+             controls
+             width="100%"
+             src={projectVideo} 
+             /> */
  
           )} 
  

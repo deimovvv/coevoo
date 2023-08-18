@@ -8,6 +8,7 @@ const Container = styled.div`
   padding: 0;
   top: 32px;
   left: 38px;
+
   display: block;
 
   @media screen and (max-width: 30em) {
@@ -17,7 +18,7 @@ const Container = styled.div`
 `;
 const IMG = styled.img`
   width: 45px;
-  height: 35px;
+  height: 36px;
 
   @media screen and (max-width: 40em) {
     width: 35px;

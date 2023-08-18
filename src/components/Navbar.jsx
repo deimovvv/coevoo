@@ -138,7 +138,7 @@ const Navbar = ({ color }) => {
           ref={ul}>
             <Li>
               <Link to="/collaborations">
-                <h5>COLLABORATIONS</h5>
+                <h5>Projects</h5>
               </Link>
             </Li>
 

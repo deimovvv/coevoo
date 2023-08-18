@@ -11,10 +11,38 @@ import MenuOverlay from "../components/MenuOverlay";
 const Container = styled.div`
   display: flex;
   justify-content: center;
+  flex-direction: column;
   margin-top: 150px;
+  align-items: center;
+
   margin-bottom: 100px !important;
   z-index: -1;
+
+
 `;
+
+const Filter = styled.div`
+color: white;
+margin-bottom: 40px;
+
+
+ul{
+  display: flex;
+  list-style: none; 
+
+}
+
+li{
+  padding-right: 7px;
+  cursor: pointer;
+}
+
+li:hover{
+  border-bottom: 0.5px solid;
+}
+
+`
+
 
 const Section = styled.div`
   display: grid;
@@ -55,8 +83,34 @@ font-size: 10px;
   font-family: "Syncopate", sans-serif;
 `;
 
+const Button = styled.button`
+background: transparent;
+color: white;
+border: none;
+padding-right: 10px;
+cursor: pointer;
+
+text-transform: uppercase;
+font-family: "Syncopate", sans-serif;
+font-size: 14px;
+
+@media screen and (max-width: 40em) {
+  font-size: 12px;
+  }
+
+
+:hover{
+  
+  border-bottom: solid 0.2px;    
+}
+
+
+
+`
+
 const Collaborations = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 2000);
@@ -68,6 +122,10 @@ const Collaborations = () => {
     // Puedes agregar una lógica adicional aquí si es necesario
     setIsLoading(false);
   };
+
+  // Tu lista de categorías
+  const categories = ['All', 'Videoclips', 'VR',/*  'Augmented Reality', 'Web Development' */ /* ... */];
+
 
   return (
     <>
@@ -81,21 +139,30 @@ const Collaborations = () => {
         
           <MenuOverlay/>
          
+          <Filter className="prueba" >   
+          {categories.map(category => (
+          <Button
+            key={category}
+            onClick={() => setSelectedCategory(category)}
+            className={selectedCategory === category ? 'active' : ''}
+          >
+            {category}
+          </Button>
+        ))}
+           </Filter>
+           
 
+           
           <Section>
             <Logo />
 
-            <ProjectList publisher="collaborations" onLoad={handleImageLoad} />
+            
+            <ProjectList category={selectedCategory === 'All' ? '' : selectedCategory} onLoad={handleImageLoad} />
           </Section>
 
           
         </Container>
       )}
-
-      {/* <Link className="link" to="/copyright">  ©2023 Coevo Studio   </Link> */}
-           
-    
-
 
     </>
 

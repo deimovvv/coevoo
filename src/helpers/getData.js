@@ -1,15 +1,21 @@
 import projects from '../data/projects'
 
 
-export const getData = ( publisher ) => {
+export const getData = ( category ) => {
+
+    if (!category) {
+        return projects; // Mostrar todos los proyectos sin filtro
+      }
+    
 
 
-    const validPublisers = ['collaborations']
-    if(!validPublisers.includes(publisher)){
-        throw new Error(`${ publisher } is not valid publiser`)
+    const validCategory = ['collaborations', 'All', 'Videoclips', 'VR','']
+
+    if(!validCategory.includes(category)){
+        throw new Error(`${ category } is not valid publiser`)
     }
 
-    return projects.filter(project => project.publisher)
+    return projects.filter(project => project.category === category)
 
 }
 

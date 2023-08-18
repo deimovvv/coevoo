@@ -66,8 +66,8 @@ const CopyRight = () => {
       <DataContainer className="info">
         <Data className="animate__animated animate__fadeIn">
          The design and
-          develop of this website was created by <a className="developers" href="https://www.instagram.com/deimovvv"target="_blank"> Deimov </a>and <a className="developers" href="https://www.instagram.com/keyla___000/" target="_blank">Keyla</a> , for web
-           services like this send email to cortezgonzalo@outlook.es
+          develop of this website was created by <a className="developers" href="https://www.instagram.com/_coevo_/"target="_blank"> Coevo</a>, for web
+           services like this send email to coevo.agency@gmail.com
         </Data>
       </DataContainer>
 

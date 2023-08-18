@@ -2,9 +2,9 @@ import ProjectCard from "./ProjectCard";
 import { getData } from "../helpers/getData";
 import { useMemo } from "react";
 
-const ProjectList = ({ publisher }) => {
+const ProjectList = ({ category }) => {
 
-  const projects = useMemo( () => getData(publisher), [publisher]);
+  const projects = useMemo( () => getData(category), [category]);
 
   return (
     <>

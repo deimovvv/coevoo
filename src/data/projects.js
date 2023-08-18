@@ -2,7 +2,7 @@ const projects = [
 
     {
         'id': 'Fiah',
-        'publisher': 'collaborations',
+        'category': 'Videoclips',
         'date': '20/06',
         'title': 'Fiah',
        'video': 'https://www.youtube.com/watch?v=UR_d1DSDtvc',
@@ -14,7 +14,7 @@ const projects = [
     },
     {
         'id': 'Remix-Facu',
-        'publisher': 'collaborations',
+        'category': 'Videoclips',
         'date': '20/06',
         'title': 'Divina',
        'video': 'https://www.youtube.com/watch?v=4xNtGSmIy9U',
@@ -26,12 +26,12 @@ const projects = [
     },
     {
         'id': 'KMILA',
-        'publisher': 'collaborations',
+        'category': 'collaborations',
         'date': '11/06',
-        'title': 'Fiah',
+        'title': 'KMILA',
        'video': 'https://www.youtube.com/watch?v=g18jd8X-JpQ&t=1s',
         'description': 'Virtual Production for KMILA - Erotica in Motion',
-        'client': 'Fiah',
+        'client': 'KMILA',
         'technologies': 'Unreal Engine, Adobe Premier',
         'type': 'image'
         
@@ -50,7 +50,7 @@ const projects = [
     }, */
     {
         'id': 'Artic',
-        'publisher': 'collaborations',
+        'category': 'collaborations',
         'date': '13/07',
         'title': 'Realistic Landscape',
        'video': 'https://www.youtube.com/watch?v=iHV8JBfzrTg',
@@ -62,7 +62,7 @@ const projects = [
     },
     {
         'id': 'Audi',
-        'publisher': 'collaborations',
+        'category': 'Videoclips',
         'date': '02/07',
         'title': 'Fiah',
         'video': 'https://www.youtube.com/watch?v=UGQMYhJdl_8',
@@ -75,7 +75,7 @@ const projects = [
 
     {
         'id': 'Roterton',
-        'publisher': 'collaborations',
+        'category': 'VR',
         'date': '16/05',
         'title': 'Roterton',
         'image': '/assets/Roterton1.jpg',
@@ -90,7 +90,7 @@ const projects = [
     },
     {
         'id': 'delight',
-        'publisher': 'collaborations',
+        'category': 'collaborations',
         'date': '02/23',
         'title': 'Delight',
         'description': 'Audiovisual Art for Cloth Brand',
@@ -106,7 +106,7 @@ const projects = [
 
     {
           'id': 'Dease',
-          'publisher': 'collaborations',
+          'category': 'collaborations',
           'date': '03/23',
           'title': 'Dease',
           'image': '/public/assets/Dease.jpg',
@@ -118,7 +118,7 @@ const projects = [
       },
       {
         'id': 'partyplane',
-        'publisher': 'collaborations',
+        'category': 'Videoclips',
         'date': '12/22',
         'title': 'Divina Glitch',
         'description': 'Videoclip for Divina Glitch',
@@ -133,7 +133,7 @@ const projects = [
     
     {
         'id': 'Rechi',
-        'publisher': 'collaborations',
+        'category': 'Videoclips',
         'date': '3/05',
         'title': 'Rechi',
         'image': '/assets/Rechi2.jpg',
@@ -149,7 +149,7 @@ const projects = [
   
   {
       'id': 'racodeloix1',
-      'publisher': 'collaborations',
+      'category': 'Videoclips',
       'date': '12/22',
       'title': 'Raco De Loix',
       'description': 'Audiovisual Art for Cloth Brand',
@@ -165,7 +165,7 @@ const projects = [
 
   {
       'id': 'deimovAI',
-      'publisher': 'collaborations',
+      'category': 'Videoclips',
       'date': '12/22',
       'title': 'Deimov',
       'description': 'Visual Art for Deimov',
