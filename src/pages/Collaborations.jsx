@@ -87,15 +87,15 @@ const Button = styled.button`
 background: transparent;
 color: white;
 border: none;
-padding-right: 10px;
+padding-right: 16px;
 cursor: pointer;
 
 text-transform: uppercase;
 font-family: "Syncopate", sans-serif;
-font-size: 14px;
+font-size: 12px;
 
 @media screen and (max-width: 40em) {
-  font-size: 12px;
+  font-size: 10px;
   }
 
 
@@ -124,7 +124,7 @@ const Collaborations = () => {
   };
 
   // Tu lista de categorías
-  const categories = ['All', 'Videoclips', 'VR',/*  'Augmented Reality', 'Web Development' */ /* ... */];
+  const categories = ['All', 'Videoclips', 'VR', 'Virtual Production' /*  'Augmented Reality', 'Web Development' */ /* ... */];
 
 
   return (
@@ -148,6 +148,7 @@ const Collaborations = () => {
           >
             {category}
           </Button>
+          
         ))}
            </Filter>
            

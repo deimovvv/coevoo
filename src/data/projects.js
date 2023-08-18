@@ -26,7 +26,7 @@ const projects = [
     },
     {
         'id': 'KMILA',
-        'category': 'collaborations',
+        'category': 'Virtual Production',
         'date': '11/06',
         'title': 'KMILA',
        'video': 'https://www.youtube.com/watch?v=g18jd8X-JpQ&t=1s',

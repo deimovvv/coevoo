@@ -9,7 +9,7 @@ export const getData = ( category ) => {
     
 
 
-    const validCategory = ['collaborations', 'All', 'Videoclips', 'VR','']
+    const validCategory = ['collaborations', 'All', 'Videoclips', 'VR','Virtual Production']
 
     if(!validCategory.includes(category)){
         throw new Error(`${ category } is not valid publiser`)
