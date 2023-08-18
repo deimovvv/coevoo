@@ -32,7 +32,7 @@ const CollabRoutes = () => {
      <Routes  location={location} >
       
         <Route exact path="/" element={<Home/>} />
-        <Route path="/projects" element={<Collaborations/>} />
+        <Route path="/collaborations" element={<Collaborations/>} />
         <Route path="/aboutus" element={<AboutUs/>} />
         <Route path="/project/:id" element={<ProjectDetail />} />
         <Route path="/installations" element={<Installations />} />

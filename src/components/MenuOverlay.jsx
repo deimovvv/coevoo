@@ -92,7 +92,7 @@ const MenuOverlay = () => {
             </div>
             <Link
               className="link_menu"
-              to="/projects"
+              to="/collaborations"
             >
               <motion.h5
               className="animate__animated animate__fadeIn"
