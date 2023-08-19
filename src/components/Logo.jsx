@@ -14,8 +14,9 @@ const Container = styled.div`
   display: block;
 
   @media screen and (max-width: 30em) {
-    top: 32px;
     left: 14px;
+    top: 14px;
+
   }
 `;
 const IMG = styled.img`
@@ -27,9 +28,18 @@ const IMG = styled.img`
   @media screen and (max-width: 40em) {
    /*  width: 35px;
     height: 25px; */
-    width: 40px;
-    height: 40px;
-    top: 15px;
+    width: 50px;
+    height: 50px;
+    top: 1px;
+    
+
+  }
+  @media screen and (max-width: 64em) {
+   /*  width: 35px;
+    height: 25px; */
+    width: 50px;
+    height: 50px;
+    top: 1px;
     
 
   }
