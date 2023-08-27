@@ -77,9 +77,6 @@ const ProjectCard = ({ id, title, category, date, description, type }) => {
   const projectURL = `/assets/${id}.jpg`;
   const projectVideo = `/assets/videos/${id}.mp4`;
 
-  
-
-
   return (
     <motion.div
       initial={{ y: 200, opacity: 0 }}

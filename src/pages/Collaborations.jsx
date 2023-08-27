@@ -47,7 +47,7 @@ li:hover{
 const Section = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  /* height: 400px; */
+  
 
   gap: 0px;
 
@@ -89,6 +89,7 @@ color: white;
 border: none;
 padding-right: 16px;
 cursor: pointer;
+transition: 0s   transform;
 
 text-transform: uppercase;
 font-family: "Syncopate", sans-serif;
@@ -101,7 +102,10 @@ font-size: 12px;
 
 :hover{
   
-  border-bottom: solid 0.2px;    
+  /* text-decoration: underline; */
+   transform: scale(1.08);
+   transition: 0.5s;
+  
 }
 
 

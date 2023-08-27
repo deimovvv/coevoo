@@ -1,13 +1,10 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams,  useNavigate } from "react-router-dom";
 import getProjectByid from "../helpers/getProjectByid";
-/* import getImage from '../helpers/getImage' */
 import styled from "styled-components";
-import LogoNegro from "../components/Logo";
 import ReactPlayer from "react-player";
 import "../css/style.css";
 import Loader from "../components/Loader";
 import { useEffect, useState } from "react";
-import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
 import Logo from "../components/Logo";
 import Experience from "../components/experiences/Experience";
@@ -152,11 +149,38 @@ const TextContainer = styled.div`
 
 `;
 
+const ButtonBack = styled.button`
+position: relative;
+left: 96%;
+background-color: transparent;
+border: none;
+color: whitesmoke;
+cursor: pointer;
+margin-top: 25px;
+font-size: 18px;
+
+:hover{
+color: #cfcdcd;
+
+}
+
+@media screen and (max-width: 30em) {
+margin-top: 30px;
+  left: 87%;
+  font-size: 16px;
+
+}
+
+
+`
+
 const Project = () => {
 
   const { id } = useParams();
 
   const project = getProjectByid(id);
+
+  const navigate = useNavigate();
     
 
 
@@ -171,6 +195,11 @@ const Project = () => {
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 1000); // Simula el tiempo de carga de la página
   });
+
+  const handleBack = () => {
+    navigate(-1); // Navega hacia atrás
+  };
+
 
   return (
     <>
@@ -226,6 +255,9 @@ const Project = () => {
                 ) : null}
               </DivImage>
             </CardProject>
+
+            <ButtonBack onClick={handleBack}> Back </ButtonBack>
+            
           </motion.div>
        
         </Section>
