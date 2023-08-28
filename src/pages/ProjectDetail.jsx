@@ -20,6 +20,8 @@ const Section = styled.div`
 
   }
 
+  
+
   .title{
 
 @media screen and (max-width: 30em) {
@@ -149,15 +151,46 @@ const TextContainer = styled.div`
 
 `;
 
+const Back = styled.div`
+display:flex;
+justify-content:flex-end;
+align-items:flex-end;
+flex-direction:column;
+margin-top: 20px;
+cursor: pointer;
+
+@media screen and (max-width: 30em) {
+
+justify-content:center;
+align-items: center;
+  
+
+}
+
+
+.flecha{
+  display: flex;
+  justify-items:flex-end;
+  align-self: flex-end;
+  margin-top: 5px;
+
+
+}
+
+
+`
+
 const ButtonBack = styled.button`
-position: relative;
-left: 96%;
+font-family: "Syncopate", sans-serif;
+display:flex;
+justify-content:flex-end;
 background-color: transparent;
 border: none;
 color: whitesmoke;
 cursor: pointer;
-margin-top: 25px;
-font-size: 18px;
+margin-top: 5px;
+font-size: 12px;
+
 
 :hover{
 color: #cfcdcd;
@@ -165,7 +198,7 @@ color: #cfcdcd;
 }
 
 @media screen and (max-width: 30em) {
-margin-top: 30px;
+margin-top: 20px;
   left: 87%;
   font-size: 16px;
 
@@ -255,8 +288,21 @@ const Project = () => {
                 ) : null}
               </DivImage>
             </CardProject>
+            
 
-            <ButtonBack onClick={handleBack}> Back </ButtonBack>
+            <Back onClick={handleBack}>
+           
+                <box-icon
+                  className="flecha"
+                  animation="flashing"
+                  name="left-arrow-alt"
+                  flip="vertical"
+                  color="#ffffff"
+                ></box-icon>
+
+                 <ButtonBack > back </ButtonBack>
+
+                </Back>
             
           </motion.div>
        
