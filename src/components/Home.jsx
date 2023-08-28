@@ -1,7 +1,5 @@
 import Experience from "./experiences/Experience";
-import Navbar from "./Navbar";
 import Logo from "./Logo";
-import styled from "styled-components";
 import "../css/style.css";
 import { useEffect, useState } from "react";
 import Loader from "./Loader";

@@ -5,7 +5,6 @@ import Experience from "../components/experiences/Experience";
 import Loader from "../components/Loader";
 import Logo from "../components/Logo";
 import MenuOverlay from "../components/MenuOverlay";
-import Navbar from "../components/Navbar";
 
 const Div = styled.div`
  width: 100%;

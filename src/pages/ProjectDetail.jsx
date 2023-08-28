@@ -7,7 +7,6 @@ import Loader from "../components/Loader";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Logo from "../components/Logo";
-import Experience from "../components/experiences/Experience";
 import MenuOverlay from "../components/MenuOverlay";
 
 const Section = styled.div`
@@ -198,9 +197,9 @@ color: #cfcdcd;
 }
 
 @media screen and (max-width: 30em) {
-margin-top: 20px;
+margin-top: 18px;
   left: 87%;
-  font-size: 16px;
+  font-size: 14px;
 
 }
 

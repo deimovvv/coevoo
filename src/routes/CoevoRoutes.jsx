@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Routes, Route, useLocation } from "react-router-dom";
 import Home from '../components/Home';
-import Navbar from '../components/Navbar';
 import Collaborations from '../pages/Collaborations';
 import AboutUs from '../pages/AboutUs';
 import ProjectDetail from '../pages/ProjectDetail';

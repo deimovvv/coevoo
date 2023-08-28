@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import "boxicons";
 import Team from "../components/Team";
-import Navbar from "../components/Navbar";
 import Loader from "../components/Loader";
 import { useEffect } from "react";
 import { useState } from "react";

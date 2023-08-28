@@ -2,10 +2,8 @@ import styled from "styled-components";
 import ProjectList from "../components/ProjectList";
 import { Suspense, useState } from "react";
 import Loader from "../components/Loader";
-import Navbar from "../components/Navbar";
 import Logo from "../components/Logo";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
 import MenuOverlay from "../components/MenuOverlay";
 
 const Container = styled.div`
@@ -102,8 +100,8 @@ font-size: 12px;
 
 :hover{
   
-  /* text-decoration: underline; */
-   transform: scale(1.08);
+  text-decoration: underline;
+   transform: scale(1.05);
    transition: 0.5s;
   
 }
