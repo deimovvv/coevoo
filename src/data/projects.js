@@ -17,7 +17,7 @@ const projects = [
         'category': 'Videoclips',
         'date': '20/06',
         'title': 'Divina',
-       'video': 'https://www.youtube.com/watch?v=4xNtGSmIy9U',
+       'video': 'https://www.youtube.com/watch?v=bdMkfValrHY',
         'description': 'Visualizer for Divina Glitch',
         'client': 'Divina',
         'technologies': 'Unreal Engine, Blender, Adobe Premier',
@@ -36,18 +36,6 @@ const projects = [
         'type': 'image'
         
     },
-    /* {
-        'id': 'PCG',
-        'publisher': 'collaborations',
-        'date': '04/08',
-        'title': 'PCG Content',
-       'video': 'https://www.youtube.com/watch?v=mSKksYOPXCc',
-        'description': 'Environment with Unreal Engine',
-        'client': 'Coevo',
-        'technologies': 'Unreal Engine 5.2',
-        'type': 'image'
-        
-    }, */
     {
         'id': 'Artic',
         'category': 'collaborations',
