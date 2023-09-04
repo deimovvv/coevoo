@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Cloudinary } from "@cloudinary/url-gen";
 import { useRef } from "react";
 import { useEffect } from "react";
+import Loader from "./Loader";
 
 const Project = styled.div`
   margin: 0%;
