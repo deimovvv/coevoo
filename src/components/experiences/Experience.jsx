@@ -52,6 +52,8 @@ const Experience = () => {
           {/* <Model/> */}
           < FBOParticles/>
         </Suspense>
+
+        
       </Canvas>
     </Container>
   );

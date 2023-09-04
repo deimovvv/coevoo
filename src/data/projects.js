@@ -33,7 +33,22 @@ const projects = [
         'description': 'Virtual Production for KMILA - Erotica in Motion',
         'client': 'KMILA',
         'technologies': 'Unreal Engine, Adobe Premier',
-        'type': 'image'
+        'type': 'video'
+        
+    },
+    {
+        'id': 'Roterton',
+        'category': 'VR',
+        'date': '16/05',
+        'title': 'Roterton',
+        'image': '/assets/Roterton1.jpg',
+        'image2': '/assets/Roterton2.jpg',
+       'video': 'https://www.youtube.com/watch?v=pUe8FA5ncso',
+        'description': 'Virtual Reality experience for Party',
+        'client': 'Roterton',
+        'technologies': 'Unreal Engine, Blender, ChatGPT',
+        'type': 'video'
+        
         
     },
     {
@@ -48,6 +63,7 @@ const projects = [
         'type': 'image'
         
     },
+
     {
         'id': 'Audi',
         'category': 'Videoclips',
@@ -61,21 +77,7 @@ const projects = [
         
     },
 
-    {
-        'id': 'Roterton',
-        'category': 'VR',
-        'date': '16/05',
-        'title': 'Roterton',
-        'image': '/assets/Roterton1.jpg',
-        'image2': '/assets/Roterton2.jpg',
-       'video': 'https://www.youtube.com/watch?v=pUe8FA5ncso',
-        'description': 'Virtual Reality experience for Party',
-        'client': 'Roterton',
-        'technologies': 'Unreal Engine, Blender, ChatGPT',
-        'type': 'image'
-        
-        
-    },
+   
     {
         'id': 'delight',
         'category': 'collaborations',

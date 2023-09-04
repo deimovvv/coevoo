@@ -50,7 +50,9 @@ const logo = () => {
     <Container>
       <Link to="/">
         {" "}
-        <IMG src="/assets/Logo33.png" />{" "}
+       
+        <IMG src="/public/assets/Logo33.png" />{" "}
+
       </Link>
     </Container>
   );

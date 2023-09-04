@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Cloudinary } from "@cloudinary/url-gen";
+import { useRef } from "react";
+import { useEffect } from "react";
 
 const Project = styled.div`
   margin: 0%;
@@ -74,8 +76,23 @@ const cld = new Cloudinary({
 
 const ProjectCard = ({ id, title, category, date, description, type }) => {
 
-  const projectURL = `/assets/${id}.jpg`;
-  const projectVideo = `/assets/videos/${id}.mp4`;
+
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    // Accede al elemento de video utilizando videoRef.current
+    const videoElement = videoRef.current;
+
+    // Verifica si el video está pausado y si no lo está, llama al método play()
+    if (videoElement && videoElement.paused) {
+      videoElement.play();
+    }
+  }, []);
+
+  
+
+  const projectURL = `assets/${id}.jpg`;
+  const projectVideo = `assets/videos/${id}.mp4`;
 
   return (
     <motion.div
@@ -94,16 +111,17 @@ const ProjectCard = ({ id, title, category, date, description, type }) => {
           )}
            { type === 'video' && (
 
-              <Video 
+             /*  <Video 
               controls  
               src={cld.video(`/assets/videos/${id}.mp4`).toURL}
-             />
+             /> */
 
-            /*  <Video
-             controls
+            <Video
+             ref={videoRef }
              width="100%"
              src={projectVideo} 
-             /> */
+             muted loop
+             />  
  
           )} 
  

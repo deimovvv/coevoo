@@ -217,7 +217,7 @@ const Project = () => {
 
 
 
-  const projectURL = `/assets/${project.id}.jpg`;
+  const projectURL = `assets/${project.id}.jpg`;
 
 
   
@@ -240,7 +240,8 @@ const Project = () => {
       ) : (
         <Section id="project-section">
           <MenuOverlay/>
-          <Logo />
+          <Logo/>
+         
 
           <motion.div
             initial={{ y: 200, opacity: 0 }}
@@ -266,7 +267,7 @@ const Project = () => {
               </TextContainer>
 
               <DivImage className="animate__animated animate__fadeIn">
-                <Img src={projectURL} alt="" />
+                <Img src={`/public/assets/${project.id}.jpg`} alt="" />
                 {project.image && project.image2 ? (
 
                   <DivImagenes>
