@@ -119,6 +119,8 @@ const ProjectCard = ({ id, title, category, date, description, type }) => {
             <Video
              ref={videoRef }
              width="100%"
+             height= "100%"
+             playsInline
              src={projectVideo} 
              muted loop
              />  
