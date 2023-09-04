@@ -51,7 +51,7 @@ const logo = () => {
       <Link to="/">
         {" "}
        
-        <IMG src="/public/assets/Logo33.png" />{" "}
+        <IMG src="/assets/Logo33.png" />{" "}
 
       </Link>
     </Container>

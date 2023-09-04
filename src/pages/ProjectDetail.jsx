@@ -267,7 +267,7 @@ const Project = () => {
               </TextContainer>
 
               <DivImage className="animate__animated animate__fadeIn">
-                <Img src={`/public/assets/${project.id}.jpg`} alt="" />
+                <Img src={`/assets/${project.id}.jpg`} alt="" />
                 {project.image && project.image2 ? (
 
                   <DivImagenes>
