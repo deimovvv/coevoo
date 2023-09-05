@@ -59,6 +59,7 @@ const Video = styled.video`
   width: 440px;
   height: 440px;
   margin-top: 0%;
+  display: ${(props) => (props.mobile ? "none" : "block")};
 `;
 
 const DescriptionContainer = styled.div`
@@ -69,6 +70,13 @@ const DescriptionContainer = styled.div`
   box-sizing: border-box;
 `;
 
+const PosterImage = styled.img`
+  width: 440px;
+  height: 440px;
+  object-fit: cover;
+  display: ${(props) => (props.mobile ? "block" : "none")};
+`;
+
 const cld = new Cloudinary({
   cloud: {
     cloudName: "djkkxjn4u",
@@ -77,6 +85,7 @@ const cld = new Cloudinary({
 
 const ProjectCard = ({ id, title, category, date, description, type }) => {
   const videoRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     // Accede al elemento de video utilizando videoRef.current
@@ -86,14 +95,30 @@ const ProjectCard = ({ id, title, category, date, description, type }) => {
     if (videoElement && videoElement.paused) {
       videoElement.play();
     }
+
+    const handleResize = () => {
+      // Detecta si el ancho de la ventana es menor que cierto valor (ajusta este valor según tus necesidades)
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Agrega un oyente para manejar cambios de tamaño de ventana
+    window.addEventListener("resize", handleResize);
+
+    // Llama a handleResize inicialmente para establecer isMobile correctamente en el montaje inicial
+    handleResize();
+
+    // Limpia el oyente cuando se desmonta el componente
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+
+
   }, []);
 
   const projectURL = `assets/${id}.jpg`;
   const projectVideo = `assets/videos/${id}.mp4`;
 
-  // Determina si la pantalla es lo suficientemente pequeña como para aplicar el estilo móvil
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 767); // Puedes ajustar este valor según tus necesidades
-
+ 
   // Función para manejar el cambio de tamaño de la ventana
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 767);
@@ -121,17 +146,24 @@ const ProjectCard = ({ id, title, category, date, description, type }) => {
           >
             {type === "image" && <IMG src={projectURL} />}
             {type === "video" && (
-              <Video
-                preload="metadata"
-                controls
-                ref={videoRef}
-                width="100%"
-                height="100%"
-                playsInline
-                src={projectVideo}
-                muted
-                loop
-              />
+               <>
+               <Video
+                 preload="metadata"
+                 ref={videoRef}
+                 width="100%"
+                 height="100%"
+                 playsInline
+                 src={projectVideo}
+                 mobile={isMobile} // Propiedad para controlar la visibilidad en dispositivos móviles
+                 muted
+                 loop
+               />
+               <PosterImage
+                 src={projectURL}
+                 alt="Preview Image"
+                 mobile={isMobile} // Propiedad para controlar la visibilidad en dispositivos móviles
+               />
+             </>
             )}
             {isMobile && (
               <DescriptionContainer>
