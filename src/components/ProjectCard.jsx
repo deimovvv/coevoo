@@ -119,6 +119,7 @@ const ProjectCard = ({ id, title, category, date, description, type }) => {
               
 
             <Video
+            preload="auto"
              ref={videoRef }
              width="100%"
              height= "100%"
