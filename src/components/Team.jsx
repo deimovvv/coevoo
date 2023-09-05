@@ -78,6 +78,13 @@ const Flecha = styled.div`
 `;
 
 const Team = () => {
+
+  const fadeInUp = {
+    initial: { y: 50, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+    transition: { duration: 0.5 },
+  };
+
   return (
     <>
       <motion.div
@@ -90,7 +97,7 @@ const Team = () => {
         </Title>
 
         <TeamDiv>
-          <div className="team-photo">
+          <div className="team-photo"  variants={fadeInUp}>
             <IMG src="/assets/deimovAI.jpg" alt="" />
             <a
               className="a"
@@ -99,7 +106,7 @@ const Team = () => {
             >
               <h3 className="team-name">Deimov</h3>
             </a>
-            <p className="team-description">
+            <p className="team-description"  variants={fadeInUp}>
               {" "}
               Co-founder / Creative Director / Creative Coding / Sound Design /
               VFX / Media Artist{" "}

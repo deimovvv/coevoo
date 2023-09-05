@@ -73,7 +73,7 @@ const Contact = () => {
 
           <Link
             className="emailLink"
-            to={"https://coevo.agency@gmail.com"}
+            to={"mailto:https://coevo.agency@gmail.com"}
             target="_blank"
           >
             {" "}
