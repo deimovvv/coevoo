@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Cloudinary } from "@cloudinary/url-gen";
-import { useEffect, useState, useRef } from "react";
-import Loader from "./Loader";
+import { useRef } from "react";
+import { useEffect } from "react";
 
 const Project = styled.div`
   margin: 0%;
@@ -57,46 +57,39 @@ const H3 = styled.h3`
 `;
 
 const Video = styled.video`
-  width: 440px;
+width: 440px;
   height: 440px;
   margin-top: 0%;
-`;
+  
+`
+
+
 
 const cld = new Cloudinary({
   cloud: {
-    cloudName: "djkkxjn4u",
-  },
+    cloudName: 'djkkxjn4u'
+  }
 });
 
+
+
+
 const ProjectCard = ({ id, title, category, date, description, type }) => {
-  const [isLoading, setIsLoading] = useState(true);
+
+
   const videoRef = useRef(null);
 
   useEffect(() => {
+    // Accede al elemento de video utilizando videoRef.current
     const videoElement = videoRef.current;
 
-    if (videoElement) {
-      // Verifica si videoElement no es nulo
-      // Detectar cuándo el video se ha cargado
-      videoElement.addEventListener("loadeddata", () => {
-        // El video se ha cargado, así que oculta el loader
-        setIsLoading(false);
-
-        // Verificar si el video está en pausa y, si lo está, reproducirlo
-        if (videoElement.paused) {
-          videoElement.play();
-        }
-      });
+    // Verifica si el video está pausado y si no lo está, llama al método play()
+    if (videoElement && videoElement.paused) {
+      videoElement.play();
     }
-
-    // Limpiar el event listener cuando el componente se desmonta
-    return () => {
-      if (videoElement) {
-        // Verifica si videoElement no es nulo antes de limpiar
-        videoElement.removeEventListener("loadeddata", () => {});
-      }
-    };
   }, []);
+
+  
 
   const projectURL = `assets/${id}.jpg`;
   const projectVideo = `assets/videos/${id}.mp4`;
@@ -112,30 +105,33 @@ const ProjectCard = ({ id, title, category, date, description, type }) => {
           <Link
             onClick={() => handleClick("project-section")}
             to={`/project/${id}`}
-          >
-            {type === "image" && <IMG src={projectURL} />}
-            {type === "video" && (
-              /*  <Video 
+          > 
+          { type === 'image' && (
+             <IMG src={projectURL} />
+          )}
+           { type === 'video' && (
+
+             /*  <Video 
               controls  
               src={cld.video(`/assets/videos/${id}.mp4`).toURL}
              /> */
-              <>
-                {isLoading && <Loader />}{" "}
-                {/* Muestra el loader mientras se carga */}
-                <Video
-                  ref={videoRef}
-                  width="100%"
-                  height="100%"
-                  playsInline
-                  src={projectVideo}
-                  muted
-                  loop
-                />
-              </>
-            )}
 
-        
+              
 
+            <Video
+             ref={videoRef }
+             width="100%"
+             height= "100%"
+             playsInline
+             src={projectVideo} 
+             muted loop
+             />  
+ 
+          )} 
+ 
+              {/*  <IMG src={projectURL} />  */}
+          
+             
             <TitleContainer>{<H3> {description} </H3>}</TitleContainer>
           </Link>
         </ImageContainer>
@@ -146,3 +142,9 @@ const ProjectCard = ({ id, title, category, date, description, type }) => {
 
 export default ProjectCard;
 
+
+ {/* <Video src={cld.video(projectVideo).toURL}>
+              
+              Tu navegador no soporta el elemento de video.
+            </Video> */}
+          
