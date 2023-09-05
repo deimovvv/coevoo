@@ -53,8 +53,6 @@ const H3 = styled.h3`
   color: white;
   position: absolute;
   bottom: 25px;
-  
-
 `;
 
 const Video = styled.video`
@@ -64,11 +62,11 @@ const Video = styled.video`
 `;
 
 const DescriptionContainer = styled.div`
-   text-align: center;
+  text-align: center;
   margin-top: 10px;
   color: white;
   padding: 0 50px; /* Ajusta el valor del padding según sea necesario */
-  box-sizing: border-box; 
+  box-sizing: border-box;
 `;
 
 const cld = new Cloudinary({
@@ -124,7 +122,7 @@ const ProjectCard = ({ id, title, category, date, description, type }) => {
             {type === "image" && <IMG src={projectURL} />}
             {type === "video" && (
               <Video
-                preload="auto"
+                preload="metadata"
                 controls
                 ref={videoRef}
                 width="100%"
