@@ -28,7 +28,8 @@ const TitleContainer = styled.div`
   flex-direction: column;
   opacity: 0;
   transition: 0.6s;
-
+  
+  
   &:hover {
     opacity: 1;
   }
@@ -87,6 +88,9 @@ const ProjectCard = ({ id, title, category, date, description, type }) => {
   const videoRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
 
+
+
+
   useEffect(() => {
     // Accede al elemento de video utilizando videoRef.current
     const videoElement = videoRef.current;
@@ -98,7 +102,7 @@ const ProjectCard = ({ id, title, category, date, description, type }) => {
 
     const handleResize = () => {
       // Detecta si el ancho de la ventana es menor que cierto valor (ajusta este valor según tus necesidades)
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth <= 767);
     };
 
     // Agrega un oyente para manejar cambios de tamaño de ventana
@@ -111,26 +115,10 @@ const ProjectCard = ({ id, title, category, date, description, type }) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-
-
   }, []);
 
   const projectURL = `assets/${id}.jpg`;
   const projectVideo = `assets/videos/${id}.mp4`;
-
- 
-  // Función para manejar el cambio de tamaño de la ventana
-  const handleResize = () => {
-    setIsMobile(window.innerWidth <= 767);
-  };
-
-  // Agrega un evento de cambio de tamaño para verificar si cambia el estado móvil
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return (
     <motion.div
@@ -139,44 +127,45 @@ const ProjectCard = ({ id, title, category, date, description, type }) => {
       transition={{ delay: 0, ease: "circOut", duration: 1 }}
     >
       <Project className="animate__animated animate__fadeIn">
-        <ImageContainer>
-          <Link
-            onClick={() => handleClick("project-section")}
+      <Link
             to={`/project/${id}`}
           >
+        <ImageContainer>
+          
             {type === "image" && <IMG src={projectURL} />}
             {type === "video" && (
-               <>
-               <Video
-                 preload="metadata"
-                 ref={videoRef}
-                 width="100%"
-                 height="100%"
-                 playsInline
-                 src={projectVideo}
-                 mobile={isMobile} // Propiedad para controlar la visibilidad en dispositivos móviles
-                 muted
-                 loop
-               />
-               <PosterImage
-                 src={projectURL}
-                 alt="Preview Image"
-                 mobile={isMobile} // Propiedad para controlar la visibilidad en dispositivos móviles
-               />
-             </>
+              <>
+                <Video
+                  preload="metadata"
+                  ref={videoRef}
+                  width="100%"
+                  height="100%"
+                  playsInline
+                  src={projectVideo}
+                  mobile={isMobile} // Propiedad para controlar la visibilidad en dispositivos móviles
+                  muted
+                  loop
+                />
+                <PosterImage
+                  src={projectURL}
+                  alt="Preview Image"
+                  mobile={isMobile} // Propiedad para controlar la visibilidad en dispositivos móviles
+                />
+              </>
             )}
             {isMobile && (
               <DescriptionContainer>
                 <H3>{description}</H3>
               </DescriptionContainer>
             )}
-          </Link>
+         
           {!isMobile && (
             <TitleContainer>
               <H3>{description}</H3>
             </TitleContainer>
           )}
         </ImageContainer>
+        </Link>
       </Project>
     </motion.div>
   );
