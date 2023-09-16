@@ -56,7 +56,7 @@ const projects = [
         'category': 'collaborations',
         'date': '13/07',
         'title': 'Realistic Landscape',
-       'video': 'https://www.youtube.com/watch?v=iHV8JBfzrTg',
+       'video': 'https://www.youtube.com/watch?v=7XTyINgeWwA',
         'description': 'Environment Design',
         'client': 'Coevo-studio',
         'technologies': 'Unreal Engine 5.1',
