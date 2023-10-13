@@ -1,4 +1,16 @@
 const projects = [
+    {
+        'id': 'Divina33',
+        'category': 'Videoclips',
+        'date': '13/10',
+        'title': 'Divina',
+       'video': 'https://www.youtube.com/watch?v=tayRe8L-D1k&t=1025s',
+        'description': 'Virtual Production for Divina Glitch',
+        'client': 'Divina',
+        'technologies': 'Unreal Engine, Blender, Adobe Premier',
+        'type': 'image'
+        
+    },
 
     {
         'id': 'Fiah',
