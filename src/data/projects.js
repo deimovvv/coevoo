@@ -11,6 +11,18 @@ const projects = [
         'type': 'image'
         
     },
+    {
+        'id': 'Seven-Fran',
+        'category': 'Videoclips',
+        'date': '19/10',
+        'title': 'FranObras',
+       'video': 'https://www.youtube.com/watch?v=6UWqifc1M8Y',
+        'description': 'VideoClip for Seven',
+        'client': 'Seven',
+        'technologies': 'Unreal Engine, Adobe Premier',
+        'type': 'image'
+        
+    },
 
     {
         'id': 'Fiah',
