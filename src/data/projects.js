@@ -1,5 +1,19 @@
 const projects = [
     {
+        'id': 'volcrom',
+        'category': 'Videoclips',
+        'date': '19/10',
+        'title': 'Volcrom',
+       'video': 'https://www.youtube.com/watch?v=Mhhv_KJaCUg',
+        'description': 'Videoclip for Volcrom Engineering',
+        'client': 'Volcrom Engineering',
+        'image': '/assets/volcrom1.jpg',
+        'image2': '/assets/volcrom2.jpg',
+        'technologies': 'Unreal Engine, Blender, Adobe Premier, Ableton Live',
+        'type': 'image'
+        
+    },
+    {
         'id': 'Divina33',
         'category': 'Videoclips',
         'date': '13/10',
