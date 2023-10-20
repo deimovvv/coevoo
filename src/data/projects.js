@@ -15,7 +15,7 @@ const projects = [
     },
     {
         'id': 'Divina33',
-        'category': 'Videoclips',
+        'category': 'Virtual Production',
         'date': '13/10',
         'title': 'Divina',
        'video': 'https://www.youtube.com/watch?v=tayRe8L-D1k&t=1025s',
