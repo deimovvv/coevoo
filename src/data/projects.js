@@ -4,7 +4,7 @@ const projects = [
         'category': 'Videoclips',
         'date': '19/10',
         'title': 'Volcrom',
-       'video': 'https://www.youtube.com/watch?v=Mhhv_KJaCUg',
+       'video': 'https://www.youtube.com/watch?v=P1JKGesWvv4',
         'description': 'Videoclip for Volcrom Engineering',
         'client': 'Volcrom Engineering',
         'image': '/assets/volcrom1.jpg',
@@ -18,10 +18,22 @@ const projects = [
         'category': 'Virtual Production',
         'date': '13/10',
         'title': 'Divina',
-       'video': 'https://www.youtube.com/watch?v=tayRe8L-D1k&t=1025s',
+       'video': 'https://www.youtube.com/watch?v=tayRe8L-D1k&t=1s',
         'description': 'Virtual Production for Divina Glitch',
         'client': 'Divina',
         'technologies': 'Unreal Engine, Blender, Adobe Premier',
+        'type': 'image'
+        
+    },
+    {
+        'id': 'CaveVR',
+        'category': 'VR',
+        'date': '12/10',
+        'title': 'VR Cave',
+       'video': 'https://www.youtube.com/watch?v=JtPOOxC0f10',
+        'description': 'VR experimental game',
+        'client': 'nadie',
+        'technologies': 'Unreal Engine, Blender',
         'type': 'image'
         
     },

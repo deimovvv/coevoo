@@ -130,7 +130,7 @@ const Team = () => {
           </div>
           <div className="team-photo">
             <IMG src="/team/divinaglitch.jpg" alt="" />
-            <h3 className="team-name">Divina glitch</h3>
+            <h3 className="team-name">Cora</h3>
 
             <p className="team-description">
               {" "}
