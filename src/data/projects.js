@@ -1,5 +1,19 @@
 const projects = [
     {
+        'id': 'Elvara',
+        'category': 'Videoclips',
+        'date': '19/10',
+        'title': 'Elvara',
+       'video': 'https://www.youtube.com/watch?v=Dt0Ucp6wbUk',
+        'description': 'Concept Art',
+        'client': 'Personal',
+        'image': '/assets/Elvara2.jpg',
+        'image2': '/assets/Elvara3.jpg',
+        'technologies': 'Unreal Engine, Blender, Adobe Premier, Ableton Live, Substance Painter',
+        'type': 'image'
+        
+    },
+    {
         'id': 'volcrom',
         'category': 'Videoclips',
         'date': '19/10',
