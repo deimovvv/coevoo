@@ -4,6 +4,7 @@ import './css/style.css'
 import Experience from './components/experiences/Experience';
 
 
+
 function App() {
 
 
@@ -13,7 +14,6 @@ function App() {
 
       {/* Rutas */}
       <AppRouter/>
-      
 
     </>
   )

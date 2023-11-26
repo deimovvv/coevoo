@@ -1,9 +1,23 @@
 const projects = [
     {
-        'id': 'Elvara',
+        'id': 'pcgexample1',
         'category': 'Videoclips',
         'date': '19/10',
-        'title': 'Elvara',
+        'title': 'Forest Environment with PCG',
+       'video': 'https://www.youtube.com/watch?v=T0IFN-n-8ps',
+        'description': 'Environment Art',
+        'client': 'Personal',
+        'image': '/assets/pcgexample2.jpg',
+        'image2': '/assets/pcgexample3.jpg',
+        'technologies': 'Unreal Engine, PCG',
+        'type': 'image'
+        
+    },
+    {
+        'id': 'Evolvara',
+        'category': 'Videoclips',
+        'date': '19/10',
+        'title': 'Evolvara',
        'video': 'https://www.youtube.com/watch?v=Dt0Ucp6wbUk',
         'description': 'Concept Art',
         'client': 'Personal',
