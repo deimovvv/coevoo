@@ -28,19 +28,21 @@ const projects = [
         
     },
     {
-        'id': 'volcrom',
-        'category': 'Videoclips',
-        'date': '19/10',
-        'title': 'Volcrom',
-       'video': 'https://www.youtube.com/watch?v=P1JKGesWvv4',
-        'description': 'Videoclip for Volcrom Engineering',
-        'client': 'Volcrom Engineering',
-        'image': '/assets/volcrom1.jpg',
-        'image2': '/assets/volcrom2.jpg',
-        'technologies': 'Unreal Engine, Blender, Adobe Premier, Ableton Live',
-        'type': 'image'
+        'id': 'Roterton',
+        'category': 'VR',
+        'date': '16/05',
+        'title': 'Roterton',
+        'image': '/assets/Roterton1.jpg',
+        'image2': '/assets/Roterton2.jpg',
+       'video': 'https://www.youtube.com/watch?v=pUe8FA5ncso',
+        'description': 'Virtual Reality experience for Party',
+        'client': 'Roterton',
+        'technologies': 'Unreal Engine, Blender, ChatGPT',
+        'type': 'video'
+        
         
     },
+    
     {
         'id': 'Divina33',
         'category': 'Virtual Production',
@@ -66,6 +68,32 @@ const projects = [
         
     },
     {
+        'id': 'Artic',
+        'category': 'collaborations',
+        'date': '13/07',
+        'title': 'Realistic Landscape',
+       'video': 'https://www.youtube.com/watch?v=7XTyINgeWwA',
+        'description': 'Environment Design',
+        'client': 'Coevo-studio',
+        'technologies': 'Unreal Engine 5.1',
+        'type': 'image'
+        
+    },
+    
+
+    {
+        'id': 'Fiah',
+        'category': 'Videoclips',
+        'date': '20/06',
+        'title': 'Fiah',
+       'video': 'https://www.youtube.com/watch?v=UR_d1DSDtvc',
+        'description': 'Videoclip for Fiah',
+        'client': 'Fiah',
+        'technologies': 'Unreal Engine, Blender, Adobe Premier',
+        'type': 'image'
+        
+    },
+    {
         'id': 'Seven-Fran',
         'category': 'Videoclips',
         'date': '19/10',
@@ -77,15 +105,44 @@ const projects = [
         'type': 'image'
         
     },
+  
+    {
+        'id': 'KMILA',
+        'category': 'Virtual Production',
+        'date': '11/06',
+        'title': 'KMILA',
+       'video': 'https://www.youtube.com/watch?v=g18jd8X-JpQ&t=1s',
+        'description': 'Virtual Production for KMILA - Erotica in Motion',
+        'client': 'KMILA',
+        'technologies': 'Unreal Engine, Adobe Premier',
+        'type': 'video'
+        
+    },
+   
+    {
+        'id': 'volcrom',
+        'category': 'Videoclips',
+        'date': '19/10',
+        'title': 'Volcrom',
+       'video': 'https://www.youtube.com/watch?v=P1JKGesWvv4',
+        'description': 'Videoclip for Volcrom Engineering',
+        'client': 'Volcrom Engineering',
+        'image': '/assets/volcrom1.jpg',
+        'image2': '/assets/volcrom2.jpg',
+        'technologies': 'Unreal Engine, Blender, Adobe Premier, Ableton Live',
+        'type': 'image'
+        
+    },
+    
 
     {
-        'id': 'Fiah',
+        'id': 'Audi',
         'category': 'Videoclips',
-        'date': '20/06',
+        'date': '02/07',
         'title': 'Fiah',
-       'video': 'https://www.youtube.com/watch?v=UR_d1DSDtvc',
-        'description': 'Videoclip for Fiah',
-        'client': 'Fiah',
+        'video': 'https://www.youtube.com/watch?v=UGQMYhJdl_8',
+        'description': 'Product Visualization',
+        'client': 'Coevo',
         'technologies': 'Unreal Engine, Blender, Adobe Premier',
         'type': 'image'
         
@@ -102,58 +159,7 @@ const projects = [
         'type': 'image'
         
     },
-    {
-        'id': 'KMILA',
-        'category': 'Virtual Production',
-        'date': '11/06',
-        'title': 'KMILA',
-       'video': 'https://www.youtube.com/watch?v=g18jd8X-JpQ&t=1s',
-        'description': 'Virtual Production for KMILA - Erotica in Motion',
-        'client': 'KMILA',
-        'technologies': 'Unreal Engine, Adobe Premier',
-        'type': 'video'
-        
-    },
-    {
-        'id': 'Roterton',
-        'category': 'VR',
-        'date': '16/05',
-        'title': 'Roterton',
-        'image': '/assets/Roterton1.jpg',
-        'image2': '/assets/Roterton2.jpg',
-       'video': 'https://www.youtube.com/watch?v=pUe8FA5ncso',
-        'description': 'Virtual Reality experience for Party',
-        'client': 'Roterton',
-        'technologies': 'Unreal Engine, Blender, ChatGPT',
-        'type': 'video'
-        
-        
-    },
-    {
-        'id': 'Artic',
-        'category': 'collaborations',
-        'date': '13/07',
-        'title': 'Realistic Landscape',
-       'video': 'https://www.youtube.com/watch?v=7XTyINgeWwA',
-        'description': 'Environment Design',
-        'client': 'Coevo-studio',
-        'technologies': 'Unreal Engine 5.1',
-        'type': 'image'
-        
-    },
 
-    {
-        'id': 'Audi',
-        'category': 'Videoclips',
-        'date': '02/07',
-        'title': 'Fiah',
-        'video': 'https://www.youtube.com/watch?v=UGQMYhJdl_8',
-        'description': 'Product Visualization',
-        'client': 'Coevo',
-        'technologies': 'Unreal Engine, Blender, Adobe Premier',
-        'type': 'image'
-        
-    },
 
    
     {
