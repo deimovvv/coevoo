@@ -12,7 +12,7 @@ export const getData = ( category ) => {
     const validCategory = ['collaborations', 'All', 'Videoclips', 'VR','Virtual Production']
 
     if(!validCategory.includes(category)){
-        throw new Error(`${ category } is not valid publiser`)
+        throw new Error(`${ category } is not valid category`)
     }
 
     return projects.filter(project => project.category === category)

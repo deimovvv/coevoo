@@ -130,6 +130,26 @@ const MenuOverlay = () => {
               >  Projects </motion.h5>
              
             </Link>
+            <Link
+              className="link_menu"
+              to="/services"
+            >
+              <motion.h5
+              className="animate__animated animate__fadeIn"
+               initial={{ y: 90, opacity: 0 }}
+               animate={{ y: 0, opacity: 1 }}
+               transition={{ delay: .35, duration: .55}}
+               exit={{
+                 opacity: 0,
+                 y: 90,
+                 transition: {
+                     ease: "easeInOut",
+                     delay: 1,
+                 }
+               }}
+              >  Services </motion.h5>
+             
+            </Link>
             <Link className="link_menu" to="/aboutus">
             <motion.h5
                initial={{ y: 90, opacity: 0}}

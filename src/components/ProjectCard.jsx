@@ -10,9 +10,10 @@ const Project = styled.div`
 `;
 
 const IMG = styled.img`
-  width: 440px;
-  height: 440px;
-  margin-top: 0%;
+  
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
 
 const TitleContainer = styled.div`
