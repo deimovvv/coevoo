@@ -1,20 +1,35 @@
 import React from "react";
 import styled from "styled-components";
 
+const Section = styled.div`
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 15px;
+
+@media screen and (max-width: 64em) {
+    grid-template-columns: 1fr;
+  }
+
+
+@media screen and (max-width: 40em) {
+grid-template-columns: 1fr;
+  
+
+};
+`
+
 const DescripcionContainer = styled.div`
   color: white;
   padding-top: 50px;
-  height: 400px;
-  width: 600px;
-  grid-column: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  @media screen and (max-width: 30em) {
+
+  @media screen and (max-width: 40em) {
     padding-top: 10px;
     font-size: 12px;
-
+    margin-bottom: 15px
     text-align: center;
   }
 `;
@@ -24,9 +39,8 @@ const Title = styled.h3`
 `;
 
 const ImagenContainer = styled.div`
-  grid-column: 1;
-  @media screen and (max-width: 30em) {
-    display: flex;
+  @media screen and (max-width: 40em) {
+    width: 70%;
      
   }
 `;
@@ -34,8 +48,11 @@ const ImagenContainer = styled.div`
 const IMG = styled.img`
   width: 600px;
   height: 400px;
-  @media screen and (max-width: 30em) {
-    margin-bottom: 15px;
+  object-fit: cover;
+  @media screen and (max-width: 40em) {
+    width: 500px;
+  height: 300px;
+  
    
   }
 `;
@@ -44,7 +61,7 @@ const ServicesCard = ({ id, title, description }) => {
   const servicesURL = `assets/serviciosImagenes/${id}.jpg`;
 
   return (
-    <>
+    <Section>
       <ImagenContainer>
         <IMG src={servicesURL} alt="" />
       </ImagenContainer>
@@ -53,7 +70,7 @@ const ServicesCard = ({ id, title, description }) => {
         <Title> {title} </Title>
         <p>{description}</p>
       </DescripcionContainer>
-    </>
+    </Section>
   );
 };
 

@@ -6,24 +6,13 @@ import Logo from "../components/Logo";
 import ServicesList from "../components/ServicesList";
 
 const Container = styled.div`
-  display: grid;
   
-  grid-template-rows: 400px;
   margin-top: 150px;
   text-align: center;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px;
-  height: 400px;
   width: 100%;
 
   margin-bottom: 100px !important;
   z-index: -1;
-
-  @media screen and (max-width: 30em) {
-  display: flex;
-  flex-direction: column;
-
-    }
     
 `;
 
