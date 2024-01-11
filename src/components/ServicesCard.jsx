@@ -27,10 +27,15 @@ const DescripcionContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-right: 20px;
+  
+
 
 
   @media screen and (max-width: 40em) {
     padding-top: 10px;
+  padding-right: 0px;
+    
     font-size: 13px;
     margin-bottom: 15px
     text-align: center;
@@ -64,7 +69,7 @@ const IMG = styled.img`
   object-fit: cover;
   @media screen and (max-width: 40em) {
     width: 380px;
-  height: 200px;
+  height: 280px;
   margin-top: 40px;
   margin-bottom: 40px;
 

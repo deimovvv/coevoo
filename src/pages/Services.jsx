@@ -5,6 +5,7 @@ import MenuOverlay from "../components/MenuOverlay";
 import Logo from "../components/Logo";
 import ServicesList from "../components/ServicesList";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router";
 
 const Container = styled.div`
   
@@ -77,6 +78,8 @@ font-size: 12px;
 
 const Services = () => {
   const [isLoading, setIsLoading] = useState(true);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 2000);
