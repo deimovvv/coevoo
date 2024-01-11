@@ -42,6 +42,13 @@ const DescripcionContainer = styled.div`
 
 const Title = styled.h3`
   padding-bottom: 10px;
+  @media screen and (max-width: 40em) {
+    
+    font-size: 13px;
+    
+    
+
+  }
 `;
 
 const ImagenContainer = styled.div`
@@ -58,7 +65,9 @@ const IMG = styled.img`
   @media screen and (max-width: 40em) {
     width: 380px;
   height: 200px;
-  margin-top: 25px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
   
    
   }
