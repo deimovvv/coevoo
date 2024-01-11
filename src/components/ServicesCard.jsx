@@ -1,10 +1,13 @@
+import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 
-const Section = styled.div`
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 15px;
+const ServicesDiv = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
 
 @media screen and (max-width: 64em) {
     grid-template-columns: 1fr;
@@ -28,9 +31,12 @@ const DescripcionContainer = styled.div`
 
   @media screen and (max-width: 40em) {
     padding-top: 10px;
-    font-size: 12px;
+    font-size: 13px;
     margin-bottom: 15px
     text-align: center;
+    width: 70%;
+    
+
   }
 `;
 
@@ -40,7 +46,7 @@ const Title = styled.h3`
 
 const ImagenContainer = styled.div`
   @media screen and (max-width: 40em) {
-    width: 70%;
+  
      
   }
 `;
@@ -50,8 +56,9 @@ const IMG = styled.img`
   height: 400px;
   object-fit: cover;
   @media screen and (max-width: 40em) {
-    width: 500px;
-  height: 300px;
+    width: 380px;
+  height: 200px;
+  margin-top: 25px;
   
    
   }
@@ -61,7 +68,12 @@ const ServicesCard = ({ id, title, description }) => {
   const servicesURL = `assets/serviciosImagenes/${id}.jpg`;
 
   return (
-    <Section>
+    <motion.div
+    initial={{ y: 200, opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
+    transition={{ delay: 0.1, ease: "circOut", duration: 1 }}
+  >
+    <ServicesDiv>
       <ImagenContainer>
         <IMG src={servicesURL} alt="" />
       </ImagenContainer>
@@ -70,7 +82,8 @@ const ServicesCard = ({ id, title, description }) => {
         <Title> {title} </Title>
         <p>{description}</p>
       </DescripcionContainer>
-    </Section>
+    </ServicesDiv>
+    </motion.div>
   );
 };
 

@@ -18,7 +18,6 @@ const Container = styled.div`
 
 const Section = styled.div`
   margin: 50px 20px;
-
   display: grid;
   justify-content: center;
 
@@ -63,6 +62,7 @@ const Manifiesto = () => {
          {/*  <Navbar /> */}
           <MenuOverlay/>
           <LogoNegro color="white" />
+
           <motion.div
             initial={{ y: 200, opacity: 0.9 }}
             animate={{ y: 0, opacity: 1 }}
