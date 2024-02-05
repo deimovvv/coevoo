@@ -2,15 +2,14 @@ import { Canvas, useThree } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
 import {
   Bloom,
-  DepthOfField,
   EffectComposer,
 } from "@react-three/postprocessing";
 import styled from "styled-components";
 import "../../css/style.css";
 import { Suspense } from "react";
-
 import { FBOParticles } from './FBOParticles'
 import Model from "./Model";
+
 
 const Container = styled.div`
   position: fixed !important;
@@ -25,6 +24,8 @@ const Container = styled.div`
 
 `;
 
+// componenente para renderizar three.js
+// que adentro renderizo el modelo
 const Experience = () => {
   return (
     <Container>
@@ -32,25 +33,25 @@ const Experience = () => {
         <OrbitControls updateDefaultCamera={true} enableZoom={false} />
 
         {/* Lighting */}
-        <directionalLight position={[0, 5, 3]} intensity={0.3} />
+        <directionalLight position={[0, 5, 3]} intensity={2} />
         <pointLight color={"purple"} intensity={0.5}></pointLight>
         <pointLight color={"green"} intensity={1.2}></pointLight>
         
 
         {/* PostProcess */}
         <EffectComposer>
-          <Bloom mipmapBlur intensity={1.8} luminanceThreshold={0} />
-          {/* <DepthOfField
-            focusDistance={0.1}
-            focalLength={0.14}
-            bokehScale={5.8}
-          /> */}
+          <Bloom mipmapBlur intensity={3.8} luminanceThreshold={0} />
+        
         </EffectComposer>
 
+
+
         {/* 3D MODEL */}
+        
         <Suspense fallback={null}>
-          {/* <Model/> */}
+         {/*  <Model/> */}
           < FBOParticles/>
+         
         </Suspense>
 
         

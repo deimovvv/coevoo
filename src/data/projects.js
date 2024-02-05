@@ -1,5 +1,19 @@
 const projects = [
     {
+        'id': '999_2',
+        'category': 'Virtual Reality',
+        'date': '19/10',
+        'title': 'Virtual Reality experience',
+       'video': 'https://www.youtube.com/watch?v=T0IFN-n-8ps',
+        'description': 'Virtual Reality for 999',
+        'client': 'Personal',
+      /*   'image': '/assets/pcgexample2.jpg',
+        'image2': '/assets/pcgexample3.jpg', */
+        'technologies': 'Unreal Engine, Blender',
+        'type': 'image'
+        
+    },
+    {
         'id': 'pcgexample1',
         'category': 'Videoclips',
         'date': '19/10',

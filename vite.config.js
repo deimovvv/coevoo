@@ -8,4 +8,5 @@ export default defineConfig({
     react(),
     glsl( )
   ],
+  build: { chunkSizeWarningLimit: 1600, }
 })

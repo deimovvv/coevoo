@@ -36,7 +36,7 @@ function Model(props) {
             geometry={nodes.mesh_0.geometry}
             material={materials["Material.001"]}
             position={[0, -0.05, 1]}
-            scale={0.5}
+            scale={0.2}
             rotation={[-1.5, 0, 0]}
           >
              <backgroundMaterial ref={mat} side={THREE.DoubleSide} />
