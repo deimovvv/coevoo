@@ -126,7 +126,7 @@ const Collaborations = () => {
   };
 
   // Tu lista de categorías
-  const categories = ['All', 'Videoclips', 'VR', 'Virtual Production' /*  'Augmented Reality', 'Web Development' */ /* ... */];
+  const categories = ['All', 'Videoclips', 'VR / AR', '3D & Environment'  /*  'Augmented Reality', 'Web Development' */ /* ... */];
 
 
   return (

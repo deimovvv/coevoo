@@ -1,21 +1,21 @@
 const projects = [
     {
         'id': '999_2',
-        'category': 'Virtual Reality',
+        'category': 'VR / AR',
         'date': '19/10',
         'title': 'Virtual Reality experience',
-       'video': 'https://www.youtube.com/watch?v=T0IFN-n-8ps',
+       'video': 'https://www.youtube.com/watch?v=f3XfhRqPN7I',
         'description': 'Virtual Reality for 999',
         'client': 'Personal',
-      /*   'image': '/assets/pcgexample2.jpg',
-        'image2': '/assets/pcgexample3.jpg', */
+        'image': '/assets/999_23.jpg',
+        'image2': '/assets/999_24.jpg',
         'technologies': 'Unreal Engine, Blender',
         'type': 'image'
         
     },
     {
         'id': 'pcgexample1',
-        'category': 'Videoclips',
+        'category': '3D & Environment',
         'date': '19/10',
         'title': 'Forest Environment with PCG',
        'video': 'https://www.youtube.com/watch?v=T0IFN-n-8ps',
@@ -29,7 +29,7 @@ const projects = [
     },
     {
         'id': 'Evolvara',
-        'category': 'Videoclips',
+        'category': '3D & Environment',
         'date': '19/10',
         'title': 'Evolvara',
        'video': 'https://www.youtube.com/watch?v=Dt0Ucp6wbUk',
@@ -43,7 +43,7 @@ const projects = [
     },
     {
         'id': 'Roterton',
-        'category': 'VR',
+        'category': 'VR / AR',
         'date': '16/05',
         'title': 'Roterton',
         'image': '/assets/Roterton1.jpg',
@@ -59,7 +59,7 @@ const projects = [
     
     {
         'id': 'Divina33',
-        'category': 'Virtual Production',
+        'category': 'Videoclips',
         'date': '13/10',
         'title': 'Divina',
        'video': 'https://www.youtube.com/watch?v=tayRe8L-D1k&t=1s',
@@ -71,7 +71,7 @@ const projects = [
     },
     {
         'id': 'CaveVR',
-        'category': 'VR',
+        'category': 'VR / AR',
         'date': '12/10',
         'title': 'VR Cave',
        'video': 'https://www.youtube.com/watch?v=JtPOOxC0f10',
@@ -83,7 +83,7 @@ const projects = [
     },
     {
         'id': 'Artic',
-        'category': 'collaborations',
+        'category': '3D & Environment',
         'date': '13/07',
         'title': 'Realistic Landscape',
        'video': 'https://www.youtube.com/watch?v=7XTyINgeWwA',
@@ -122,7 +122,7 @@ const projects = [
   
     {
         'id': 'KMILA',
-        'category': 'Virtual Production',
+        'category': 'Videoclips',
         'date': '11/06',
         'title': 'KMILA',
        'video': 'https://www.youtube.com/watch?v=g18jd8X-JpQ&t=1s',
@@ -151,7 +151,7 @@ const projects = [
 
     {
         'id': 'Audi',
-        'category': 'Videoclips',
+        'category': '3D & Environment',
         'date': '02/07',
         'title': 'Fiah',
         'video': 'https://www.youtube.com/watch?v=UGQMYhJdl_8',
@@ -163,7 +163,7 @@ const projects = [
     },
     {
         'id': 'Remix-Facu',
-        'category': 'Videoclips',
+        'category': '3D & Environment',
         'date': '20/06',
         'title': 'Divina',
        'video': 'https://www.youtube.com/watch?v=bdMkfValrHY',

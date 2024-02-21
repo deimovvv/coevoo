@@ -9,7 +9,7 @@ export const getData = ( category ) => {
     
 
 
-    const validCategory = ['collaborations', 'All', 'Videoclips', 'VR','Virtual Production']
+    const validCategory = ['collaborations', 'All', 'Videoclips', 'VR / AR','Virtual Production', '3D & Environment']
 
     if(!validCategory.includes(category)){
         throw new Error(`${ category } is not valid category`)

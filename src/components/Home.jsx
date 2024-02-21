@@ -11,8 +11,8 @@ import { Helmet } from "react-helmet";
 
 
 const Home = () => {
-  const [isLoading, setIsLoading] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 1000); // Simula el tiempo de carga de la página
@@ -25,7 +25,7 @@ const Home = () => {
                 <meta charSet="utf-8" />
                 <title>Coevo Studio</title>
                 <link rel="canonical" href="https://coevo-studio.com/" />
-                <meta name="description" content="Coevo Studio" />
+                <meta name="Coevo Website" content="Coevo Studio" />
             </Helmet>
         {isLoading ? (
           <Loader />

@@ -72,7 +72,7 @@ const CopyRight = () => {
 
       <Link className="link" to="/copyright">
         {" "}
-        ©2023 Coevo Studio{" "}
+        ©2024 Coevo Studio{" "}
       </Link>
     </Div> }
   
