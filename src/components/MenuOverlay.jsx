@@ -6,7 +6,7 @@ import "../css/style.css";
 
 const Menu = styled.h4`
 font-family: "Syncopate", sans-serif;
-font-size: 14px;
+font-size: 1rem;
  color: white;
 font-weight: 1000;
 margin: 10px;

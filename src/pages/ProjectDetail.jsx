@@ -188,7 +188,7 @@ border: none;
 color: whitesmoke;
 cursor: pointer;
 margin-top: 5px;
-font-size: 12px;
+font-size: 0.85rem;
 
 
 :hover{

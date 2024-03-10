@@ -91,7 +91,7 @@ transition: 0s   transform;
 
 text-transform: uppercase;
 font-family: "Syncopate", sans-serif;
-font-size: 12px;
+font-size: 0.85rem;
 
 @media screen and (max-width: 40em) {
   font-size: 10px;

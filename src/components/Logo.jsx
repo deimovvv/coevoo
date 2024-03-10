@@ -22,8 +22,8 @@ const Container = styled.div`
 const IMG = styled.img`
   /* width: 45px;
   height: 36px; */
-  width: 62px;
-    height: 62px;
+  width: 72px;
+    height: 72px;
 
   @media screen and (max-width: 40em) {
    /*  width: 35px;
