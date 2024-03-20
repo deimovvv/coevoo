@@ -1,5 +1,17 @@
 const projects = [
     {
+        'id': 'Manglar',
+        'category': 'VR / AR',
+        'date': '16/03',
+        'title': 'Virtual Reality experience',
+       'video': 'https://www.youtube.com/watch?v=SM1aSXdxxgo',
+        'description': 'Virtual Reality for Manglar',
+        'client': 'Manglar',
+        'technologies': 'Unreal Engine, Blender, Substance Painter',
+        'type': 'image'
+        
+    },
+    {
         'id': '999_2',
         'category': 'VR / AR',
         'date': '19/10',
