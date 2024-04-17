@@ -26,19 +26,18 @@ const projects = [
         
     },
     {
-        'id': 'pcgexample1',
+        'id': 'EnvTren',
         'category': '3D & Environment',
-        'date': '19/10',
-        'title': 'Forest Environment with PCG',
-       'video': 'https://www.youtube.com/watch?v=T0IFN-n-8ps',
-        'description': 'Environment Art',
+        'date': '12/03/2024',
+        'title': 'Environment',
+       'video': 'https://www.youtube.com/watch?v=OreMUiKiSH4',
+        'description': 'Environment Train',
         'client': 'Personal',
-        'image': '/assets/pcgexample2.jpg',
-        'image2': '/assets/pcgexample3.jpg',
-        'technologies': 'Unreal Engine, PCG',
+        'technologies': 'Unreal Engine, Adobe Premier',
         'type': 'image'
         
     },
+
     {
         'id': 'Evolvara',
         'category': '3D & Environment',
@@ -80,19 +79,23 @@ const projects = [
         'type': 'image'
         
     },
-    
     {
-        'id': 'Divina33',
-        'category': 'Videoclips',
-        'date': '13/10',
-        'title': 'Divina',
-       'video': 'https://www.youtube.com/watch?v=tayRe8L-D1k&t=1s',
-        'description': 'Virtual Production for Divina Glitch',
-        'client': 'Divina',
-        'technologies': 'Unreal Engine, Blender, Adobe Premier',
+        'id': 'pcgexample1',
+        'category': '3D & Environment',
+        'date': '19/10',
+        'title': 'Forest Environment with PCG',
+       'video': 'https://www.youtube.com/watch?v=T0IFN-n-8ps',
+        'description': 'Environment PCG',
+        'client': 'Personal',
+        'image': '/assets/pcgexample2.jpg',
+        'image2': '/assets/pcgexample3.jpg',
+        'technologies': 'Unreal Engine, PCG',
         'type': 'image'
         
     },
+   
+    
+   
     {
         'id': 'CaveVR',
         'category': 'VR / AR',
@@ -114,6 +117,18 @@ const projects = [
         'description': 'Environment Design',
         'client': 'Coevo-studio',
         'technologies': 'Unreal Engine 5.1',
+        'type': 'image'
+        
+    },
+    {
+        'id': 'Divina33',
+        'category': 'Videoclips',
+        'date': '13/10',
+        'title': 'Divina',
+       'video': 'https://www.youtube.com/watch?v=tayRe8L-D1k&t=1s',
+        'description': 'Virtual Production for Divina Glitch',
+        'client': 'Divina',
+        'technologies': 'Unreal Engine, Blender, Adobe Premier',
         'type': 'image'
         
     },
