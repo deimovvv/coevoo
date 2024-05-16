@@ -251,8 +251,8 @@ const Project = () => {
 
             <CardProject>
               
-            <h2 className="title"> {project.title} </h2>
-              <h3 className="description">  {project.description} </h3>
+            <h2 className="title"> {project.description} </h2>
+              <h3 className="description">   {project.title} </h3>
               
               <TextContainer>
               

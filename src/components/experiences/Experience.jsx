@@ -41,7 +41,6 @@ const Experience = () => {
         {/* PostProcess */}
         <EffectComposer>
           <Bloom mipmapBlur intensity={3.8} luminanceThreshold={0} />
-        
         </EffectComposer>
 
 

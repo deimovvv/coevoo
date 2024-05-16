@@ -1,12 +1,14 @@
 const projects = [
     {
-        'id': 'Manglar',
+        'id': 'manglar3',
         'category': 'VR / AR',
         'date': '16/03',
         'title': 'Virtual Reality experience',
        'video': 'https://www.youtube.com/watch?v=SM1aSXdxxgo',
         'description': 'Virtual Reality for Manglar',
         'client': 'Manglar',
+        'image': '/assets/manglar2.jpg',
+        'image2': '/assets/Manglar.jpg',
         'technologies': 'Unreal Engine, Blender, Substance Painter',
         'type': 'image'
         
@@ -22,6 +24,18 @@ const projects = [
         'image': '/assets/999_23.jpg',
         'image2': '/assets/999_24.jpg',
         'technologies': 'Unreal Engine, Blender',
+        'type': 'image'
+        
+    },
+    {
+        'id': 'forestTrain',
+        'category': '3D & Environment',
+        'date': '15/05',
+        'title': 'Environment',
+       'video': 'https://www.youtube.com/watch?v=IWbyb_4up5I',
+        'description': 'Environment Forest inspired in Michael Gerard Course',
+        'client': 'Personal',
+        'technologies': 'Unreal Engine, Speed Tree',
         'type': 'image'
         
     },
