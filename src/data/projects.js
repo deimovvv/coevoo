@@ -31,11 +31,25 @@ const projects = [
         'id': 'forestTrain',
         'category': '3D & Environment',
         'date': '15/05',
-        'title': 'Environment',
+        'title': 'Environment Forest inspired in Michael Gerard Course',
        'video': 'https://www.youtube.com/watch?v=IWbyb_4up5I',
-        'description': 'Environment Forest inspired in Michael Gerard Course',
+        'description': 'Environment',
         'client': 'Personal',
         'technologies': 'Unreal Engine, Speed Tree',
+        'type': 'image'
+        
+    },
+    {
+        'id': 'Aitana',
+        'category': '3D & Environment',
+        'date': '15/05',
+        'title': '3D Environment and Modeling for Aitana VideoCLIP',
+       'video': 'https://www.youtube.com/watch?v=sB3OVYG7tTQ',
+        'description': '3D for AITANA',
+        'client': 'Aitana, Julia Conde',
+        'image': '/assets/Aitana2.jpg',
+        'image2': '/assets/Aitana3.jpg',
+        'technologies': 'Unreal Engine, Blender, Substance Painter',
         'type': 'image'
         
     },

@@ -20,6 +20,9 @@ const Section = styled.div`
   margin: 50px 20px;
   display: grid;
   justify-content: center;
+  text-align: center;
+  width: auto;
+
 
   @media screen and (max-width: 48em) {
   }
@@ -71,21 +74,15 @@ const Manifiesto = () => {
             <Section>
               <h3>
                 {" "}
-                Coevo is an interdiciplinary studio based in Argentina...{" "}
+                Welcome to Coevo...
               </h3>{" "}
               <br />
               <p>
-                We create experiencies that cover 3D art, immersive
-                installations, virtual reality, sound / inmersive Design,
-                virtual worlds, art direction and visual effects. <br />
-              </p>
+                Where innovation meets imagination! We are an interdisciplinary studio based in Argentina that specializes in creating experiences encompassing 3D art, immersive installations, virtual reality, augmented reality, application design and development, sound/immersive design, virtual worlds, art direction, and visual effects.{" "}
+              </p> 
               <br />
               <p>
-                Our approach is to create an open space for experimentation and
-                cooperation between the parties involved, hence our name Coevo,
-                which refers to Co-evolution, <br /> That means every system,
-                whether physical or digital, evolves thanks to the evolution of
-                the others.
+              Our focus is on creating an open space for experimentation and cooperation among the different parties involved, hence our name, which refers to Co-evolution. This means that each system, whether physical or digital, evolves thanks to the development of the others. Join us on this journey where creativity and technology merge to create truly unique experiences. Let Coevo transform your vision into reality today!
               </p>
               <br />
               <Gallery>
