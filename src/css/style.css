@@ -54,6 +54,8 @@ body {
   margin-right: 30px;
   margin-top: 2px;
   position: fixed;
+  
+ 
 }
 
 .menu_container{
@@ -67,7 +69,9 @@ body {
   align-items: center;
   flex-direction: column;
   top: 0;
-  position: fixed;
+/*   position: fixed; */
+
+  
    
 }
 
@@ -84,20 +88,19 @@ font-family: "Syncopate", sans-serif;
 
 }
 
-.btn_close{
+.btn_close {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  width: 58%;
-  height: 58px;
+  width: 108px; /* Ajusta el ancho del área clicable */
+  height: 150px; /* Ajusta la altura del área clicable */
   position: absolute;
-  top: 10px;
-  right: 4px;
+  top: 0px;
+  right: 5px;
   cursor: pointer;
-  padding: 0 20px;
-
+/*   z-index: 1002;  *//* Asegúrate de que el botón de cierre tenga un z-index alto */
+  background-color: transparent; /* Asegúrate de que el fondo sea transparente */
 }
-
 
 
 a {
@@ -150,6 +153,7 @@ h5 {
 
 .iconContainer {
   padding: 0 7px;
+  /* background-color: #4caf50; */
 }
 
 .emailLink {
@@ -218,6 +222,18 @@ h5 {
   outline: none;
   padding: 10px;
   text-align: center;
+}
+
+.df-messenger {
+  --df-messenger-bot-message: #e0e0e0;
+  --df-messenger-button-titlebar-color: #4caf50;
+  --df-messenger-chat-background-color: #fafafa;
+  --df-messenger-font-color: #000;
+  --df-messenger-send-icon: #4caf50;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
 }
 
 .link {

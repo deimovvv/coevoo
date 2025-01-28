@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Experience from "../components/experiences/Experience";
 import Loader from "../components/Loader";
 import Logo from "../components/Logo";
-import MenuOverlay from "../components/MenuOverlay";
+
 
 const Div = styled.div`
  width: 100%;
@@ -72,7 +72,7 @@ const CopyRight = () => {
 
       <Link className="link" to="/copyright">
         {" "}
-        ©2024 Coevo Studio{" "}
+        ©2025 Coevo Studio{" "}
       </Link>
     </Div> }
   

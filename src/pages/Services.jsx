@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Loader from "../components/Loader";
-import MenuOverlay from "../components/MenuOverlay";
+/* import MenuOverlay from "../components/MenuOverlay"; */
 import Logo from "../components/Logo";
 import ServicesList from "../components/ServicesList";
 import { motion } from "framer-motion";

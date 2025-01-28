@@ -4,7 +4,7 @@ import { Suspense, useState } from "react";
 import Loader from "../components/Loader";
 import Logo from "../components/Logo";
 import { useEffect } from "react";
-import MenuOverlay from "../components/MenuOverlay";
+import SidebarMenu from "../components/SidebarMenu";
 
 const Container = styled.div`
   display: flex;
@@ -12,41 +12,33 @@ const Container = styled.div`
   flex-direction: column;
   margin-top: 150px;
   align-items: center;
-
   margin-bottom: 100px !important;
   z-index: -1;
-
-
 `;
 
 const Filter = styled.div`
-color: white;
-margin-bottom: 40px;
+  color: white;
+  margin-bottom: 40px;
+  
 
+  ul {
+    display: flex;
+    list-style: none;
+  }
 
-ul{
-  display: flex;
-  list-style: none; 
+  li {
+    padding-right: 7px;
+    cursor: pointer;
+  }
 
-}
-
-li{
-  padding-right: 7px;
-  cursor: pointer;
-}
-
-li:hover{
-  border-bottom: 0.5px solid;
-}
-
-`
-
+  li:hover {
+    border-bottom: 0.5px solid;
+  }
+`;
 
 const Section = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  
-
   gap: 0px;
 
   @media screen and (max-width: 64em) {
@@ -58,15 +50,11 @@ const Section = styled.div`
 `;
 
 const Copirigth = styled.div`
- 
-  
-  /* transform: translateX(-51%);  */
   cursor: pointer;
   z-index: 99;
-  position:relative;
+  position: relative;
   left: 45%;
   margin-bottom: 5%;
-  
 
   & > h5 {
     font-family: "Syncopate", sans-serif;
@@ -77,42 +65,36 @@ const Copirigth = styled.div`
 `;
 
 const Copy = styled.h5`
-font-size: 10px;
+  font-size: 10px;
   font-family: "Syncopate", sans-serif;
 `;
 
 const Button = styled.button`
-background: transparent;
-color: white;
-border: none;
-padding-right: 16px;
-cursor: pointer;
-transition: 0s   transform;
+  background: transparent;
+  color: white;
+  border: none;
+  padding-right: 16px;
+  cursor: pointer;
+  transition: 0s transform;
+  text-transform: uppercase;
+  font-family: "Syncopate", sans-serif;
+  font-size: .95rem;
 
-text-transform: uppercase;
-font-family: "Syncopate", sans-serif;
-font-size: 0.85rem;
-
-@media screen and (max-width: 40em) {
-  font-size: 10px;
+  @media screen and (max-width: 40em) {
+    font-size: 10px;
   }
 
-
-:hover{
-  
-  text-decoration: underline;
-   transform: scale(1.05);
-   transition: 0.5s;
-  
-}
-
-
-
-`
+  &:hover {
+    text-decoration: underline;
+    transform: scale(1.05);
+    transition: 0.5s;
+  }
+`;
 
 const Collaborations = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [highlightedIndex, setHighlightedIndex] = useState(null);
 
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 2000);
@@ -126,8 +108,7 @@ const Collaborations = () => {
   };
 
   // Tu lista de categorías
-  const categories = ['All', 'Videoclips', 'VR / AR', '3D & Environment'  /*  'Augmented Reality', 'Web Development' */ /* ... */];
-
+  const categories = ['All', '3D & Environment', 'AI', 'VR / AR', 'Videoclips'];
 
   return (
     <>
@@ -135,40 +116,32 @@ const Collaborations = () => {
         // Renderiza el Loader mientras isLoading sea true
         <Loader />
       ) : (
-        
         <Container>
-          
-        
-          <MenuOverlay/>
-         
-          <Filter className="prueba" >   
-          {categories.map(category => (
-          <Button
-            key={category}
-            onClick={() => setSelectedCategory(category)}
-            className={selectedCategory === category ? 'active' : ''}
-          >
-            {category}
-          </Button>
-          
-        ))}
-           </Filter>
-           
-
-           
+          <Filter className="prueba">
+            {categories.map((category) => (
+              <Button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={selectedCategory === category ? 'active' : ''}
+              >
+                {category}
+              </Button>
+            ))}
+          </Filter>
           <Section>
-            <Logo />
-
-            
-            <ProjectList category={selectedCategory === 'All' ? '' : selectedCategory} onLoad={handleImageLoad} />
+            <ProjectList
+              category={selectedCategory === 'All' ? '' : selectedCategory}
+              onLoad={handleImageLoad}
+              highlightedIndex={highlightedIndex}
+              onHover={(index) => setHighlightedIndex(index)}
+              onLeave={() => setHighlightedIndex(null)}
+            />
           </Section>
-
-          
         </Container>
       )}
-
+      <Logo />
+      <SidebarMenu />
     </>
-
   );
 };
 

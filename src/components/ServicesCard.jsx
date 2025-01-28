@@ -37,7 +37,7 @@ const DescripcionContainer = styled.div`
   padding-right: 0px;
     
     font-size: 13px;
-    margin-bottom: 15px
+    margin-bottom: 15px;
     text-align: center;
     width: 70%;
     

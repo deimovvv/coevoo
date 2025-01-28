@@ -2,60 +2,29 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.div`
-  position: fixed;
-  z-index: 999999;
   margin: 0;
   padding: 0;
-  /* top: 32px;
-  left: 38px; */
-  top: 25px;
-  left: 35px;
-
   display: block;
-
-  @media screen and (max-width: 30em) {
-    left: 14px;
-    top: 14px;
-
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Asegúrate de que el logo esté por encima de otros elementos */
 `;
+
 const IMG = styled.img`
-  /* width: 45px;
-  height: 36px; */
-  width: 72px;
-    height: 72px;
-
-  @media screen and (max-width: 40em) {
-   /*  width: 35px;
-    height: 25px; */
-    width: 50px;
-    height: 50px;
-    top: 1px;
-    
-
-  }
-  @media screen and (max-width: 64em) {
-   /*  width: 35px;
-    height: 25px; */
-    width: 50px;
-    height: 50px;
-    top: 1px;
-    
-
-  }
+  width: 130px;
+  margin-top: 24px;
+  margin-left: 20px;
 `;
 
-const logo = () => {
+const Logo = () => {
   return (
     <Container>
       <Link to="/">
-        {" "}
-       
-        <IMG src="/assets/Logo33.png" />{" "}
-
+        <IMG src="/assets/isocoevo.png" alt="Logo" />
       </Link>
     </Container>
   );
 };
 
-export default logo;
+export default Logo;

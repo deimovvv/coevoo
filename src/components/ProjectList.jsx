@@ -9,10 +9,14 @@ const ProjectList = ({ category }) => {
   return (
     <>
       {projects.map((project) => (
-        <ProjectCard key={project.id} {...project} />
+       <ProjectCard key={project.id} {...project} /> 
+
       ))}
     </>
   );
 };
 
 export default ProjectList;
+
+
+

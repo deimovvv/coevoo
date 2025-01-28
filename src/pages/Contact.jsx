@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Experience from "../components/experiences/Experience";
 import Loader from "../components/Loader";
 import Logo from "../components/Logo";
-import MenuOverlay from "../components/MenuOverlay";
+
 
 const Container = styled.div`
   width: 100%;
@@ -62,10 +62,10 @@ const Contact = () => {
     { isLoading ? <Loader/> : 
     <Container>
       
-      <Logo />
+      {/* <Logo /> */}
       <Experience />
      
-      <MenuOverlay/>
+     {/*  <MenuOverlay/> */}
 
       <Contactos className="animate__animated animate__fadeIn">
         <Emailcontainer>
@@ -83,7 +83,7 @@ const Contact = () => {
         <Iconcontainer>
           <Link
             className="iconContainer"
-            to={"https://www.linkedin.com/in/coevo-studio-38b3a5265/"}
+            to={"https://www.linkedin.com/company/104669428/admin/dashboard/"}
             target="_blank"
           >
             <box-icon
@@ -113,7 +113,7 @@ const Contact = () => {
 
       <Link className="link" to="/copyright">
         {" "}
-        ©2024 Coevo Studio{" "}
+        ©2025 Coevo Studio{" "}
       </Link>
     </Container>
   }

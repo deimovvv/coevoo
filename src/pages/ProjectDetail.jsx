@@ -7,7 +7,6 @@ import Loader from "../components/Loader";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Logo from "../components/Logo";
-import MenuOverlay from "../components/MenuOverlay";
 
 const Section = styled.div`
   margin: 150px 10px;
@@ -239,9 +238,9 @@ const Project = () => {
         <Loader />
       ) : (
         <Section id="project-section">
-          <MenuOverlay/>
-          <Logo/>
-         
+         {/*  <MenuOverlay/>
+          <Logo/> */}
+            <Logo/> 
 
           <motion.div
             initial={{ y: 200, opacity: 0 }}

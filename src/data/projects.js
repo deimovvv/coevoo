@@ -14,6 +14,20 @@ const projects = [
         
     },
     {
+        'id': 'divinaglitch1',
+        'category': 'Videoclips',
+        'date': '16/08/2024',
+        'title': '',
+       'video': 'https://www.youtube.com/watch?v=HYYLl_wMBH8',
+        'description': 'Audiovisual production for Divina Glitch',
+        'client': 'DIVINA',
+        'image': '/assets/divinaglitch2.jpg',
+        'image2': '/assets/divinaglitch3.jpg',
+        'technologies': 'Adobe Premiere, After Effects',
+        'type': 'image'
+        
+    },
+    {
         'id': '999_2',
         'category': 'VR / AR',
         'date': '19/10',
@@ -43,7 +57,7 @@ const projects = [
         'id': 'Aitana',
         'category': '3D & Environment',
         'date': '15/05',
-        'title': '3D Environment and Modeling for Aitana VideoCLIP',
+        'title': '3D Environment and Modeling for Aitana Videoclip directed by Julia Conde',
        'video': 'https://www.youtube.com/watch?v=sB3OVYG7tTQ',
         'description': '3D for AITANA',
         'client': 'Aitana, Julia Conde',
@@ -65,6 +79,19 @@ const projects = [
         'type': 'image'
         
     },
+    {
+        'id': 'papanoel',
+        'category': 'AI',
+        'date': '12/11/2024',
+        'title': 'Christmas campaign video made for Alto Palermo with Artificial Intelligence, which was presented on the screens.',
+       'video': 'https://www.youtube.com/watch?v=MNNixtVlCmA',
+        'description': 'Video AI with FLUX',
+        'client': 'Personal',
+        'technologies': 'Comfy UI, Flux, IPAadapter, ControlNet',
+        'type': 'image'
+        
+    },
+
 
     {
         'id': 'Evolvara',

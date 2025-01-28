@@ -5,6 +5,7 @@ const services = [
     "description": "Explore a new realm of digital experiences with our services in VR (Virtual Reality), AR (Augmented Reality), MR (Mixed Reality), and XR (Extended Reality). From immersive virtual worlds to the integration of digital information into the real world, Coevo transforms ideas into unique and engaging experiences. Discover how these revolutionary technologies can enhance your vision and connect with your audience in innovative ways.",
     "category": "servicios"
 },
+
 {   
     "id": '3D',
     "title": "3D",
@@ -12,10 +13,11 @@ const services = [
     "category": "servicios"
    
 },
+
 {   
-    "id": 'ProduccionesAudiovisuales',
-    "title": "AUDIOVISUAL PRODUCTIONS",
-    "description": "Capture the essence of your message with our high-quality audiovisual productions. From promotional and advertising videos to captivating narrative content, at Coevo we turn your ideas into impactful visual stories.",
+    "id": 'AI',
+    "title": "AI",
+    "description": "We drive innovation with cutting-edge Artificial Intelligence solutions. From generating visual content and immersive simulations to developing AI agents and custom chatbots, we create unique experiences that transform interaction and creativity in your projects.",
     "category": "servicios"
     
 },

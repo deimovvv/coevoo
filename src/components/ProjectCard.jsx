@@ -5,15 +5,16 @@ import { Cloudinary } from "@cloudinary/url-gen";
 import { useRef, useEffect, useState } from "react";
 
 const Project = styled.div`
-  margin: 0%;
+  margin: 20px; /* Agrega margen para la distancia entre proyectos */
   padding: 0%;
 `;
 
 const IMG = styled.img`
-  
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 8px; /* Ajusta el borde redondeado */
+  transition: transform 0.3s ease; /* Añade transición para el efecto de escala */
 `;
 
 const TitleContainer = styled.div`
@@ -29,7 +30,7 @@ const TitleContainer = styled.div`
   flex-direction: column;
   opacity: 0;
   transition: 0.6s;
-  
+  border-radius: 8px; /* Ajusta el borde redondeado */
   
   &:hover {
     opacity: 1;
@@ -47,9 +48,21 @@ const TitleContainer = styled.div`
 const ImageContainer = styled.div`
   position: relative;
   height: 440px;
+  border-radius: 8px; /* Ajusta el borde redondeado */
+  overflow: hidden; /* Asegura que el contenido se recorte según el borde redondeado */
+  transition: transform 0.3s ease; /* Añade transición para el efecto de escala */
+
+  &:hover {
+    transform: scale(1.02); /* Aplica una pequeña escala en hover */
+  }
+
+  &:hover ${IMG} {
+    transform: scale(1.02); /* Aplica una pequeña escala en hover */
+  }
 `;
 
 const H3 = styled.h3`
+  font-family: 'Helvetica', 'Arial', sans-serif; /* Especifica la fuente Helvetica y Arial como respaldo */
   font-weight: 200;
   font-size: 1rem;
   color: white;
@@ -62,6 +75,7 @@ const Video = styled.video`
   height: 440px;
   margin-top: 0%;
   display: ${(props) => (props.mobile ? "none" : "block")};
+  border-radius: 8px; /* Ajusta el borde redondeado */
 `;
 
 const DescriptionContainer = styled.div`
@@ -77,6 +91,7 @@ const PosterImage = styled.img`
   height: 440px;
   object-fit: cover;
   display: ${(props) => (props.mobile ? "block" : "none")};
+  border-radius: 8px; /* Ajusta el borde redondeado */
 `;
 
 const cld = new Cloudinary({
@@ -88,9 +103,6 @@ const cld = new Cloudinary({
 const ProjectCard = ({ id, title, category, date, description, type }) => {
   const videoRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
-
-
-
 
   useEffect(() => {
     // Accede al elemento de video utilizando videoRef.current
@@ -128,11 +140,8 @@ const ProjectCard = ({ id, title, category, date, description, type }) => {
       transition={{ delay: 0, ease: "circOut", duration: 1 }}
     >
       <Project className="animate__animated animate__fadeIn">
-      <Link
-            to={`/project/${id}`}
-          >
-        <ImageContainer>
-          
+        <Link to={`/project/${id}`}>
+          <ImageContainer>
             {type === "image" && <IMG src={projectURL} />}
             {type === "video" && (
               <>
@@ -159,13 +168,12 @@ const ProjectCard = ({ id, title, category, date, description, type }) => {
                 <H3>{description}</H3>
               </DescriptionContainer>
             )}
-         
-          {!isMobile && (
-            <TitleContainer>
-              <H3>{description}</H3>
-            </TitleContainer>
-          )}
-        </ImageContainer>
+            {!isMobile && (
+              <TitleContainer>
+                <H3>{description}</H3>
+              </TitleContainer>
+            )}
+          </ImageContainer>
         </Link>
       </Project>
     </motion.div>
