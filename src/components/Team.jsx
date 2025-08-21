@@ -2,14 +2,16 @@ import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 import "../css/style.css";
+import Experience from "./experiences/Experience";
 
 const TeamContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   width: 100%;
   align-items: center;
   justify-items: center;
   gap: 20px;
+  padding: 20px;
 
   @media screen and (max-width: 64em) {
     grid-template-columns: 1fr;
@@ -29,6 +31,7 @@ const TeamMember = styled.div`
   overflow: hidden;
   margin-bottom: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+ 
 
   &:hover {
     transform: scale(1.05);
@@ -51,6 +54,7 @@ const TeamName = styled.h3`
   font-size: 1.5rem;
   margin-top: 10px;
   color: #fff;
+   padding: 5px;
 `;
 
 const TeamRole = styled.p`
@@ -58,15 +62,20 @@ const TeamRole = styled.p`
   margin-bottom: 20px;
   margin-top: 5px;
   color: #ccc;
+   padding: 5px;
+
 `;
 
-const Title = styled.h3`
-  font-family: "Syncopate", sans-serif;
-  text-transform: uppercase;
-  padding: 3rem 5rem;
+const Title = styled.h2`
+  font-family: "Helvetica", sans-serif;
+  font-size: 4.5rem;
+  font-weight: 300;
+  color: #fff;
+  text-align: center;
+  margin: 40px 0;
 
   @media screen and (max-width: 48em) {
-    font-size: 10px;
+    font-size: 2rem;
   }
 `;
 
@@ -86,14 +95,14 @@ const Team = () => {
       id: 1,
       name: 'Deimov',
       role: 'Co-founder / Creative Director / Creative Coding / Sound Design / VFX / Media Artist',
-      imageSrc: '/assets/deimovAI.jpg',
+      imageSrc: '/team/deimov.png',
       link: 'https://www.instagram.com/deimovvv/',
     },
     {
       id: 2,
       name: 'Cora',
       role: 'Co-founder | Creative Director | Cinematic | CGI',
-      imageSrc: '/team/divinaglitch.jpg',
+      imageSrc: '/team/cora.png',
       link: 'https://www.instagram.com/divina.glitch/',
     },
     {
@@ -107,21 +116,21 @@ const Team = () => {
       id: 4,
       name: 'Juno',
       role: 'Sound Design | Immersive Audio | Creative Coding | Generative AI | Media Artist',
-      imageSrc: '/team/juno.png',
+      imageSrc: '/team/juno.jpg',
       link: 'https://www.linkedin.com/in/juno-nedic-3022031b8/',
     },
   ];
 
   return (
     <>
+   
       <motion.div
         initial={{ y: 200, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.1, ease: "circOut", duration: 1 }}
       >
-        <Title>
-          <h3>Team</h3>
-        </Title>
+        
+        <Title>Team</Title>
 
         <TeamContainer>
           {teamMembers.map((member) => (

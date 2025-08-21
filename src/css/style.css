@@ -1,6 +1,6 @@
 * {
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -9,13 +9,11 @@ html {
 }
 
 body {
-  /* background-color: #e4e4e4; */
-  background-color: #090909;
+  background-color: rgba(15, 15, 15, 1);
   overflow-x: hidden;
-  /*  height: 100%; */
 }
 
-.dflex{
+.dflex {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,89 +24,22 @@ body {
   overflow: hidden;
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   flex-direction: column;
-  
 }
 
-.header{
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 100%;
-  height: 58px;
-  padding: 0 20px;
-  position: absolute;
-  z-index: 9999;
-  top: 10px;
-  
+@media (max-width: 768px) {
+  .wrapper {
+    height: 78vh;
+  }
 }
-
-.menu{
-  width: 58px;
-  height: 58px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  margin-right: 30px;
-  margin-top: 2px;
-  position: fixed;
-  
- 
-}
-
-.menu_container{
-  position: absolute;
-  width: 100%;
-  max-height: 100% !important;
-  background-color: rgba(0.2, 0.2, 0.2, 0.8);
-  z-index: 9999999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  top: 0;
-/*   position: fixed; */
-
-  
-   
-}
-
-.link_menu{
-  display: inline-flex;
-  height: 50px;
-  overflow: hidden;
-  text-transform: uppercase;
-font-family: "Syncopate", sans-serif;
-
-
-
-
-
-}
-
-.btn_close {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 108px; /* Ajusta el ancho del área clicable */
-  height: 150px; /* Ajusta la altura del área clicable */
-  position: absolute;
-  top: 0px;
-  right: 5px;
-  cursor: pointer;
-/*   z-index: 1002;  *//* Asegúrate de que el botón de cierre tenga un z-index alto */
-  background-color: transparent; /* Asegúrate de que el fondo sea transparente */
-}
-
 
 a {
   text-decoration: none;
   color: whitesmoke;
   font-size: 1.3rem;
   font-weight: 500;
-  padding: 0px;
+  padding: 0;
 }
 
 h1 {
@@ -116,14 +47,8 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-p {
-  color: rgb(230, 230, 230);
-}
-
 h2 {
-  /* color: black; */
   color: rgb(230, 230, 230);
-
   font-weight: bold;
   font-size: 1.45rem;
 }
@@ -131,19 +56,15 @@ h2 {
 h3 {
   font-weight: 200;
   font-size: 1.1rem;
-  /* color: black; */
   color: rgb(230, 230, 230);
 }
 
-/* links */
 h5 {
   font-size: medium;
-
 }
 
-.loader {
-  background-color: rebeccapurple;
-  z-index: 1000;
+p {
+  color: rgb(230, 230, 230);
 }
 
 .video {
@@ -153,19 +74,18 @@ h5 {
 
 .iconContainer {
   padding: 0 7px;
-  /* background-color: #4caf50; */
 }
 
 .emailLink {
-   color: "#bfbfbf";
+  color: #bfbfbf;
   text-decoration: underline;
 }
+
 .closeIcon {
   position: absolute;
   top: 26px;
   right: 22px;
   cursor: pointer;
-
 }
 
 .arrow {
@@ -174,15 +94,7 @@ h5 {
   left: 55px;
 }
 
-.overlayMenu {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  top: 40%;
-}
-
-/* Modal */
+/* Modal Styles */
 .ReactModalPortal > div {
   opacity: 0;
 }
@@ -213,7 +125,6 @@ h5 {
 }
 
 .modal {
-  /*  background: rgb(51, 51, 51); */
   border-radius: 5px;
   color: whitesmoke;
   display: inline;
@@ -224,17 +135,6 @@ h5 {
   text-align: center;
 }
 
-.df-messenger {
-  --df-messenger-bot-message: #e0e0e0;
-  --df-messenger-button-titlebar-color: #4caf50;
-  --df-messenger-chat-background-color: #fafafa;
-  --df-messenger-font-color: #000;
-  --df-messenger-send-icon: #4caf50;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-}
 
 .link {
   font-family: "Syncopate", sans-serif;
@@ -248,7 +148,8 @@ h5 {
   transform: translateX(-51%);
 }
 
-@media screen and (max-width: 40em) {
+/* Responsive Design */
+@media screen and (max-width: 768px) {
   .video {
     margin-top: 50px;
   }
@@ -262,30 +163,28 @@ h5 {
     left: 25px;
   }
 
-  .gallery {
-    font-size: 1rem;
+  h5 {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
   }
 }
 
-.menu{
-  right: 5px;
+/* Performance optimizations */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
-.link_menu{
-  font-size: 12px;
-}
-
-
-
-@media screen and (max-width: 64em) {
-
-  
-
- 
-h5{
-  font-size: 14px;
-  padding: 0;
-  margin: 0;
-}
-
+/* Fade in animation for content */
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+  }
+  to { 
+    opacity: 1; 
+  }
 }

@@ -1,5 +1,31 @@
 const projects = [
     {
+        'id': 'volvo03',
+        'category': 'AI',
+        'date': '16/03/2025',
+        'title': 'Generative campaign for the Volvo EX30 developed in collaboration with Morph and Art Collective.',
+       'video': 'https://www.youtube.com/shorts/ZuOpfAHzC2g',
+        'description': 'AI-driven Cinematic Campaign',
+        'client': 'Volvo Meschini',
+        'image': '/assets/volvo011.jpg',
+        'image2': '/assets/volvo022.jpg',
+        'technologies': 'Stable Diffusion, Runway, ComfyUI, LoRA, AI Avatars',
+        'type': 'image'
+        
+    },
+    {
+        'id': 'rauw',
+        'category': 'VR / AR',
+        'date': '12/08/2024',
+        'title': 'Virtual Reality experience in collaboration with Julia Conde',
+       'video': 'https://www.youtube.com/watch?v=x9DQUpARihw',
+        'description': 'Virtual Reality for Rauw Alejandro',
+        'client': 'Julia Conde & Rauw Alejandro',
+        'technologies': 'Unreal Engine, Blender, Substance Painter',
+        'type': 'image'
+        
+    },
+    {
         'id': 'manglar3',
         'category': 'VR / AR',
         'date': '16/03',
@@ -80,7 +106,7 @@ const projects = [
         
     },
     {
-        'id': 'papanoel',
+        'id': 'AltoPalermo',
         'category': 'AI',
         'date': '12/11/2024',
         'title': 'Christmas campaign video made for Alto Palermo with Artificial Intelligence, which was presented on the screens.',
@@ -104,6 +130,20 @@ const projects = [
         'image': '/assets/Elvara2.jpg',
         'image2': '/assets/Elvara3.jpg',
         'technologies': 'Unreal Engine, Blender, Adobe Premier, Ableton Live, Substance Painter',
+        'type': 'image'
+        
+    },
+    {
+        'id': 'pita03',
+       'category': 'AI',
+        'date': '16/03/2025',
+        'title': 'Generative campaign for Javier Pitta using AI',
+       'video': 'https://youtube.com/shorts/feq6MU-91t4?si=XJb-kYWhvMrD9HlT',
+        'description': 'AI-driven Cinematic Campaign',
+        'client': 'Javier Pitta',
+        'image': '/assets/pita01.jpg',
+        'image2': '/assets/pita02.jpg',
+        'technologies': 'Stable Diffusion, Runway, ComfyUI, LoRA',
         'type': 'image'
         
     },
@@ -175,19 +215,7 @@ const projects = [
         'type': 'image'
         
     },
-    {
-        'id': 'Divina33',
-        'category': 'Videoclips',
-        'date': '13/10',
-        'title': 'Divina',
-       'video': 'https://www.youtube.com/watch?v=tayRe8L-D1k&t=1s',
-        'description': 'Virtual Production for Divina Glitch',
-        'client': 'Divina',
-        'technologies': 'Unreal Engine, Blender, Adobe Premier',
-        'type': 'image'
-        
-    },
-    
+  
 
     
     {
@@ -287,20 +315,7 @@ const projects = [
           'type': 'image'
       
       },
-      {
-        'id': 'partyplane',
-        'category': 'Videoclips',
-        'date': '12/22',
-        'title': 'Divina Glitch',
-        'description': 'Videoclip for Divina Glitch',
-        'client': 'Divina Glitch',
-        'technologies': 'Unreal Engine, Blender, Adobe Premier',
-        'video': 'https://www.youtube.com/watch?v=K-GqiwfEEA8',
-        'type': 'image'
-        
-    
-    
-    },
+  
     
     {
         'id': 'Rechi',
@@ -332,26 +347,8 @@ const projects = [
   
   
   },
-  
+    
 
-  {
-      'id': 'deimovAI',
-      'category': 'Videoclips',
-      'date': '12/22',
-      'title': 'Deimov',
-      'description': 'Visual Art for Deimov',
-      'client': 'Deimov',
-      'technologies': 'Stable Diffusion, Photoshop',
-      'type': 'image'
-      
-  
-  
-  },
-
- 
-  
-
-  
   
   
   

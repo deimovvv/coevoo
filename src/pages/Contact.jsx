@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Experience from "../components/experiences/Experience";
 import Loader from "../components/Loader";
-import Logo from "../components/Logo";
+import Navigation from "../components/Navigation";
 
 
 const Container = styled.div`
@@ -51,10 +51,39 @@ const Emailcontainer = styled.div`
 const Contact = () => {
 
   const [isLoading, setIsLoading] = useState(true);
+  const [currentLanguage, setCurrentLanguage] = useState(localStorage.getItem('language') || 'EN');
 
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 500);
   });
+
+  useEffect(() => {
+    const handleLanguageChange = () => {
+      setCurrentLanguage(localStorage.getItem('language') || 'EN');
+    };
+
+    window.addEventListener('storage', handleLanguageChange);
+    window.addEventListener('languageChange', handleLanguageChange);
+
+    return () => {
+      window.removeEventListener('storage', handleLanguageChange);
+      window.removeEventListener('languageChange', handleLanguageChange);
+    };
+  }, []);
+
+  const translations = {
+    ES: {
+      workWithUs: 'Trabajá con nosotros'
+    },
+    EN: {
+      workWithUs: 'Work with us'
+    },
+    DE: {
+      workWithUs: 'Arbeiten Sie mit uns'
+    }
+  };
+
+  const t = translations[currentLanguage];
 
 
   return (
@@ -69,7 +98,7 @@ const Contact = () => {
 
       <Contactos className="animate__animated animate__fadeIn">
         <Emailcontainer>
-          <h2 className="work-us">Work with us</h2>
+          <h2 className="work-us">{t.workWithUs}</h2>
 
           <Link
             className="emailLink"

@@ -6,43 +6,75 @@ import BrandSlider from "./BrandSlider";
 import Services from "./Services";
 
 const Container = styled.div`
-  background: rgba(12, 12, 12, 1); /* Fondo de ruido con opacidad negra */
-  padding: 10px;
+background: linear-gradient(to bottom, rgba(15, 15, 15, 0.2) 0%, rgba(15, 15, 15, 1) 3%);
+  padding: 0;
+  margin-top: 2rem; /* Agregado para empujar la sección hacia abajo */
   border-radius: 10px;
-  height: 1050px;
+  border-top: 1px solid rgba(120, 120, 120, 0.1);
+  min-height: 800px; /* Altura mínima para evitar choques */
+  height: auto;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra horizontalmente */
-  justify-content: flex-start; /* Mueve el contenido hacia arriba */
-  gap: 20px; /* Espacio uniforme entre los elementos */
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding-bottom: 2rem; /* Espacio adicional en la parte inferior */
+
+  @media (min-width: 768px) {
+    height: 1200px; /* Aumentado para evitar choques */
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+  }
 `;
 
 const TitleContainer = styled.div`
-  width: 80%;
+  width: 90%;
   display: flex;
-  justify-content: flex-start; /* Alinea el contenido a la derecha */
+  flex-direction: column; /* Cambia a columna para pantallas pequeñas */
+  justify-content: center; /* Centra el contenido horizontalmente */
   position: relative; /* Necesario para posicionar el texto con opacidad */
   align-items: center; /* Alinea verticalmente los elementos */
+
+  @media (min-width: 768px) {
+    width: 80%;
+    flex-direction: row; /* Cambia a fila para pantallas más grandes */
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    align-items: flex-start; /* Alinea el contenido a la izquierda */
+    height: 30vh;
+    
+  }
 `;
 
 const Title = styled(motion.h1)`
   font-family: 'Helvetica', 'Arial', sans-serif;
-  font-size: 7.1rem;
+  font-size: 3rem;
   font-weight: 250;
-  margin-top: 140px;
+  margin-top: 50px;
   color: white;
-  /* Alinea el texto a la derecha */
+  text-align: center; /* Centra el texto */
+
+  @media (min-width: 768px) {
+    font-size: 7.1rem;
+    margin-top: 120px;
+    text-align: left; /* Alinea el texto a la izquierda */
+  }
 `;
 
 const OpacityText = styled(motion.p)`
   font-family: 'Helvetica', 'Arial', sans-serif;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 200;
   color: white;
   opacity: 0.5; /* Ajusta la opacidad del texto */
-  margin-left: 20px; /* Espacio entre el título y el texto con opacidad */
-  margin-top: 207px; 
- 
+  margin-top: 20px; /* Espacio entre el título y el texto con opacidad */
+  text-align: center; /* Centra el texto */
+
+  @media (min-width: 768px) {
+    font-size: 1.3rem;
+    margin-left: 20px; /* Espacio entre el título y el texto con opacidad */
+    margin-top: 207px;
+    text-align: left; /* Alinea el texto a la izquierda */
+  }
 `;
 
 const BrandAndServices = () => {

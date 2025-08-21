@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 const ServicesDiv = styled.div`
@@ -79,7 +79,38 @@ const IMG = styled.img`
 `;
 
 const ServicesCard = ({ id, title, description }) => {
+  const [currentLanguage, setCurrentLanguage] = useState(localStorage.getItem('language') || 'EN');
+
+  useEffect(() => {
+    const handleLanguageChange = () => {
+      setCurrentLanguage(localStorage.getItem('language') || 'EN');
+    };
+
+    window.addEventListener('storage', handleLanguageChange);
+    window.addEventListener('languageChange', handleLanguageChange);
+
+    return () => {
+      window.removeEventListener('storage', handleLanguageChange);
+      window.removeEventListener('languageChange', handleLanguageChange);
+    };
+  }, []);
+
   const servicesURL = `assets/serviciosImagenes/${id}.jpg`;
+
+  // Get the translated text based on current language
+  const getTitle = () => {
+    if (typeof title === 'object') {
+      return title[currentLanguage] || title.EN || '';
+    }
+    return title || '';
+  };
+
+  const getDescription = () => {
+    if (typeof description === 'object') {
+      return description[currentLanguage] || description.EN || '';
+    }
+    return description || '';
+  };
 
   return (
     <motion.div
@@ -93,8 +124,8 @@ const ServicesCard = ({ id, title, description }) => {
       </ImagenContainer>
 
       <DescripcionContainer>
-        <Title> {title} </Title>
-        <p>{description}</p>
+        <Title>{getTitle()}</Title>
+        <p>{getDescription()}</p>
       </DescripcionContainer>
     </ServicesDiv>
     </motion.div>

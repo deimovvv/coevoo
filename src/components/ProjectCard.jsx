@@ -13,8 +13,7 @@ const IMG = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 8px; /* Ajusta el borde redondeado */
-  transition: transform 0.3s ease; /* Añade transición para el efecto de escala */
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 `;
 
 const TitleContainer = styled.div`
@@ -23,14 +22,15 @@ const TitleContainer = styled.div`
   top: 0;
   left: 0;
   position: absolute;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(15, 15, 15, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   opacity: 0;
   transition: 0.6s;
-  border-radius: 8px; /* Ajusta el borde redondeado */
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
   
   &:hover {
     opacity: 1;
@@ -47,27 +47,40 @@ const TitleContainer = styled.div`
 
 const ImageContainer = styled.div`
   position: relative;
-  height: 440px;
-  border-radius: 8px; /* Ajusta el borde redondeado */
-  overflow: hidden; /* Asegura que el contenido se recorte según el borde redondeado */
-  transition: transform 0.3s ease; /* Añade transición para el efecto de escala */
+  height: 560px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(120, 120, 120, 0.1);
 
   &:hover {
-    transform: scale(1.02); /* Aplica una pequeña escala en hover */
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    border-color: rgba(170, 144, 165, 0.3);
   }
 
   &:hover ${IMG} {
-    transform: scale(1.02); /* Aplica una pequeña escala en hover */
+    transform: scale(1.05);
+  }
+
+  @media screen and (max-width: 768px) {
+    height: 480px;
+  }
+  
+  @media screen and (max-width: 480px) {
+    height: 400px;
   }
 `;
 
 const H3 = styled.h3`
-  font-family: 'Helvetica', 'Arial', sans-serif; /* Especifica la fuente Helvetica y Arial como respaldo */
+  font-family: 'Helvetica', 'Arial', sans-serif;
   font-weight: 200;
   font-size: 1rem;
-  color: white;
+  color: rgba(255, 255, 255, 0.95);
   position: absolute;
   bottom: 25px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 `;
 
 const Video = styled.video`

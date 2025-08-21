@@ -1,13 +1,12 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import coevoLogo from '../.././public/assets/Logo33.png'; // Asegúrate de ajustar la ruta al logo de Coevo
 
-const spin = keyframes`
-  0% {
-    transform: rotate(0deg);
+const expand = keyframes`
+  0%, 100% {
+    transform: scale(1);
   }
-  100% {
-    transform: rotate(360deg);
+  50% {
+    transform: scale(1.5);
   }
 `;
 
@@ -24,17 +23,35 @@ const Div = styled.div`
   z-index: 1000; /* Asegúrate de que el loader esté por encima de otros elementos */
 `;
 
-
-const Logo = styled.img`
+const LoaderContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   width: 100px;
-  height: 100px;
-  animation: ${spin} 1s linear infinite;
+`;
+
+const Dot = styled.div`
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: ${expand} 1.6s infinite ease-in-out;
+  &:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  &:nth-child(3) {
+    animation-delay: 0.4s;
+  }
 `;
 
 const Loader = () => {
   return (
     <Div>
-      <Logo src={coevoLogo} alt="Coevo Logo" />
+      <LoaderContainer>
+        <Dot />
+        <Dot />
+        <Dot />
+      </LoaderContainer>
     </Div>
   );
 };

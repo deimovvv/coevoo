@@ -11,7 +11,7 @@ import fragmentShader from './fragmentShader';
 extend({ SimulationMaterial: SimulationMaterial });
 
 export const FBOParticles = () => {
-  const size = 111;
+  const size = 64; // Reduced from 96 to 64 for better performance
 
   const points = useRef();
   const simulationMaterialRef = useRef();
@@ -26,7 +26,8 @@ export const FBOParticles = () => {
     magFilter: THREE.NearestFilter,
     format: THREE.RGBAFormat,
     stencilBuffer: false,
-    type: THREE.FloatType,
+    type: THREE.HalfFloatType, // Changed from FloatType to HalfFloatType for better performance
+    generateMipmaps: false,
   });
 
   const particlesPosition = useMemo(() => {
@@ -49,14 +50,17 @@ export const FBOParticles = () => {
   useFrame((state) => {
     const { gl, clock } = state;
 
-    gl.setRenderTarget(renderTarget);
-    gl.clear();
-    gl.render(scene, camera);
-    gl.setRenderTarget(null);
+    // Only update every other frame for better performance
+    if (Math.floor(clock.elapsedTime * 60) % 2 === 0) {
+      gl.setRenderTarget(renderTarget);
+      gl.clear();
+      gl.render(scene, camera);
+      gl.setRenderTarget(null);
 
-    points.current.material.uniforms.uPositions.value = renderTarget.texture;
+      points.current.material.uniforms.uPositions.value = renderTarget.texture;
+    }
 
-    simulationMaterialRef.current.uniforms.uTime.value = clock.elapsedTime *0.2;
+    simulationMaterialRef.current.uniforms.uTime.value = clock.elapsedTime * 0.15; // Slightly slower animation
   });
 
   return (

@@ -7,7 +7,6 @@ import { Suspense, useRef, useEffect } from "react";
 import { FBOParticles } from './FBOParticles';
 import Model from "./Model";
 
-
 const Container = styled.div`
   position: fixed !important;
   width: 100%;
@@ -16,17 +15,18 @@ const Container = styled.div`
   margin: 0;
   padding: 0;
   background: rgba(12, 12, 12, 1);
-  pointer-events: none; /* Prevent interaction issues */
+  pointer-events: none;
+  opacity: 0.3; /* Opacidad reducida para fondo */
 `;
 
-const Experience = () => {
+const ExperienceBackground = () => {
   const cameraRef = useRef();
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       if (cameraRef.current) {
-        cameraRef.current.position.y = scrollY * 0.001; // Ajusta el factor de desplazamiento según sea necesario
+        cameraRef.current.position.y = scrollY * 0.001;
       }
     };
 
@@ -41,8 +41,8 @@ const Experience = () => {
       <Canvas 
         camera={{ position: [-0.9, 0, -0.01] }} 
         onCreated={({ camera }) => (cameraRef.current = camera)}
-        dpr={[1, 1.5]} // Limit pixel ratio for better performance
-        performance={{ min: 0.5 }} // Enable automatic performance scaling
+        dpr={[1, 1.5]}
+        performance={{ min: 0.5 }}
       >
         <OrbitControls 
           updateDefaultCamera={true} 
@@ -51,25 +51,23 @@ const Experience = () => {
           enableRotate={false}
         />
 
-        {/* Optimized Lighting */}
-        <directionalLight position={[0, 5, 3]} intensity={1.5} />
-        <pointLight color={"purple"} intensity={0.3} />
-        <pointLight color={"green"} intensity={0.8} />
+        {/* Reduced intensity lighting for background */}
+        <directionalLight position={[0, 5, 3]} intensity={1} />
+        <pointLight color={"purple"} intensity={0.2} />
+        <pointLight color={"green"} intensity={0.5} />
 
-        {/* PostProcess */}
+        {/* PostProcess with reduced intensity */}
         <EffectComposer multisampling={0}>
-          <Bloom mipmapBlur intensity={1.2} luminanceThreshold={0.1} />
+          <Bloom mipmapBlur intensity={0.8} luminanceThreshold={0.2} />
         </EffectComposer>
        
-        {/* 3D MODEL */}
         <Suspense fallback={null}>
           <FBOParticles />
         </Suspense>
        
       </Canvas>
-      
     </Container>
   );
 };
 
-export default Experience;
+export default ExperienceBackground;
